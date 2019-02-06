@@ -35,13 +35,13 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         }
 
 
-        [Then(@"Validar cadastro")]
-        public void ThenValidarCadastro()
-        {
-            var result = pageAction.ValidarCadastroDB();
+        //[Then(@"Validar cadastro")]
+        //public void ThenValidarCadastro()
+        //{
+        //    var result = pageAction.ValidarCadastroDB();
 
-                Assert.That(result, Is.True, "Erro ao cadastrar os dados no DB!");
-        }
+        //        Assert.That(result, Is.True, "Erro ao cadastrar os dados no DB!");
+        //}
 
 
     }

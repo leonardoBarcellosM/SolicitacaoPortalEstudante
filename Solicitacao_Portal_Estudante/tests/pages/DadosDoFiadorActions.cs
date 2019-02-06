@@ -14,7 +14,6 @@ namespace Solicitacao_Portal_Estudante.tests.steps
     class DadosDoFiadorActions : DadosDoFiadorMap
     {
         private ClassUtilities util = new ClassUtilities();
-        private ConsultaDB db = new ConsultaDB();
 
         public DadosDoFiadorActions()
         {
@@ -138,27 +137,27 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             return _result;
         }
 
-        public bool ValidarPosFiadorNoDb()
-        {
-            bool _result = false;
+        //public bool ValidarPosFiadorNoDb()
+        //{
+        //    bool _result = false;
 
-            try
-            {
-                string[] list = db.ConsultaSolicitacao();
+        //    try
+        //    {
+        //        //string[] list = db.ConsultaSolicitacao();
 
-                if (list[0] == "PAF" && list[1] == "PDC" && list[2] == "PDC")
-                {
-                    _result = true;
-                }
-                else
-                {
-                }
-            }
-            catch
-            {
-            }
+        //        if (list[0] == "PAF" && list[1] == "PDC" && list[2] == "PDC")
+        //        {
+        //            _result = true;
+        //        }
+        //        else
+        //        {
+        //        }
+        //    }
+        //    catch
+        //    {
+        //    }
 
-            return _result;
-        }
+        //    return _result;
+        //}
     }
 }

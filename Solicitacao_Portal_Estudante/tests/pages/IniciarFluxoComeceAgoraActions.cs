@@ -16,7 +16,6 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         private MassaDeDados massa = new MassaDeDados();
         private ClassUtilities util = new ClassUtilities();
         private AprovacaoIesActions cpf = new AprovacaoIesActions();
-        private ConsultaDB db = new ConsultaDB();
 
         public IniciarFluxoComeceAgoraActions()
         {
@@ -35,7 +34,6 @@ namespace Solicitacao_Portal_Estudante.tests.steps
                 string cpf = util.GerarCpf();
                 MassaDeDados.BKey = "SOLICITACAO " + cpf;
                 UpdateStatusDB.Cpf(cpf);
-                ConsultaDB.Cpf(cpf);
 
                 //string dt = utils.ClassUtilities.PegarDataHora();
                 //string arquivo = @"C:\Users\leonardo.barcellos\Desktop\Fundacred\reg\" + dt + ".txt";
@@ -147,24 +145,24 @@ namespace Solicitacao_Portal_Estudante.tests.steps
  
         }
 
-        public bool ValidarCadastroDB()
-        {
-            bool _result = false;
-            try
-            {
-                string valor = db.NovoCadastro();
+        //public bool ValidarCadastroDB()
+        //{
+        //    bool _result = false;
+        //    try
+        //    {
+        //        string valor = db.NovoCadastro();
 
-                if (valor == "1")
-                {
-                    _result = true;
-                }
+        //        if (valor == "1")
+        //        {
+        //            _result = true;
+        //        }
               
-            }
-            catch
-            {
+        //    }
+        //    catch
+        //    {
 
-            }
-            return _result;
-        }
+        //    }
+        //    return _result;
+        //}
     }
 }

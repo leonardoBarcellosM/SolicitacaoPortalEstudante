@@ -24,7 +24,6 @@ Given Acessar a opcao solicitacao
 When Clicar em quero solicitar o credito
 Then Validar o direcionamento com sucesso
 
-
 @02_1Etapa
 Scenario: 04 Selecionar Instituicao
 Given Selecionar instituicao "USF - UNIVERSIDADE SAO FRANCISCO"
@@ -32,19 +31,11 @@ When Selecionar curso "ADMINISTRAÇÃO-NOTURNO-BRAGANÇA"
 And Clicar no botao aceito os termos
 Then Validar solicitacao enviada
 
-#@02_1Etapa
-#Scenario: 05 Validar DB
-#Then Validar status de solicitacao no db "Solicitacao"
-
 #Dados editáveis
 @02_2Etapa
 Scenario: 06 Preencher Dados Do Estudante
 Given Clicar no botao enviar
 Then Validar direcionamento para etapa 3
-
-#@02_1Etapa
-#Scenario: 07 Validar DB
-#Then Validar status de solicitacao no db "Estudante"
 
 #Dados editáveis
 @03_3Etapa
@@ -53,10 +44,6 @@ Given Inserir nome e cpf " Leonardo Barcellos Teste "
 When Inserir data de nasc e renda "5.000,00-06/08/2000"
 And Clicar no botao enviar etapa 3
 Then Validar direcionamento para etapa 4
-#
-#@02_1Etapa
-#Scenario: 09 Validar DB
-#Then Validar status de solicitacao no db "Fiador"
 
 @04_4Etapa
 Scenario: 10 Preencher Dados Pessoais
@@ -72,63 +59,9 @@ When Preencho contato e endereco
 And Clico em proximo
 Then Validar direcionamento Dados Curso
 
-#@04_4Etapa
-#Scenario: 12 Validar DB
-#Then Validar status de solicitacao no db "PosFiador"
-
 @04_4Etapa
 Scenario: 13 Preencher Dados Do Curso
 Given Preencho matricula e percentual
 When Preencho ano e semestre
 And Clico em documentos
 Then Validar direcionamento documentos
-
-#@04_4Etapa
-#Scenario: 14 Selecionar E Enviar Documentos
-#Given Seleciono documentos do estudante
-#When Seleciono documentos do grupo familiar
-##And Seleciono documentos de renda familiar
-#And Seleciono documentos do fiador
-#And Seleciono documentos de renda do fiador
-#And Clico em concluir
-#Then Validar a conclusao da etapa 4
-#
-#@05_5Etapa
-#Scenario: 15 Validar DB
-#Then Validar status de solicitacao no db "Solicitação concluída"
-#
-#@05_5Etapa
-#Scenario: 16 Atualizar Status SGCred
-#Given Realizo update de status
-#Then Update realizado com sucesso
-#
-#@06_AcessarPagina
-#Scenario: 17 Acessar o endereco
-##Given Acessar o endereco "http://testes.fundacred.org.br/ies/#/login"	
-#Given Acessar o endereco "http://homologacao.fundacred.org.br/ies/#/login"	
-#Then Validar Acesso ao portal
-#
-#@06_6Etapa
-#Scenario: 18 Realizar Login Portal IES
-#Given Informo o email "Cristiane@teste.org.br"
-#When Informo a senha "welcome1"
-#And Clico no botao Entrar
-#Then Validar login com sucesso
-#
-#@06_6Etapa
-#Scenario: 19 iniciar Aprovacao
-#Given Acesso a opcao aprovacao
-#When Pesquiso a solicitacao desejada
-#And Clico em prosseguir confirmacao
-#Then Valido o acesso a tela aprovar solicitacao
-#
-#@06_6Etapa
-#Scenario: 20 Finalizar Aprovacao
-#Given Preencho os dados pendentes
-#When Preencho as informacoes de valores
-#And Clico em aprovar
-#Then Valido solicitacao aprovada com sucesso
-#
-#@06_6Etapa
-#Scenario: 21 Validar DB
-#Then Validar status de solicitacao no db "Solicitação aprovada"

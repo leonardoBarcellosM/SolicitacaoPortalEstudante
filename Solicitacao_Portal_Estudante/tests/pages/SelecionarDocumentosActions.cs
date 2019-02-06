@@ -14,7 +14,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
     class SelecionarDocumentosActions : SelecionarDocumentosMap
     {
         private ClassUtilities util = new ClassUtilities();
-        private ConsultaDB db = new ConsultaDB();
+        //private ConsultaDB db = new ConsultaDB();
 
         public SelecionarDocumentosActions()
         {
@@ -298,93 +298,93 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             return _result;
         }
 
-        public bool ValidarSolicConcluidaNoDb()
-        {
-            bool _result = false;
+        //public bool ValidarSolicConcluidaNoDb()
+        //{
+        //    bool _result = false;
 
-            try
-            {
-                string[] list = db.ConsultaSolicitacao();
+        //    try
+        //    {
+        //        string[] list = db.ConsultaSolicitacao();
 
-                if (list[0] == "PAF" && list[1] == "C" && list[2] == "PAF")
-                {
-                    _result = true;
-                }
-                else
-                {
-                }
-            }
-            catch
-            {
-            }
-            return _result;
-        }
+        //        if (list[0] == "PAF" && list[1] == "C" && list[2] == "PAF")
+        //        {
+        //            _result = true;
+        //        }
+        //        else
+        //        {
+        //        }
+        //    }
+        //    catch
+        //    {
+        //    }
+        //    return _result;
+        //}
 
-        public bool ValidarSolicAprovadaNoDb()
-        {
-            bool _result = false;
+        //public bool ValidarSolicAprovadaNoDb()
+        //{
+        //    bool _result = false;
 
-            try
-            {
-                string[] list = db.ConsultaSolicitacao();
+        //    try
+        //    {
+        //        string[] list = db.ConsultaSolicitacao();
 
-                if (list[0] == "A" && list[1] == "C" && list[2] == "A")
-                {
-                    _result = true;
-                }
-                else
-                {
-                }
-            }
-            catch
-            {
-            }
-            return _result;
-        }
+        //        if (list[0] == "A" && list[1] == "C" && list[2] == "A")
+        //        {
+        //            _result = true;
+        //        }
+        //        else
+        //        {
+        //        }
+        //    }
+        //    catch
+        //    {
+        //    }
+        //    return _result;
+        //}
 
-        public bool ValidarSolicReproNoDb()
-        {
-            bool _result = false;
+        //public bool ValidarSolicReproNoDb()
+        //{
+        //    bool _result = false;
 
-            try
-            {
-                string[] list = db.ConsultaSolicitacao();
+        //    try
+        //    {
+        //        string[] list = db.ConsultaSolicitacao();
 
-                if (list[0] == "RIES" && list[1] == "C" && list[2] == "R")
-                {
-                    _result = true;
-                }
-                else
-                {
-                }
-            }
-            catch
-            {
-            }
-            return _result;
-        }
+        //        if (list[0] == "RIES" && list[1] == "C" && list[2] == "R")
+        //        {
+        //            _result = true;
+        //        }
+        //        else
+        //        {
+        //        }
+        //    }
+        //    catch
+        //    {
+        //    }
+        //    return _result;
+        //}
 
-        public bool ValidarSolicitacao(string arg01, string arg02, string arg03)
-        {
-            bool _result = false;
+        //public bool ValidarSolicitacao(string arg01, string arg02, string arg03)
+        //{
+        //    bool _result = false;
 
-            try
-            {
-                string[] list = db.ConsultaSolicitacao();
+        //    try
+        //    {
+        //        string[] list = db.ConsultaSolicitacao();
 
-                if (list[0] == arg01 && list[1] == arg02 && list[2] == arg03)
-                {
-                    _result = true;
-                }
-                else
-                {
-                }
-            }
-            catch
-            {
-            }
-            return _result;
-        }
+        //        if (list[0] == arg01 && list[1] == arg02 && list[2] == arg03)
+        //        {
+        //            _result = true;
+        //        }
+        //        else
+        //        {
+        //        }
+        //    }
+        //    catch
+        //    {
+        //    }
+        //    return _result;
+        //}
 
     }
 }
