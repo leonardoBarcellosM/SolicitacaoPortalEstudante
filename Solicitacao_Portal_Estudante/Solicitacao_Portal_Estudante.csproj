@@ -121,7 +121,6 @@
     <Compile Include="tests\pages\SelecionarDocumentosMap.cs" />
     <Compile Include="tests\steps\AccessSteps.cs" />
     <Compile Include="tests\steps\AprovacaoIesSteps.cs" />
-    <Compile Include="tests\steps\AtualizarStatusSgCred.cs" />
     <Compile Include="tests\steps\DadosDoEstudanteSteps.cs" />
     <Compile Include="tests\steps\DadosDoFiadorSteps.cs" />
     <Compile Include="tests\steps\DadosPessoaisSteps.cs" />
@@ -138,7 +137,6 @@
     <Compile Include="tests\utils\ClassUtilities.cs" />
     <Compile Include="tests\utils\DadosDB.cs" />
     <Compile Include="tests\utils\MassaDeDados.cs" />
-    <Compile Include="tests\utils\UpdateStatusDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

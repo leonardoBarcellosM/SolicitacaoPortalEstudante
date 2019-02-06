@@ -38,33 +38,33 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             return _result;
         }
 
-        public bool PesquisarSolicitacao()
-        {
+        //public bool PesquisarSolicitacao()
+        //{
 
-            bool _result = false;
-            string Cpf = UpdateStatusDB.PegarCpf();
-            //Cpf = "755.828.204-77";
+        //    bool _result = false;
+        //    string Cpf = UpdateStatusDB.PegarCpf();
+        //    //Cpf = "755.828.204-77";
 
-            try
-            {
-                ExpectedConditions.ElementToBeClickable(InputCpf);
-                Thread.Sleep(4000);
-                if (InputCpf.Displayed)
-                {
-                    InputCpf.Click();
-                    Thread.Sleep(300);
-                    InputCpf.SendKeys(Cpf);
-                    Thread.Sleep(3000);
-                    _result = true;
-                }
-            }
-            catch
-            {
+        //    try
+        //    {
+        //        ExpectedConditions.ElementToBeClickable(InputCpf);
+        //        Thread.Sleep(4000);
+        //        if (InputCpf.Displayed)
+        //        {
+        //            InputCpf.Click();
+        //            Thread.Sleep(300);
+        //            InputCpf.SendKeys(Cpf);
+        //            Thread.Sleep(3000);
+        //            _result = true;
+        //        }
+        //    }
+        //    catch
+        //    {
 
-            }
+        //    }
 
-            return _result;
-        }
+        //    return _result;
+        //}
 
         public bool ClicarEmProsseguir()
         {

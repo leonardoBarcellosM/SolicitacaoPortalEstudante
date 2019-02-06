@@ -113,7 +113,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
 
                     InputCpf.Click();
                     Thread.Sleep(250);
-                    InputCpf.SendKeys(UpdateStatusDB.PegarCpf());
+                    //InputCpf.SendKeys(UpdateStatusDB.PegarCpf());
 
                     InputRg.Click();
                     Thread.Sleep(250);

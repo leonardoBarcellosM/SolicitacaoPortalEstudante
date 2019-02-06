@@ -32,8 +32,8 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             try
             {
                 string cpf = util.GerarCpf();
-                MassaDeDados.BKey = "SOLICITACAO " + cpf;
-                UpdateStatusDB.Cpf(cpf);
+                //MassaDeDados.BKey = "SOLICITACAO " + cpf;
+               // UpdateStatusDB.Cpf(cpf);
 
                 //string dt = utils.ClassUtilities.PegarDataHora();
                 //string arquivo = @"C:\Users\leonardo.barcellos\Desktop\Fundacred\reg\" + dt + ".txt";
