@@ -33,24 +33,24 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             switch (arg)
             {
                 case "Solicitações Iniciadas":
-                    (result, vlr) = pageAction.ValidarTotalDeSolicitacoes(0);
+                    pageAction.ValidarTotalDeSolicitacoes(ref result, ref vlr, 0);
                     break;
                 case "Reprovados Fundacred":
-                    (result, vlr) = pageAction.ValidarTotalDeSolicitacoes(1);
+                    pageAction.ValidarTotalDeSolicitacoes(ref result, ref vlr, 1);
                     break;
                 case "Pendente Análise Fundacred":
-                    (result, vlr) = pageAction.ValidarTotalDeSolicitacoes(2);
+                     pageAction.ValidarTotalDeSolicitacoes(ref result, ref vlr, 2);
                     break;
                 case "Pendente Análise Ies":
-                    (result, vlr) = pageAction.ValidarTotalDeSolicitacoesPendentesIes();
+                    pageAction.ValidarTotalDeSolicitacoesPendentesIes(ref result, ref vlr, 3);
                     break;
                 case "Reprovadas IES":
-                    (result, vlr) = pageAction.ValidarTotalDeSolicitacoes(4);
+                    pageAction.ValidarTotalDeSolicitacoes(ref result, ref vlr, 4);
                     break;
                 case "Aprovadas":
-                    (result, vlr) = pageAction.ValidarTotalDeSolicitacoes(5);
+                    pageAction.ValidarTotalDeSolicitacoes(ref result, ref vlr, 5);
                     break;
-                    
+
             }
 
             Assert.That(result, Is.True, "Erro - Verifico o total de solicitacoes listadas! |  " + vlr);

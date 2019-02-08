@@ -14,7 +14,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
     class ValidarTelaPesquisaAction : ValidarTelaPesquisaMap
     {
         private ClassUtilities util = new ClassUtilities();
-
+        //private ConsultaDB db = new ConsultaDB();
 
         public ValidarTelaPesquisaAction()
         {
@@ -64,7 +64,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         //}
 
 
-        public (bool, string) ValidarTotalDeSolicitacoes(int arg)
+        public void ValidarTotalDeSolicitacoes(ref bool result, ref string conteudo, int arg)
         {
             bool _result = false;
             Thread.Sleep(2000);
@@ -91,11 +91,13 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             {
 
             }
-
-            return (_result, "Portal IES: " + valor + " | DB: " + dadosList[arg]);
+            result = _result;
+            conteudo = "Portal IES: " + valor + " | DB: " + dadosList[arg];
+            ;
+            //return (_result, "Portal IES: " + valor + " | DB: " + dadosList[arg]);
         }
 
-        public (bool, string) ValidarTotalDeSolicitacoesPendentesIes()
+        public void ValidarTotalDeSolicitacoesPendentesIes(ref bool result, ref string conteudo, int arg)
         {
             bool _result = false;
             Thread.Sleep(1000);
@@ -113,7 +115,10 @@ namespace Solicitacao_Portal_Estudante.tests.steps
 
             }
 
-            return (_result, "Portal IES: " + valor +  " | DB: " + DadosDB.Funil_PendenteAnaliseIes);
+            result = _result;
+            conteudo = "Portal IES: " + valor + " | DB: " + DadosDB.Funil_PendenteAnaliseIes;
+
+            //return new KeyValuePair<bool, string>(_result, "Portal IES: " + valor + " | DB: " + DadosDB.Funil_PendenteAnaliseIes);
         }
 
         public bool ValidarEtapasFiltro()
