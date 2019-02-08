@@ -91,7 +91,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
                     util.ScrollElementoPage(BtnBuscarCep);
                     Thread.Sleep(2000);
                     BtnBuscarCep.Click();
-                    Thread.Sleep(2000);
+                    Thread.Sleep(5000);
                     util.ScrollElementoPage(InputNumEnder);
                     InputNumEnder.Click();
                     Thread.Sleep(300);

@@ -68,17 +68,17 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         {
             bool _result = false;
 
-            Thread.Sleep(2000);
+            Thread.Sleep(4000);
             try
             {
                 if (InputCep.Displayed)
                 {
                     InputCep.Click();
-                    Thread.Sleep(300);
+                    Thread.Sleep(400);
                     InputCep.SendKeys(massa.cep);
-                    Thread.Sleep(300);
+                    Thread.Sleep(400);
                     BtnBuscarEnder.Click();
-                    Thread.Sleep(3000);
+                    Thread.Sleep(5000);
 
                     InputNumero.Click();
                     Thread.Sleep(300);

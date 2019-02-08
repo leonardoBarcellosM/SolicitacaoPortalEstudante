@@ -75,6 +75,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="features\01_Validar_Login_Sucesso1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>01_Validar_Login_Sucesso.feature</DependentUpon>
+    </Compile>
     <Compile Include="features\06_Fluxo_De_Solicitacao_Aprovacao_IES.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,8 +100,10 @@
     <Compile Include="tests\pages\EtapasMap.cs" />
     <Compile Include="tests\pages\IniciarFluxoComeceAgoraActions.cs" />
     <Compile Include="tests\pages\IniciarFluxoComeceAgoraMap.cs" />
+    <Compile Include="tests\pages\LoginActions.cs" />
     <Compile Include="tests\pages\LoginIesActions.cs" />
     <Compile Include="tests\pages\LoginIesMap.cs" />
+    <Compile Include="tests\pages\LoginMap.cs" />
     <Compile Include="tests\pages\PreencherDadosDoCursoActions.cs" />
     <Compile Include="tests\pages\PreencherDadosDoCursoMap.cs" />
     <Compile Include="tests\pages\PreencherDadosFiadorActions.cs" />
@@ -113,6 +120,7 @@
     <Compile Include="tests\steps\EtapasSteps.cs" />
     <Compile Include="tests\steps\IniciarFluxoComeceAgoraSteps.cs" />
     <Compile Include="tests\steps\LoginIesSteps.cs" />
+    <Compile Include="tests\steps\LoginSteps.cs" />
     <Compile Include="tests\steps\PreencherDadosDoCursoSteps.cs" />
     <Compile Include="tests\steps\PreencherDadosFiadorSteps.cs" />
     <Compile Include="tests\steps\ScopeFeatures.cs" />
@@ -126,6 +134,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="features\01_Validar_Login_Sucesso.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>01_Validar_Login_Sucesso1.feature.cs</LastGenOutput>
+    </None>
     <None Include="features\06_Fluxo_De_Solicitacao_Aprovacao_IES.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>06_Fluxo_De_Solicitacao_Aprovacao_IES.feature.cs</LastGenOutput>
