@@ -8,7 +8,7 @@ Then Validar Acesso ao portal
 
 @02_RealizarLogin
 Scenario: 02 Realizar Login Portal IES
-Given Informo o email "Cristiane@teste.org.br"
+Given Informo o email "angela@teste.org.br"
 When Informo a senha "welcome1"
 And Clico no botao Entrar
 Then Validar login Ies com sucesso

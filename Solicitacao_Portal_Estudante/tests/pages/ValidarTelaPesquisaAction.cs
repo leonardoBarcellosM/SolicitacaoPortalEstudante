@@ -168,8 +168,8 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             try
             {
 
-                if (NomeEstudante.Displayed && DtSolicitacao.Displayed
-                    && Curso.Displayed && Convenio.Displayed && Campus.Displayed
+                if (NomeEstudante.Displayed || DtSolicitacao.Displayed
+                    || Curso.Displayed || Convenio.Displayed || Campus.Displayed
                     || Etapa.Displayed || PercSolicitado.Displayed)
                 {
                     _result = true;

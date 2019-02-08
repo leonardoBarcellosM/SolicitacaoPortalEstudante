@@ -98,7 +98,7 @@ testRunner.Then("Validar Acesso ao portal", ((string)(null)), ((TechTalk.SpecFlo
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 11
-testRunner.Given("Informo o email \"Cristiane@teste.org.br\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("Informo o email \"angela@teste.org.br\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
 testRunner.When("Informo a senha \"welcome1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
