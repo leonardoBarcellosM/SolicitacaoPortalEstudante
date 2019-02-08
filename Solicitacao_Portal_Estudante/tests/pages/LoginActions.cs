@@ -153,5 +153,92 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             }
             return _result;
         }
-    }
+
+       
+            public bool PreencherUserPassword()
+            {
+                bool _result = false;
+                util.WaitForElementVisible(CampoUsername, 30);
+
+                try
+                {
+                    if (CampoUsername.Displayed)
+                    {
+                        CampoUsername.Clear();
+                        CampoUsername.SendKeys("demo");
+                        CampoPassword.Clear();
+                        CampoPassword.SendKeys("demo");
+
+                        _result = true;
+                    }
+                }
+                catch
+                {
+                }
+                return _result;
+            }
+
+            public bool ClicarSignIn()
+            {
+                bool _result = false;
+
+                try
+                {
+                    if (BtnSignIn.Displayed)
+                    {
+                        BtnSignIn.Click();
+
+                        _result = true;
+                    }
+                }
+                catch
+                {
+                }
+                return _result;
+            }
+
+            public bool ValidarLoginCamunda()
+            {
+                bool _result = false;
+                Thread.Sleep(2000);
+
+                IWebElement Validar = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[1]/nav/ul/li[2]/a"));
+
+                try
+                {
+                    if (Validar.Displayed)
+                    {
+                        _result = true;
+                    }
+                }
+                catch
+                {
+                }
+                return _result;
+            }
+
+            public bool ValidarAcessoIes()
+            {
+                bool _result = false;
+                try
+                {
+                    Thread.Sleep(10000);
+                    IWebElement formLogin = ClassDriver.GetInstance().Driver.FindElement(By.Id("formLogin"));
+                    util.WaitForElementVisible(formLogin, 15);
+                    if (formLogin.Displayed)
+                    {
+                        _result = true;
+                    }
+                    else
+                    {
+
+                    }
+                }
+                catch
+                {
+
+                }
+                return _result;
+            }
+        }
 }

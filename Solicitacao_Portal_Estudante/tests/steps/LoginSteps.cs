@@ -1,5 +1,7 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 namespace Solicitacao_Portal_Estudante.tests.steps
@@ -7,60 +9,73 @@ namespace Solicitacao_Portal_Estudante.tests.steps
     [Binding]
     public class LoginSteps
     {
-        private LoginActions pageAction = new LoginActions();
+        LoginActions pageAction = new LoginActions();
 
-        [Given(@"Clico no botao Entrar")]
-        public void GivenClicoNoBotaoEntrar()
+        LoginIesActions pageActionIes = new LoginIesActions();
+
+        [Given(@"Preencher username e password")]
+        public void GivenPreencherUsernameEPassword()
         {
-            bool result = pageAction.AcessarTelaLogin();
+            bool result = pageAction.PreencherUserPassword();
 
-                Assert.That(result, Is.True, "Erro ao acessar a tela de login!");
+                Assert.That(result, Is.True, "Erro ao preencher os dados!");
         }
 
-        [When(@"Preencho os campos nome e senha ""(.*)""")]
-        public void WhenPreenchoCampoESenha(string arg)
+        [When(@"Clico em sign in")]
+        public void WhenClicoEmSignIn()
         {
-            var items = arg.Split(',');
-            bool result = pageAction.PreencherCampos(items);
+            bool result = pageAction.ClicarSignIn();
 
-                Assert.That(result, Is.True, "Erro ao preencher usuário e senha!");
+                Assert.That(result, Is.True, "Erro ao clicar no botão SignIn!");
         }
 
-        [When(@"Clico em Entrar")]
-        public void WhenClicoEntrar()
+        [Then(@"Validar login com sucesso")]
+        public void ThenValidarLoginComSucesso()
         {
-            bool result = pageAction.Submit();
+            var result = pageAction.ValidarLoginCamunda();
+
+                Assert.That(result, Is.True, "Erro ao realizar login no camunda!");
+        }
+
+        [Given(@"Informo o email ""(.*)""")]
+        public void GivenInformoOEmail(string arg)
+        {
+            bool result = pageActionIes.InformarEmail(arg);
+
+                Assert.That(result, Is.True, "Erro ao preencher o campo e-mail!");
+        }
+
+        [When(@"Informo a senha ""(.*)""")]
+        public void WhenInformoASenha(string arg)
+        {
+            bool result = pageActionIes.InformarSenha(arg);
+
+                Assert.That(result, Is.True, "Erro ao preencher o campo senha!");
+        }
+
+        [When(@"Clico no botao Entrar")]
+        public void WhenClicoNoBotaoEntrar()
+        {
+            bool result = pageActionIes.ClicarEmEntrar();
 
                 Assert.That(result, Is.True, "Erro ao clicar em entrar!");
         }
 
 
-        [Then(@"Login deve ser ralizado com sucesso")]
-        public void ThenLoginRealizadoComSucesso()
+        [Then(@"Validar login Ies com sucesso")]
+        public void ThenValidarLoginIesComSucesso()
         {
-            var result = pageAction.ValidarLogin();
+            var result = pageActionIes.ValidarLogin();
 
                 Assert.That(result, Is.True, "Erro ao realizar login!");
         }
 
-        ///////////////////////
-        ///
-
-        [When(@"Preencho o campo usuario ""(.*)""")]
-        public void WhenPreenchoCampoUsuario(string arg)
+        [Then(@"Validar Acesso ao portal")]
+        public void ThenValidarAcessoAoPortalIes()
         {
-            bool result = pageAction.PreencherUsuario(arg);
+            var result = pageAction.ValidarAcessoIes();
 
-                Assert.That(result, Is.True, "Erro ao preencher usuário e senha!");
-        }
-
-
-        [Then(@"Validar mensagem de senha incorreta")]
-        public void ThenValidarSenhaIncorreta()
-        {
-            var result = pageAction.ValidarSenhaIncorreta();
-
-                Assert.That(result, Is.True, "Erro ao realizar login!");
+                Assert.That(result, Is.True, "Erro ao acessar o endereço solicitado!");
         }
 
     }

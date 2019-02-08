@@ -27,5 +27,17 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         [CacheLookup]
         public IWebElement BtnSubmit { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/div/form/input[1]")]
+        [CacheLookup]
+        public IWebElement CampoUsername { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/div/form/input[2]")]
+        [CacheLookup]
+        public IWebElement CampoPassword { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/div/form/button")]
+        [CacheLookup]
+        public IWebElement BtnSignIn { get; set; }
+
     }
 }

@@ -25,29 +25,6 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             
                 Assert.That(result, Is.True, "Erro ao acessar o endereço solicitado!");
         }
-
-        [Then(@"Validar Acesso ao portal")]
-        public void ThenValidarAcessoAoPortalIes()
-        {
-            var result = pageAction.ValidarAcessoIes();
-
-                Assert.That(result, Is.True, "Erro ao acessar o endereço solicitado!");
-        }
-
-        //[Then(@"Validar Acesso Fila De Trabalho")]
-        //public void ThenValidarAcessoFilaDeTrabalho()
-        //{
-        //    var result = Fila.ValidarAcessoFilaDeTrabalho();
-
-        //    Assert.That(result, Is.True, "Validar Acesso Fila De Trabalho!");
-        //}
-
-        //[When(@"Clico no botao Entrar da fila de trabalho")]
-        //public void WhenClicoNoBotaoEntrarDaFilaDeTrabalho()
-        //{
-        //    var result = Fila.Entrar();
-
-        //    Assert.That(result, Is.True, "Clico no botao Entrar da fila de trabalho!");
-        //}
+       
     }
 }

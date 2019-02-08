@@ -85,6 +85,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>06_Fluxo_De_Solicitacao_Aprovacao_IES.feature</DependentUpon>
     </Compile>
+    <Compile Include="features\07_IES_Validar_Direcionamentos_Funil1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>07_IES_Validar_Direcionamentos_Funil.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tests\pages\AccessElementsMap.cs" />
     <Compile Include="tests\pages\AccessPageActions.cs" />
@@ -104,6 +109,8 @@
     <Compile Include="tests\pages\LoginIesActions.cs" />
     <Compile Include="tests\pages\LoginIesMap.cs" />
     <Compile Include="tests\pages\LoginMap.cs" />
+    <Compile Include="tests\pages\NavegarPortalIesActions.cs" />
+    <Compile Include="tests\pages\NavegarPortalIesMap.cs" />
     <Compile Include="tests\pages\PreencherDadosDoCursoActions.cs" />
     <Compile Include="tests\pages\PreencherDadosDoCursoMap.cs" />
     <Compile Include="tests\pages\PreencherDadosFiadorActions.cs" />
@@ -112,6 +119,8 @@
     <Compile Include="tests\pages\SelecaoDeInstituicaoMap.cs" />
     <Compile Include="tests\pages\SelecionarDocumentosActions.cs" />
     <Compile Include="tests\pages\SelecionarDocumentosMap.cs" />
+    <Compile Include="tests\pages\ValidarTelaPesquisaAction.cs" />
+    <Compile Include="tests\pages\ValidarTelaPesquisaMap.cs" />
     <Compile Include="tests\steps\AccessSteps.cs" />
     <Compile Include="tests\steps\AprovacaoIesSteps.cs" />
     <Compile Include="tests\steps\DadosDoEstudanteSteps.cs" />
@@ -119,13 +128,14 @@
     <Compile Include="tests\steps\DadosPessoaisSteps.cs" />
     <Compile Include="tests\steps\EtapasSteps.cs" />
     <Compile Include="tests\steps\IniciarFluxoComeceAgoraSteps.cs" />
-    <Compile Include="tests\steps\LoginIesSteps.cs" />
     <Compile Include="tests\steps\LoginSteps.cs" />
+    <Compile Include="tests\steps\NavegarIesSteps.cs" />
     <Compile Include="tests\steps\PreencherDadosDoCursoSteps.cs" />
     <Compile Include="tests\steps\PreencherDadosFiadorSteps.cs" />
     <Compile Include="tests\steps\ScopeFeatures.cs" />
     <Compile Include="tests\steps\SelecionarDocumentosSteps.cs" />
     <Compile Include="tests\steps\SelecionarInstituicaoSteps.cs" />
+    <Compile Include="tests\steps\ValidarTelaPesquisaSteps.cs" />
     <Compile Include="tests\utils\ClassDriver.cs" />
     <Compile Include="tests\utils\ClassInfo.cs" />
     <Compile Include="tests\utils\ClassUtilities.cs" />
@@ -141,6 +151,10 @@
     <None Include="features\06_Fluxo_De_Solicitacao_Aprovacao_IES.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>06_Fluxo_De_Solicitacao_Aprovacao_IES.feature.cs</LastGenOutput>
+    </None>
+    <None Include="features\07_IES_Validar_Direcionamentos_Funil.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>07_IES_Validar_Direcionamentos_Funil1.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
