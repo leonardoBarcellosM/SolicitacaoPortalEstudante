@@ -14,7 +14,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
     {
 
         private ClassUtilities util = new ClassUtilities();
-        //private ConsultaDB db = new ConsultaDB();
+        private ConsultaDB db = new ConsultaDB();
 
         public SelecaoDeInstituicaoActions()
         {
@@ -185,29 +185,29 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             return _result;
         }
 
-        //public bool ValidarSolicitacaoNoDb()
-        //{
-        //    bool _result = false;
+        public bool ValidarSolicitacaoNoDb()
+        {
+            bool _result = false;
 
-        //    try
-        //    {
-        //        string[] list = db.ConsultaSolicitacao();
+            try
+            {
+                string[] list = db.ConsultaSolicitacao();
 
-        //        if (list[0] == "CI" && list[1] == "PDBE" && list[2] == "PDBE")
-        //        {
-        //            _result = true;
-        //        }
-        //        else
-        //        {
-        //        }
-        //    }
-        //    catch
-        //    {
-        //    }
+                if (list[0] == "CI" && list[1] == "PDBE" && list[2] == "PDBE")
+                {
+                    _result = true;
+                }
+                else
+                {
+                }
+            }
+            catch
+            {
+            }
 
-        //    return _result;
-        //}
-        
+            return _result;
+        }
+
 
     }
 }

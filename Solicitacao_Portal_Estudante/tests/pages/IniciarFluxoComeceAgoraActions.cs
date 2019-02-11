@@ -32,6 +32,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             try
             {
                 string cpf = util.GerarCpf();
+                ConsultaDB.Cpf(cpf);
                 //MassaDeDados.BKey = "SOLICITACAO " + cpf;
                // UpdateStatusDB.Cpf(cpf);
 

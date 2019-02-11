@@ -31,6 +31,10 @@ When Selecionar curso "ADMINISTRAÇÃO-NOTURNO-BRAGANÇA"
 And Clicar no botao aceito os termos
 Then Validar solicitacao enviada
 
+@02_1Etapa
+Scenario: 05 Validar DB
+Then Validar status de solicitacao no db "Solicitacao"
+
 #Dados editáveis
 @02_2Etapa
 Scenario: 06 Preencher Dados Do Estudante
