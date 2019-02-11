@@ -48,30 +48,30 @@ namespace Solicitacao_Portal_Estudante.tests.steps
                 case "Solicitacao":
                     result = InstituicaoActions.ValidarSolicitacaoNoDb();
                     break;
-                //case "Estudante":
-                //    result = EstudanteActions.ValidarEstudanteNoDb();
-                //    break;
-                //case "Fiador":
-                //    result = EstudanteActions.ValidarFiadorNoDb();
-                //    break;
-                //case "PosFiador":
-                //    result = FiadorActions.ValidarPosFiadorNoDb();
-                //    break;
-                //case "Solicitação concluída":
-                //    result = ConcluirSolicitacao.ValidarSolicConcluidaNoDb();
-                //    break;
-                //case "Solicitação aprovada":
-                //    result = ConcluirSolicitacao.ValidarSolicAprovadaNoDb();
-                //    break;
-                //case "Solicitação reprovada":
-                //    result = ConcluirSolicitacao.ValidarSolicReproNoDb();
-                //    break;
-                //case "PDC":
-                //    result = ConcluirSolicitacao.ValidarSolicitacao("PDC", "C", "PADC");
-                //    break;
-                //case "PAF":
-                //    result = ConcluirSolicitacao.ValidarSolicitacao("PAF", "C", "PAF");
-                //    break;
+                case "Estudante":
+                    result = EstudanteActions.ValidarEstudanteNoDb();
+                    break;
+                case "Fiador":
+                    result = EstudanteActions.ValidarFiadorNoDb();
+                    break;
+                    //case "PosFiador":
+                    //    result = FiadorActions.ValidarPosFiadorNoDb();
+                    //    break;
+                    //case "Solicitação concluída":
+                    //    result = ConcluirSolicitacao.ValidarSolicConcluidaNoDb();
+                    //    break;
+                    //case "Solicitação aprovada":
+                    //    result = ConcluirSolicitacao.ValidarSolicAprovadaNoDb();
+                    //    break;
+                    //case "Solicitação reprovada":
+                    //    result = ConcluirSolicitacao.ValidarSolicReproNoDb();
+                    //    break;
+                    //case "PDC":
+                    //    result = ConcluirSolicitacao.ValidarSolicitacao("PDC", "C", "PADC");
+                    //    break;
+                    //case "PAF":
+                    //    result = ConcluirSolicitacao.ValidarSolicitacao("PAF", "C", "PAF");
+                    //    break;
             }
 
             Assert.That(result, Is.True, "Divergência entre a etapa/ação e os status do banco!");

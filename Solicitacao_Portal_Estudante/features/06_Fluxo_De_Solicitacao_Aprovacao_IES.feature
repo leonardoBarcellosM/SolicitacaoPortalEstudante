@@ -41,6 +41,10 @@ Scenario: 06 Preencher Dados Do Estudante
 Given Clicar no botao enviar
 Then Validar direcionamento para etapa 3
 
+@02_1Etapa
+Scenario: 07 Validar DB
+Then Validar status de solicitacao no db "Estudante"
+
 #Dados editáveis
 @03_3Etapa
 Scenario: 08 Preencher Dados Do Fiador
@@ -48,6 +52,10 @@ Given Inserir nome e cpf " Leonardo Barcellos Teste "
 When Inserir data de nasc e renda "5.000,00-06/08/2000"
 And Clicar no botao enviar etapa 3
 Then Validar direcionamento para etapa 4
+
+@02_1Etapa
+Scenario: 09 Validar DB
+Then Validar status de solicitacao no db "Fiador"
 
 @04_4Etapa
 Scenario: 10 Preencher Dados Pessoais

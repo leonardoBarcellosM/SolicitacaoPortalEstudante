@@ -186,23 +186,55 @@ testRunner.Then("Validar direcionamento para etapa 3", ((string)(null)), ((TechT
         }
         
         [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("07 Validar DB")]
+        [NUnit.Framework.CategoryAttribute("02_1Etapa")]
+        public virtual void _07ValidarDB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07 Validar DB", null, new string[] {
+                        "02_1Etapa"});
+#line 45
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 46
+testRunner.Then("Validar status de solicitacao no db \"Estudante\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("08 Preencher Dados Do Fiador")]
         [NUnit.Framework.CategoryAttribute("03_3Etapa")]
         public virtual void _08PreencherDadosDoFiador()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08 Preencher Dados Do Fiador", null, new string[] {
                         "03_3Etapa"});
-#line 46
+#line 50
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 47
+#line 51
 testRunner.Given("Inserir nome e cpf \" Leonardo Barcellos Teste \"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 48
+#line 52
 testRunner.When("Inserir data de nasc e renda \"5.000,00-06/08/2000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 49
+#line 53
 testRunner.And("Clicar no botao enviar etapa 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 50
+#line 54
 testRunner.Then("Validar direcionamento para etapa 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("09 Validar DB")]
+        [NUnit.Framework.CategoryAttribute("02_1Etapa")]
+        public virtual void _09ValidarDB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09 Validar DB", null, new string[] {
+                        "02_1Etapa"});
+#line 57
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 58
+testRunner.Then("Validar status de solicitacao no db \"Fiador\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -214,16 +246,16 @@ testRunner.Then("Validar direcionamento para etapa 4", ((string)(null)), ((TechT
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10 Preencher Dados Pessoais", null, new string[] {
                         "04_4Etapa"});
-#line 53
+#line 61
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 54
+#line 62
 testRunner.Given("Inserir os dados pessoais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 55
+#line 63
 testRunner.When("Inserir endereco e contato", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 64
 testRunner.And("Clicar no botao proximo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 57
+#line 65
 testRunner.Then("Validar direcionamento dados fiador", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -236,16 +268,16 @@ testRunner.Then("Validar direcionamento dados fiador", ((string)(null)), ((TechT
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11 Preencher Dados Completos Do Fiador", null, new string[] {
                         "04_4Etapa"});
-#line 60
+#line 68
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 61
+#line 69
 testRunner.Given("Preencho os dados completos do fiador", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 62
+#line 70
 testRunner.When("Preencho contato e endereco", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 63
+#line 71
 testRunner.And("Clico em proximo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 64
+#line 72
 testRunner.Then("Validar direcionamento Dados Curso", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -258,16 +290,16 @@ testRunner.Then("Validar direcionamento Dados Curso", ((string)(null)), ((TechTa
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("13 Preencher Dados Do Curso", null, new string[] {
                         "04_4Etapa"});
-#line 67
+#line 75
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 68
+#line 76
 testRunner.Given("Preencho matricula e percentual", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 69
+#line 77
 testRunner.When("Preencho ano e semestre", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 70
+#line 78
 testRunner.And("Clico em documentos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 71
+#line 79
 testRunner.Then("Validar direcionamento documentos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

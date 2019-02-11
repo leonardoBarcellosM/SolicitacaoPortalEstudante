@@ -13,7 +13,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
     {
         private ClassUtilities util = new ClassUtilities();
         private MassaDeDados Massa = new MassaDeDados();
-        //private ConsultaDB db = new ConsultaDB();
+        private ConsultaDB db = new ConsultaDB();
 
         public DadosDoEstudanteActions()
         {
@@ -166,51 +166,51 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             return _result;
         }
 
-        //public bool ValidarEstudanteNoDb()
-        //{
-        //    bool _result = false;
+        public bool ValidarEstudanteNoDb()
+        {
+            bool _result = false;
 
-        //    try
-        //    {
-        //        string[] list = db.ConsultaSolicitacao();
+            try
+            {
+                string[] list = db.ConsultaSolicitacao();
 
-        //        if (list[0] == "PAF" && list[1] == "PDBF" && list[2] == "PDBF")
-        //        {
-        //            _result = true;
-        //        }
-        //        else
-        //        {
-        //        }
-        //    }
-        //    catch
-        //    {
-        //    }
+                if (list[0] == "PAF" && list[1] == "PDBF" && list[2] == "PDBF")
+                {
+                    _result = true;
+                }
+                else
+                {
+                }
+            }
+            catch
+            {
+            }
 
-        //    return _result;
-        //}
+            return _result;
+        }
 
-        //public bool ValidarFiadorNoDb()
-        //{
-        //    bool _result = false;
+        public bool ValidarFiadorNoDb()
+        {
+            bool _result = false;
 
-        //    try
-        //    {
-        //        string[] list = db.ConsultaSolicitacao();
+            try
+            {
+                string[] list = db.ConsultaSolicitacao();
 
-        //        if (list[0] == "PAF" && list[1] == "PDC" && list[2] == "PDC")
-        //        {
-        //            _result = true;
-        //        }
-        //        else
-        //        {
-        //        }
-        //    }
-        //    catch
-        //    {
-        //    }
+                if (list[0] == "PAF" && list[1] == "PDC" && list[2] == "PDC")
+                {
+                    _result = true;
+                }
+                else
+                {
+                }
+            }
+            catch
+            {
+            }
 
-        //    return _result;
-        //}
+            return _result;
+        }
 
     }
 }
