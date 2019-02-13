@@ -61,7 +61,6 @@ namespace Solicitacao_Portal_Estudante.tests.steps
                 Assert.That(result, Is.True, "Erro ao clicar em entrar!");
         }
 
-
         [Then(@"Validar login Ies com sucesso")]
         public void ThenValidarLoginIesComSucesso()
         {

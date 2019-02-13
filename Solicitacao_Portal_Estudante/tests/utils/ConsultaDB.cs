@@ -25,111 +25,110 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             return ocsb.ConnectionString;
         }
 
-        //public bool Consulta(string bol_id)
-        //{
-        //    //1539, 1541
-        //    //select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8
-        //    bool result = false;
-        //    string total = "";
+        public bool Consulta(string bol_id)
+        {
+            //1539, 1541
+            //select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8
+            bool result = false;
+            string total = "";
 
-        //    string dia = DateTime.Now.Day.ToString();
-        //    string mes = DateTime.Now.Month.ToString();
-        //    string ano = DateTime.Now.Year.ToString();
-        //    int year = int.Parse(ano) - 7;
-        //    ano = year.ToString();
-        //    string data =  dia + "-" + mes + "-" + ano;
+            string dia = DateTime.Now.Day.ToString();
+            string mes = DateTime.Now.Month.ToString();
+            string ano = DateTime.Now.Year.ToString();
+            int year = int.Parse(ano) - 7;
+            ano = year.ToString();
+            string data = dia + "-" + mes + "-" + ano;
 
-        //    OracleConnection con = new OracleConnection();
+            OracleConnection con = new OracleConnection();
 
-        //    con.ConnectionString = ConectarDB();
+            con.ConnectionString = ConectarDB();
 
-        //    //string queryString0 =
-        //    //    "select count(1) from SOLICITACOES_WEB where STATUS not in ('C', 'RIES') and STATUS_CADASTRO not in ('C') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
-        //    //string queryString1 =
-        //    //    "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO in ('C') and STATUS  in ('PAF', 'PDC') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
-        //    //string queryString2 =
-        //    //    "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO = 'C' and STATUS in ('PIES') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
-        //    //string queryString3 =
-        //    //    "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO = 'C' and STATUS in ('A') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
-        //    //string queryString4 =
-        //    //    "select count(1) from SOLICITACOES_WEB where STATUS in ('RAF', 'RDC') and STATUS_CADASTRO not in ('C') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
-        //    //string queryString5 =
-        //    //    "select count(1) from SOLICITACOES_WEB where STATUS in ('RIES') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
+            //string queryString0 =
+            //    "select count(1) from SOLICITACOES_WEB where STATUS not in ('C', 'RIES') and STATUS_CADASTRO not in ('C') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
+            //string queryString1 =
+            //    "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO in ('C') and STATUS  in ('PAF', 'PDC') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
+            //string queryString2 =
+            //    "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO = 'C' and STATUS in ('PIES') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
+            //string queryString3 =
+            //    "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO = 'C' and STATUS in ('A') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
+            //string queryString4 =
+            //    "select count(1) from SOLICITACOES_WEB where STATUS in ('RAF', 'RDC') and STATUS_CADASTRO not in ('C') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
+            //string queryString5 =
+            //    "select count(1) from SOLICITACOES_WEB where STATUS in ('RIES') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
 
 
-        //    string queryString0 =
-        //        "select count(1) from SOLICITACOES_WEB where STATUS not in ('C', 'RIES') and STATUS_CADASTRO not in ('C') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
-        //    string queryString1 =
-        //        "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO in ('C') and STATUS  in ('PAF', 'PDC') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
-        //    string queryString2 =
-        //        "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO = 'C' and STATUS in ('PIES') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
-        //    string queryString3 =
-        //        "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO = 'C' and STATUS in ('A') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
-        //    string queryString4 =
-        //        "select count(1) from SOLICITACOES_WEB where STATUS in ('RAF', 'RDC') and STATUS_CADASTRO not in ('C') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
-        //    string queryString5 =
-        //        "select count(1) from SOLICITACOES_WEB where STATUS in ('RIES') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
+            string queryString0 =
+                "select count(1) from SOLICITACOES_WEB where STATUS not in ('C', 'RIES') and STATUS_CADASTRO not in ('C') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S'";
+            string queryString1 =
+                "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO in ('C') and STATUS  in ('PAF', 'PDC') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S'";
+            string queryString2 =
+                "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO = 'C' and STATUS in ('PIES') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S'";
+            string queryString3 =
+                "select count(1) from SOLICITACOES_WEB where STATUS_CADASTRO = 'C' and STATUS in ('A') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S'";
+            string queryString4 =
+                "select count(1) from SOLICITACOES_WEB where STATUS in ('RAF', 'RDC') and STATUS_CADASTRO not in ('C') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S'";
+            string queryString5 =
+                "select count(1) from SOLICITACOES_WEB where STATUS in ('RIES') and BOLSA_ID in (1539, 1541) and nvl(OCULTAR_IES, 'N') <> 'S'";
 
-        //    string[] queryList = 
-        //        {
-        //        queryString0,
-        //        queryString1,
-        //        queryString2,
-        //        queryString3,
-        //        queryString4,
-        //        queryString5
-        //        };
+            string[] queryList =
+                {
+                queryString0,
+                queryString1,
+                queryString2,
+                queryString3,
+                queryString4,
+                queryString5
+                };
 
-        //    string[] dadosList = 
-        //        {
-        //        DadosDB.SolicitacoesIniciadas,
-        //        DadosDB.PendenteAnaliseFundacred,
-        //        DadosDB.PendenteAnaliseIes,
-        //        DadosDB.Aprovados,
-        //        DadosDB.ReprovadosFundacred,
-        //        DadosDB.ReprovadosIes
-        //        };
+            string[] dadosList =
+                {
+                DadosDB.SolicitacoesIniciadas,
+                DadosDB.PendenteAnaliseFundacred,
+                DadosDB.PendenteAnaliseIes,
+                DadosDB.Aprovados,
+                DadosDB.ReprovadosFundacred,
+                DadosDB.ReprovadosIes
+                };
 
-        //    con.Open();
+            con.Open();
 
-        //    for (int cont = 0; cont < 6; cont++)
-        //    {
-                
-        //        try
-        //        {
-        //            OracleCommand command = con.CreateCommand();
-        //            command.CommandText = queryList[cont];
-        //            command.Parameters.Add(new OracleParameter("dt", data));
-        //            Console.WriteLine("Connection established (" + con.ServerVersion + ")");
-        //            OracleDataReader reader = command.ExecuteReader();
+            for (int cont = 0; cont < 6; cont++)
+            {
 
-        //            if (reader.Read())
-        //            {
-        //                total = reader[0].ToString();
-        //                dadosList[cont] = total;
-        //            }
-        //            reader.Close();
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            Console.WriteLine(ex.Message);
-        //        }
-        //        if (cont == 5)
-        //        {
-        //            result = true;
-        //        }
-        //    }
+                try
+                {
+                    OracleCommand command = con.CreateCommand();
+                    command.CommandText = queryList[cont];
+                    command.Parameters.Add(new OracleParameter("dt", data));
+                    OracleDataReader reader = command.ExecuteReader();
 
-        //    DadosDB.SolicitacoesIniciadas = dadosList[0];
-        //    DadosDB.PendenteAnaliseFundacred = dadosList[1];
-        //    DadosDB.PendenteAnaliseIes = dadosList[2];
-        //    DadosDB.Aprovados = dadosList[3];
-        //    DadosDB.ReprovadosFundacred = dadosList[4];
-        //    DadosDB.ReprovadosIes = dadosList[5];
+                    if (reader.Read())
+                    {
+                        total = reader[0].ToString();
+                        dadosList[cont] = total;
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                if (cont == 5)
+                {
+                    result = true;
+                }
+            }
 
-        //    con.Dispose();
-        //    return result;
-        //}
+            DadosDB.SolicitacoesIniciadas = dadosList[0];
+            DadosDB.PendenteAnaliseFundacred = dadosList[1];
+            DadosDB.PendenteAnaliseIes = dadosList[2];
+            DadosDB.Aprovados = dadosList[3];
+            DadosDB.ReprovadosFundacred = dadosList[4];
+            DadosDB.ReprovadosIes = dadosList[5];
+
+            con.Dispose();
+            return result;
+        }
 
         //public string NovoCadastro()
         //{
@@ -140,7 +139,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
 
         //    string queryString0 =
         //        "select status from usuarios_web where cpf = :cpf";
-            
+
         //    con.Open();
 
         //        try
