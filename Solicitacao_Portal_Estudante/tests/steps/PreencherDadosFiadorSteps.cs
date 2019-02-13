@@ -14,7 +14,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         {
             bool result = pageAction.PreencherDadosFiador();
 
-                Assert.That(result, Is.True, "Erro ao preencher os dados!");
+                Assert.That(result, Is.True, "Erro ao preencher os dados pessoais do fiador!");
         }
 
         [When(@"Preencho contato e endereco")]
@@ -22,7 +22,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         {
             bool result = pageAction.PreencherContatoEndereco();
 
-                Assert.That(result, Is.True, "Erro ao preencher os dados!");
+                Assert.That(result, Is.True, "Erro ao preencher os dados de endereço do fiador!");
         }
 
         [When(@"Clico em proximo")]

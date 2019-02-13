@@ -14,7 +14,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         {
             bool result = pageAction.PreencherDadosPessoais();
 
-                Assert.That(result, Is.True, "Erro ao inserir os dados!");
+                Assert.That(result, Is.True, "Erro ao inserir os dados pessoais!");
         }
 
         [When(@"Inserir endereco e contato")]
@@ -22,7 +22,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         {
             bool result = pageAction.PreencherEndereco();
 
-                Assert.That(result, Is.True, "Erro ao inserir os dados!");
+                Assert.That(result, Is.True, "Erro ao inserir os dados de endereço!");
         }
 
         [When(@"Clicar no botao proximo")]
