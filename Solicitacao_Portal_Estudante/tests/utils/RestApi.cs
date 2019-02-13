@@ -10,7 +10,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
 {
     class RestApi
     {
-        static HttpClientHandler Client = new HttpClientHandler();
+        //static HttpClient Client = new HttpClient();
 
         //public bool ConsultarToken()
         //{
