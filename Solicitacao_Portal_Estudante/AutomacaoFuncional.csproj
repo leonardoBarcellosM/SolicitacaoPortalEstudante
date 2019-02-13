@@ -180,7 +180,6 @@
     <Compile Include="tests\utils\ConsultaDB.cs" />
     <Compile Include="tests\utils\DadosDB.cs" />
     <Compile Include="tests\utils\MassaDeDados.cs" />
-    <Compile Include="tests\utils\RestApi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
