@@ -77,8 +77,8 @@ namespace Solicitacao_Portal_Estudante.tests.steps
                     Thread.Sleep(400);
                     InputCep.SendKeys(massa.cep);
                     Thread.Sleep(400);
-                    BtnBuscarEnder.Click();
-                    Thread.Sleep(5000);
+                    //BtnBuscarEnder.Click();
+                    Thread.Sleep(500);
 
                     InputNumero.Click();
                     Thread.Sleep(300);
