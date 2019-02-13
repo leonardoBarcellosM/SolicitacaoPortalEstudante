@@ -168,7 +168,6 @@
     <Compile Include="tests\steps\NavegarIesSteps.cs" />
     <Compile Include="tests\steps\PreencherDadosDoCursoSteps.cs" />
     <Compile Include="tests\steps\PreencherDadosFiadorSteps.cs" />
-    <Compile Include="tests\steps\RestApiSteps.cs" />
     <Compile Include="tests\steps\ScopeFeatures.cs" />
     <Compile Include="tests\steps\SelecionarDocumentosSteps.cs" />
     <Compile Include="tests\steps\SelecionarInstituicaoSteps.cs" />
