@@ -90,6 +90,24 @@ namespace Solicitacao_Portal_Estudante.tests.steps
                     InputComplemento.SendKeys(massa.complemento);
                     Thread.Sleep(300);
 
+                    Campoendereco.Clear();
+                    Campoendereco.Click();
+                    Campoendereco.SendKeys("Av Júlio De Castilhos");
+                    Thread.Sleep(300);
+
+                    CampoBairro.Clear();
+                    CampoBairro.Click();
+                    CampoBairro.SendKeys("Centro Histórico");
+                    Thread.Sleep(300);
+
+                    CampoCidade.Clear();
+                    CampoCidade.Click();
+                    CampoCidade.SendKeys("Porto Alegre");
+                    Thread.Sleep(300);
+
+                    var selectElement = new SelectElement(SelectUf);
+                    selectElement.SelectByIndex(21);
+
                     InputNomePai.Click();
                     Thread.Sleep(300);
                     InputNomePai.SendKeys(massa.nomePai);

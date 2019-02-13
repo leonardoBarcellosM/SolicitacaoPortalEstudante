@@ -1,6 +1,7 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Globalization;
+using System.Net.Http;
 
 namespace Solicitacao_Portal_Estudante.tests.steps
 {

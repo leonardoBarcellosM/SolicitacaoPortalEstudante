@@ -101,6 +101,24 @@ namespace Solicitacao_Portal_Estudante.tests.steps
                     Thread.Sleep(300);
                     InputComplemento.SendKeys(massa.complemento);
 
+                    Campoendereco.Clear();
+                    Campoendereco.Click();
+                    Campoendereco.SendKeys("Av Júlio De Castilhos");
+                    Thread.Sleep(300);
+
+                    CampoBairro.Clear();
+                    CampoBairro.Click();
+                    CampoBairro.SendKeys("Centro Histórico");
+                    Thread.Sleep(300);
+
+                    CampoCidade.Clear();
+                    CampoCidade.Click();
+                    CampoCidade.SendKeys("Porto Alegre");
+                    Thread.Sleep(300);
+
+                    var selectElement = new SelectElement(SelectUf);
+                    selectElement.SelectByIndex(21);
+
                     _result = true;
                 }
             }

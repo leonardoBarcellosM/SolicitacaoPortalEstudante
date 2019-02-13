@@ -87,5 +87,20 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         [CacheLookup]
         public IWebElement BtnProximo { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[2]/div/div/ng-view/section/form/div/div/div/div[1]/div/div/ng-form/div[5]/div[1]/div/input")]
+        [CacheLookup]
+        public IWebElement Campoendereco { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[2]/div/div/ng-view/section/form/div/div/div/div[1]/div/div/ng-form/div[6]/div[2]/div/input")]
+        [CacheLookup]
+        public IWebElement CampoCidade { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[2]/div/div/ng-view/section/form/div/div/div/div[1]/div/div/ng-form/div[6]/div[1]/div/input")]
+        [CacheLookup]
+        public IWebElement CampoBairro { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[2]/div/div/ng-view/section/form/div/div/div/div[1]/div/div/ng-form/div[6]/div[3]/div/div/select")]
+        [CacheLookup]
+        public IWebElement SelectUf { get; set; }
     }
 }
