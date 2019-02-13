@@ -1,4 +1,4 @@
-﻿Feature: 07_IES_Validar_Direcionamentos_Funil
+﻿Feature: 07_Portal_IES_Validar_Direcionamentos_Funil
 
 @01_AcessarPagina
 Scenario: 01 Acessar o endereco

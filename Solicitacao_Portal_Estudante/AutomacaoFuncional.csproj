@@ -103,25 +103,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="features\01_Validar_Login_Sucesso1.feature.cs">
+    <Compile Include="features\01_Portal_Estudante_Validar_Login_Sucesso.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>01_Validar_Login_Sucesso.feature</DependentUpon>
+      <DependentUpon>01_Portal_Estudante_Validar_Login_Sucesso.feature</DependentUpon>
     </Compile>
-    <Compile Include="features\06_Fluxo_De_Solicitacao_Aprovacao_IES.feature.cs">
+    <Compile Include="features\06_Portal_Estudante_Fluxo_De_Solicitacao.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>06_Fluxo_De_Solicitacao_Aprovacao_IES.feature</DependentUpon>
+      <DependentUpon>06_Portal_Estudante_Fluxo_De_Solicitacao.feature</DependentUpon>
     </Compile>
-    <Compile Include="features\07_IES_Validar_Direcionamentos_Funil1.feature.cs">
+    <Compile Include="features\07_Portal_IES_Validar_Direcionamentos_Funil.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>07_IES_Validar_Direcionamentos_Funil.feature</DependentUpon>
+      <DependentUpon>07_Portal_IES_Validar_Direcionamentos_Funil.feature</DependentUpon>
     </Compile>
-    <Compile Include="features\10_Validar_Funil_IES1.feature.cs">
+    <Compile Include="features\10_Portal_IES_Validar_Funil.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>10_Validar_Funil_IES.feature</DependentUpon>
+      <DependentUpon>10_Portal_IES_Validar_Funil.feature</DependentUpon>
+    </Compile>
+    <Compile Include="features\11_Portal_IES_Validar_Aprovar_Solicitacao - Cópia .feature.cs">
+      <DependentUpon>11_Portal_IES_Validar_Aprovar_Solicitacao - Cópia .feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="features\11_Portal_IES_Validar_Reprovar_Solicitacao.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>11_Portal_IES_Validar_Reprovar_Solicitacao.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tests\pages\AccessElementsMap.cs" />
@@ -182,21 +192,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="features\01_Validar_Login_Sucesso.feature">
+    <None Include="features\01_Portal_Estudante_Validar_Login_Sucesso.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>01_Validar_Login_Sucesso1.feature.cs</LastGenOutput>
+      <LastGenOutput>01_Portal_Estudante_Validar_Login_Sucesso.feature.cs</LastGenOutput>
     </None>
-    <None Include="features\06_Fluxo_De_Solicitacao_Aprovacao_IES.feature">
+    <None Include="features\06_Portal_Estudante_Fluxo_De_Solicitacao.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>06_Fluxo_De_Solicitacao_Aprovacao_IES.feature.cs</LastGenOutput>
+      <LastGenOutput>06_Portal_Estudante_Fluxo_De_Solicitacao.feature.cs</LastGenOutput>
     </None>
-    <None Include="features\07_IES_Validar_Direcionamentos_Funil.feature">
+    <None Include="features\07_Portal_IES_Validar_Direcionamentos_Funil.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>07_IES_Validar_Direcionamentos_Funil1.feature.cs</LastGenOutput>
+      <LastGenOutput>07_Portal_IES_Validar_Direcionamentos_Funil.feature.cs</LastGenOutput>
     </None>
-    <None Include="features\10_Validar_Funil_IES.feature">
+    <None Include="features\10_Portal_IES_Validar_Funil.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>10_Validar_Funil_IES1.feature.cs</LastGenOutput>
+      <LastGenOutput>10_Portal_IES_Validar_Funil.feature.cs</LastGenOutput>
+    </None>
+    <None Include="features\11_Portal_IES_Validar_Aprovar_Solicitacao - Cópia .feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>11_Portal_IES_Validar_Aprovar_Solicitacao - Cópia .feature.cs</LastGenOutput>
+    </None>
+    <None Include="features\11_Portal_IES_Validar_Reprovar_Solicitacao.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>11_Portal_IES_Validar_Reprovar_Solicitacao.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

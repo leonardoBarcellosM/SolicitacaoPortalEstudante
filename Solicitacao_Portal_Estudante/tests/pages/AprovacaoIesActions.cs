@@ -11,6 +11,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
     {
         
         private ClassUtilities util = new ClassUtilities();
+        private ConsultaDB db = new ConsultaDB();
 
         public AprovacaoIesActions()
         {
@@ -38,33 +39,31 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             return _result;
         }
 
-        //public bool PesquisarSolicitacao()
-        //{
+        public bool PesquisarSolicitacao(string cpf)
+        {
 
-        //    bool _result = false;
-        //    string Cpf = UpdateStatusDB.PegarCpf();
-        //    //Cpf = "755.828.204-77";
+            bool _result = false;
+            ConsultaDB.Cpf(cpf);
+            try
+            {
+                ExpectedConditions.ElementToBeClickable(InputCpf);
+                Thread.Sleep(4000);
+                if (InputCpf.Displayed)
+                {
+                    InputCpf.Click();
+                    Thread.Sleep(300);
+                    InputCpf.SendKeys(cpf);
+                    Thread.Sleep(3000);
+                    _result = true;
+                }
+            }
+            catch
+            {
 
-        //    try
-        //    {
-        //        ExpectedConditions.ElementToBeClickable(InputCpf);
-        //        Thread.Sleep(4000);
-        //        if (InputCpf.Displayed)
-        //        {
-        //            InputCpf.Click();
-        //            Thread.Sleep(300);
-        //            InputCpf.SendKeys(Cpf);
-        //            Thread.Sleep(3000);
-        //            _result = true;
-        //        }
-        //    }
-        //    catch
-        //    {
+            }
 
-        //    }
-
-        //    return _result;
-        //}
+            return _result;
+        }
 
         public bool ClicarEmProsseguir()
         {
@@ -367,6 +366,29 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             catch
             {
 
+            }
+            return _result;
+        }
+
+        public bool ValidarSolicReproNoDb()
+        {
+            bool _result = false;
+
+            try
+            {
+                string[] list = db.ConsultaSolicitacao();
+
+                if (list[0] == "RIES" && list[1] == "C" && list[2] == "R")
+                {
+                    _result = true;
+                    db.AlterarStatus();
+                }
+                else
+                {
+                }
+            }
+            catch
+            {
             }
             return _result;
         }

@@ -1,4 +1,4 @@
-﻿Feature: 06_Fluxo_De_Solicitacao_Aprovacao_IES
+﻿Feature: 06_Portal_Estudante_Fluxo_De_Solicitacao
 	Use before title fiture separed with "-":
 	 'C' for Chrome;
 	 'I' for Internet Explorer;

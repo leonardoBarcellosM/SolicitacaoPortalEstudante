@@ -12,6 +12,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         private DadosDoEstudanteActions EstudanteActions = new DadosDoEstudanteActions();
         private DadosDoFiadorActions FiadorActions = new DadosDoFiadorActions();
         private SelecionarDocumentosActions ConcluirSolicitacao = new SelecionarDocumentosActions();
+        private AprovacaoIesActions Reprovar = new AprovacaoIesActions();
         //private ValidarRendaMinimaActions RendaMinima = new ValidarRendaMinimaActions();
 
         [Given(@"Acessar a opcao solicitacao")]
@@ -54,18 +55,18 @@ namespace Solicitacao_Portal_Estudante.tests.steps
                 case "Fiador":
                     result = EstudanteActions.ValidarFiadorNoDb();
                     break;
-                    //case "PosFiador":
-                    //    result = FiadorActions.ValidarPosFiadorNoDb();
-                    //    break;
-                    //case "Solicitação concluída":
-                    //    result = ConcluirSolicitacao.ValidarSolicConcluidaNoDb();
-                    //    break;
-                    //case "Solicitação aprovada":
-                    //    result = ConcluirSolicitacao.ValidarSolicAprovadaNoDb();
-                    //    break;
-                    //case "Solicitação reprovada":
-                    //    result = ConcluirSolicitacao.ValidarSolicReproNoDb();
-                    //    break;
+                //case "PosFiador":
+                //    result = FiadorActions.ValidarPosFiadorNoDb();
+                //    break;
+                //case "Solicitação concluída":
+                //    result = ConcluirSolicitacao.ValidarSolicConcluidaNoDb();
+                //    break;
+                //case "Solicitação aprovada":
+                //    result = ConcluirSolicitacao.ValidarSolicAprovadaNoDb();
+                //    break;
+                case "Solicitação reprovada":
+                    result = Reprovar.ValidarSolicReproNoDb();
+                    break;
                     //case "PDC":
                     //    result = ConcluirSolicitacao.ValidarSolicitacao("PDC", "C", "PADC");
                     //    break;

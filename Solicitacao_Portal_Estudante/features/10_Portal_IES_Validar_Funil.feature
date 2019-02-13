@@ -1,4 +1,4 @@
-﻿Feature: 10_Validar_Funil_IES
+﻿Feature: 10_Portal_IES_Validar_Funil
 
 
 @01_AcessarPagina

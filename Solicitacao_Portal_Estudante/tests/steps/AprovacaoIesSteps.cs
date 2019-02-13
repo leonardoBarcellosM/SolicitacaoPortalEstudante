@@ -17,13 +17,13 @@ namespace Solicitacao_Portal_Estudante.tests.steps
                 Assert.That(result, Is.True, "Erro ao acessar a opção aprovação!");
         }
 
-        //[When(@"Pesquiso a solicitacao desejada")]
-        //public void WhenPesquisoASolicitacaoDesejada()
-        //{
-        //    var result = pageAction.PesquisarSolicitacao();
+        [When(@"Pesquiso a solicitacao ""(.*)""")]
+        public void WhenPesquisoASolicitacaoDesejada(string cpf)
+        {
+            var result = pageAction.PesquisarSolicitacao(cpf);
 
-        //        Assert.That(result, Is.True, "Erro ao pesquisar solicitação!");
-        //}
+            Assert.That(result, Is.True, "Erro ao pesquisar solicitação!");
+        }
 
         [When(@"Clico em prosseguir confirmacao")]
         public void WhenClicoEmProsseguir()

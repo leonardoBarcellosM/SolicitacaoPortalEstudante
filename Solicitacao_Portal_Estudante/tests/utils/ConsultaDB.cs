@@ -274,7 +274,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         //    string minimo = null;
         //    float total_minimo;
         //    float fiador_minimo;
-            
+
 
         //    string[] status = ConsultaBolsaCurso();
 
@@ -340,6 +340,32 @@ namespace Solicitacao_Portal_Estudante.tests.steps
 
         //    return minimo;
         //}
-       
+
+        public void AlterarStatus()
+        {
+            OracleConnection con = new OracleConnection();
+            con.ConnectionString = ConectarDB();
+            con.Open();
+
+            string queryString =
+                "update SOLICITACOES_WEB set STATUS = 'PIES' where id = '99329'";
+
+
+            OracleCommand command = con.CreateCommand();
+            command.CommandText = queryString;
+            
+            try
+            {
+                Console.WriteLine("Connection established (" + con.ServerVersion + ")");
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            con.Dispose();
+        }
+        
     }
 }

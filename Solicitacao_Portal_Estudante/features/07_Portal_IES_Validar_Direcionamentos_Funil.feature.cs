@@ -18,20 +18,20 @@ namespace Solicitacao_Portal_Estudante.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("07_IES_Validar_Direcionamentos_Funil")]
-    public partial class _07_IES_Validar_Direcionamentos_FunilFeature
+    [NUnit.Framework.DescriptionAttribute("07_Portal_IES_Validar_Direcionamentos_Funil")]
+    public partial class _07_Portal_IES_Validar_Direcionamentos_FunilFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "07_IES_Validar_Direcionamentos_Funil.feature"
+#line 1 "07_Portal_IES_Validar_Direcionamentos_Funil.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "07_IES_Validar_Direcionamentos_Funil", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "07_Portal_IES_Validar_Direcionamentos_Funil", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
