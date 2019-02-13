@@ -110,22 +110,6 @@ testRunner.Then("Login deve ser ralizado com sucesso", ((string)(null)), ((TechT
 #line hidden
             this.ScenarioCleanup();
         }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("03 ConsultarAPI")]
-        [NUnit.Framework.CategoryAttribute("02_ValidarServicoCarregarSolicitacao")]
-        public virtual void _03ConsultarAPI()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 ConsultarAPI", null, new string[] {
-                        "02_ValidarServicoCarregarSolicitacao"});
-#line 24
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 25
-testRunner.Given("Consultar retorno do servico de carregar solicitação", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-            this.ScenarioCleanup();
-        }
     }
 }
 #pragma warning restore

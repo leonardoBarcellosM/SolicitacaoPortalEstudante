@@ -20,6 +20,6 @@ When Preencho os campos nome e senha "802.204.500-48,teste123"
 And Clico em Entrar
 Then Login deve ser ralizado com sucesso
 
-@02_ValidarServicoCarregarSolicitacao
-Scenario: 03 ConsultarAPI
-Given Consultar retorno do servico de carregar solicitação 
+#@02_ValidarServicoCarregarSolicitacao
+#Scenario: 03 ConsultarAPI
+#Given Consultar retorno do servico de carregar solicitação 
