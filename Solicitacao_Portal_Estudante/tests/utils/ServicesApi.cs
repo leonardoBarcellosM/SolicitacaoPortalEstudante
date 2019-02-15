@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +10,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
     class ServicesApi
     {
         static string Result = null;
-        static System.Net.Http.HttpClient Client = new System.Net.Http.HttpClient();
+        HttpClient Client = new HttpClient();
 
         public bool Testar()
         {
