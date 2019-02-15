@@ -42,3 +42,4 @@ C:\Users\leonardo.barcellos\source\repos\Solicitacao_Portal_Estudante\Solicitaca
 C:\Users\leonardo.barcellos\source\repos\Solicitacao_Portal_Estudante\Solicitacao_Portal_Estudante\bin\Debug\System.Net.Http.Extensions.dll
 C:\Users\leonardo.barcellos\source\repos\Solicitacao_Portal_Estudante\Solicitacao_Portal_Estudante\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\leonardo.barcellos\source\repos\Solicitacao_Portal_Estudante\Solicitacao_Portal_Estudante\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\leonardo.barcellos\source\repos\Solicitacao_Portal_Estudante\Solicitacao_Portal_Estudante\bin\Debug\Newtonsoft.Json.pdb

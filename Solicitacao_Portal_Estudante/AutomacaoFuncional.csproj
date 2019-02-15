@@ -47,8 +47,8 @@
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
@@ -123,15 +123,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>10_Portal_IES_Validar_Funil.feature</DependentUpon>
     </Compile>
-    <Compile Include="features\11_Portal_IES_Validar_Aprovar_Solicitacao - Cópia .feature.cs">
-      <DependentUpon>11_Portal_IES_Validar_Aprovar_Solicitacao - Cópia .feature</DependentUpon>
+    <Compile Include="features\11_Portal_IES_Validar_Aprovar_Solicitacao.feature.cs">
+      <DependentUpon>11_Portal_IES_Validar_Aprovar_Solicitacao.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="features\11_Portal_IES_Validar_Reprovar_Solicitacao.feature.cs">
+    <Compile Include="features\12_Portal_IES_Validar_Reprovar_Solicitacao.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>11_Portal_IES_Validar_Reprovar_Solicitacao.feature</DependentUpon>
+      <DependentUpon>12_Portal_IES_Validar_Reprovar_Solicitacao.feature</DependentUpon>
+    </Compile>
+    <Compile Include="features\FeatureDeTeste.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeatureDeTeste.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tests\pages\AccessElementsMap.cs" />
@@ -181,6 +186,7 @@
     <Compile Include="tests\steps\ScopeFeatures.cs" />
     <Compile Include="tests\steps\SelecionarDocumentosSteps.cs" />
     <Compile Include="tests\steps\SelecionarInstituicaoSteps.cs" />
+    <Compile Include="tests\steps\ServicesApiSteps.cs" />
     <Compile Include="tests\steps\ValidarFunilIesSteps.cs" />
     <Compile Include="tests\steps\ValidarTelaPesquisaSteps.cs" />
     <Compile Include="tests\utils\ClassDriver.cs" />
@@ -189,6 +195,7 @@
     <Compile Include="tests\utils\ConsultaDB.cs" />
     <Compile Include="tests\utils\DadosDB.cs" />
     <Compile Include="tests\utils\MassaDeDados.cs" />
+    <Compile Include="tests\utils\ServicesApi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -208,13 +215,17 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>10_Portal_IES_Validar_Funil.feature.cs</LastGenOutput>
     </None>
-    <None Include="features\11_Portal_IES_Validar_Aprovar_Solicitacao - Cópia .feature">
+    <None Include="features\11_Portal_IES_Validar_Aprovar_Solicitacao.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>11_Portal_IES_Validar_Aprovar_Solicitacao - Cópia .feature.cs</LastGenOutput>
+      <LastGenOutput>11_Portal_IES_Validar_Aprovar_Solicitacao.feature.cs</LastGenOutput>
     </None>
-    <None Include="features\11_Portal_IES_Validar_Reprovar_Solicitacao.feature">
+    <None Include="features\12_Portal_IES_Validar_Reprovar_Solicitacao.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>11_Portal_IES_Validar_Reprovar_Solicitacao.feature.cs</LastGenOutput>
+      <LastGenOutput>12_Portal_IES_Validar_Reprovar_Solicitacao.feature.cs</LastGenOutput>
+    </None>
+    <None Include="features\FeatureDeTeste.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FeatureDeTeste.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
