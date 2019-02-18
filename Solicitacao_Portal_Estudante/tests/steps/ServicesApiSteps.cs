@@ -12,7 +12,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         [Given(@"Request")]
         public void GivenRequest()
         {
-           bool result = PageActions.Testar();
+           bool result = PageActions.ConsultarServicoCarregarSolicitacao();
            Assert.That(result, Is.True, "Erro request!");
         }
     }

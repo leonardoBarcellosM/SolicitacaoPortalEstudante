@@ -27,7 +27,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             
             try
             {
-                util.WaitForElementVisible(InputNome, 15);
+                util.WaitForElementVisible(InputNome, 45);
                 if (InputNome.Displayed)
                 {
                     InputNome.Click();
@@ -59,7 +59,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             bool _result = false;
             try
             {
-                util.WaitForElementVisible(InputDtaNasc, 15);
+                util.WaitForElementVisible(InputDtaNasc, 45);
                 if (InputDtaNasc.Displayed)
                 {
                     InputDtaNasc.Click();
@@ -90,7 +90,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             bool _result = false;
             try
             {
-                util.WaitForElementVisible(BtnEnviar, 10);
+                util.WaitForElementVisible(BtnEnviar, 45);
                 if (BtnEnviar.Displayed && BtnEnviar.Enabled)
                 {
                     BtnEnviar.Click();
@@ -117,7 +117,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             try
             {
                 IWebElement Validar = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//h2[text()='Dados Pessoais']"));
-                util.WaitForElementVisible(Validar, 15);
+                util.WaitForElementVisible(Validar, 45);
                 if (Validar.Displayed)
                 {
                     _result = true;

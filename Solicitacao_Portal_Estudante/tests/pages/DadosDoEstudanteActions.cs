@@ -25,7 +25,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             bool _result = false;
             try
             {
-                util.WaitForElementVisible(InputIntegrantes, 15);
+                util.WaitForElementVisible(InputIntegrantes, 45);
                 if (InputIntegrantes.Displayed)
                 {
                     util.ScrollElementoPage(InputIntegrantes);
@@ -52,7 +52,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             bool _result = false;
             try
             {
-                util.WaitForElementVisible(InputRenda, 15);
+                util.WaitForElementVisible(InputRenda, 45);
                 if (InputRenda.Displayed)
                 {
                     InputRenda.Click();
@@ -78,7 +78,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             bool _result = false;
             try
             {
-                util.WaitForElementVisible(BtnSubmit, 10);
+                util.WaitForElementVisible(BtnSubmit, 45);
                 if (BtnSubmit.Displayed && BtnSubmit.Enabled)
                 {
                     BtnSubmit.Click();
@@ -104,7 +104,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
 
             try
             {
-                util.WaitForElementVisible(InputNome, 15);
+                util.WaitForElementVisible(InputNome, 45);
                 if (InputNome.Displayed)
                 {
                     InputNome.Click();
@@ -146,7 +146,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             try
             {
                 IWebElement Validar = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//section[@class='ng-scope']//h2[text()='Dados do Fiador']"));
-                util.WaitForElementVisible(Validar, 15);
+                util.WaitForElementVisible(Validar, 45);
                 if (Validar.Displayed)
                 {
                     _result = true;

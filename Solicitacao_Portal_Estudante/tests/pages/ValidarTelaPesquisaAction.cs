@@ -93,7 +93,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             }
             result = _result;
             conteudo = "Portal IES: " + valor + " | DB: " + dadosList[arg];
-            ;
+            
             //return (_result, "Portal IES: " + valor + " | DB: " + dadosList[arg]);
         }
 

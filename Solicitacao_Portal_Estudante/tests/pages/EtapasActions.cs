@@ -22,9 +22,10 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         public bool ClicarSolicitacao()
         {
             bool _result = false;
+            Thread.Sleep(5000);
             try
             {
-                util.WaitForElementVisible(OptionSolicitacao, 15);
+                util.WaitForElementVisible(OptionSolicitacao, 60);
                 if(OptionSolicitacao.Displayed)
                 {
                     OptionSolicitacao.Click();

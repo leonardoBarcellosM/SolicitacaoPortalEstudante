@@ -71,6 +71,5 @@ namespace Solicitacao_Portal_Estudante.tests.steps
 
             Assert.That(result, Is.True, "Erro - Verifico as informacoes basicas de listagem de solicitacao!");
         }
-
     }
 }

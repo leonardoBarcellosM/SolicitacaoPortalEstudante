@@ -136,6 +136,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>01_Portal_Estudante_Validar_Login_Sucesso.feature</DependentUpon>
     </Compile>
+    <Compile Include="features\13_Camunda_Analise_De_Credito.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>13_Camunda_Analise_De_Credito.feature</DependentUpon>
+    </Compile>
     <Compile Include="features\06_Portal_Estudante_Fluxo_De_Solicitacao.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -230,6 +235,10 @@
     <None Include="features\01_Portal_Estudante_Validar_Login_Sucesso.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>01_Portal_Estudante_Validar_Login_Sucesso.feature.cs</LastGenOutput>
+    </None>
+    <None Include="features\13_Camunda_Analise_De_Credito.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>13_Camunda_Analise_De_Credito.feature.cs</LastGenOutput>
     </None>
     <None Include="features\06_Portal_Estudante_Fluxo_De_Solicitacao.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
