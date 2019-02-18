@@ -12,14 +12,8 @@ namespace Solicitacao_Portal_Estudante.tests.steps
 {
     class ServicesApi
     {
-        static string Result = null;
-        private ClassUtilities util = new ClassUtilities();
-
-        HttpClient Client = new HttpClient();
-
         public bool ConsultarServicoCarregarSolicitacao()
         {
-
             String Token = ClassUtilities.getItemFromLocalStorage("value");
             bool _result = CarregarSolicitacao(Token);
 
