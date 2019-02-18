@@ -93,6 +93,14 @@ namespace Solicitacao_Portal_Estudante.tests.steps
 
         }
 
+        public static String getItemFromLocalStorage(String key)
+        {
+            IJavaScriptExecutor js = ClassDriver.GetInstance().Driver as IJavaScriptExecutor;
+
+            return (String)js.ExecuteScript(String.Format(
+                "return window.localStorage.getItem('tokenPES');", key));
+        }
+
         public void ClickJS(IWebElement element)
         {
             try

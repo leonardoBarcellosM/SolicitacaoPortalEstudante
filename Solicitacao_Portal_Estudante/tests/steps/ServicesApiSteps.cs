@@ -9,11 +9,11 @@ namespace Solicitacao_Portal_Estudante.tests.steps
     {
         ServicesApi PageActions = new ServicesApi();
 
-        [Given(@"Request")]
-        public void GivenRequest()
+        [Given(@"Consultar o servico de carregar a solicitacao")]
+        public void GivenConsultarCarregarSolicitacao()
         {
            bool result = PageActions.ConsultarServicoCarregarSolicitacao();
-           Assert.That(result, Is.True, "Erro request!");
+           Assert.That(result, Is.True, "Erro ao carregar a solicitacao!");
         }
     }
 }

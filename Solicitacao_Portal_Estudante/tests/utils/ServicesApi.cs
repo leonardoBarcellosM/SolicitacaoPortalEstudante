@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,15 +13,22 @@ namespace Solicitacao_Portal_Estudante.tests.steps
     class ServicesApi
     {
         static string Result = null;
+        private ClassUtilities util = new ClassUtilities();
+
         HttpClient Client = new HttpClient();
 
         public bool ConsultarServicoCarregarSolicitacao()
         {
-            return true;
+
+            String Token = ClassUtilities.getItemFromLocalStorage("value");
+            bool _result = CarregarSolicitacao(Token);
+
+            return _result;
         }
 
-        public bool testar()
+        public bool CarregarSolicitacao(string Token)
         {
+            bool _result = false;
             const string WEBSERVICE_URL = "http://homologacao.fundacred.org.br:8080/portal-estudante-rest/resources/solicitacaoCredito/carregar";
             try
             {
@@ -30,14 +38,19 @@ namespace Solicitacao_Portal_Estudante.tests.steps
                     webRequest.Method = "GET";
                     webRequest.Timeout = 12000;
                     webRequest.ContentType = "application/json";
-                    webRequest.Headers.Add("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1NTAyMzM2OTUsInN1YiI6IiIsImlzcyI6IiIsInByaW5jaXBhbCI6IntcImlkXCI6MTUzMzk5LFwibmFtZVwiOlwiTEVPTkFSRE8gQkFSQ0VMTE9TIFRFU1RFXCIsXCJjcGZcIjpcIjgwMjIwNDUwMDQ4XCIsXCJyb2xlc1wiOntcIkVzdHVkYW50ZVwiOnRydWV9LFwicGVyZmlsXCI6bnVsbCxcImlkR3J1cG9JRVNcIjpudWxsLFwiZW1wcmVzYUlkXCI6bnVsbCxcImNhbXB1c0lkXCI6bnVsbCxcInNpZ2xhc0JwbVwiOltdfSIsImV4cCI6MTU1MDIzNDU5NX0.uM2mlNYM2XnwsJ1yCT55UMRtWhR-QzaYQznTZY3BnWxCPdxohXIvvuKn0ubJTmqeO4eLIzGXn-o-d7hZ5HBeXg");
+                    webRequest.Headers.Add("Authorization", Token);
 
                     using (System.IO.Stream s = webRequest.GetResponse().GetResponseStream())
                     {
                         using (System.IO.StreamReader sr = new System.IO.StreamReader(s))
                         {
                             var jsonResponse = sr.ReadToEnd();
-                            Console.WriteLine(String.Format("Response: {0}", jsonResponse));
+                            string value = String.Format("Response: {0}", jsonResponse);
+                            string[] values = value.Split('"');
+                            if (values[5] == "CADASTRO_INICIADO")
+                            {
+                                _result = true;
+                            }
                         }
                     }
                 }
@@ -46,7 +59,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             {
                 Console.WriteLine(ex.ToString());
             }
-            return true;
+            return _result;
         }
     }
 }
