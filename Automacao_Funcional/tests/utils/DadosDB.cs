@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Solicitacao_Portal_Estudante.tests.steps
+namespace Automacao_Funcional.tests.steps
 {
     public static class DadosDB
     {

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Solicitacao_Portal_Estudante.Features
+namespace Automacao_Funcional.Features
 {
     using TechTalk.SpecFlow;
     

@@ -4,7 +4,7 @@ using System.Linq;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 
-namespace Solicitacao_Portal_Estudante.tests.steps
+namespace Automacao_Funcional.tests.steps
 {
     [Binding]
     public class LoginSteps

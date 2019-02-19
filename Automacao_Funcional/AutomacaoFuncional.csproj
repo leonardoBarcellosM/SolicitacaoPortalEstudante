@@ -10,8 +10,8 @@
     <ProjectGuid>{7A14CF73-37AD-4596-BF52-A5C39BB4D468}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Solicitacao_Portal_Estudante</RootNamespace>
-    <AssemblyName>Solicitacao_Portal_Estudante</AssemblyName>
+    <RootNamespace>Automacao_Funcional</RootNamespace>
+    <AssemblyName>Automacao_Funcional</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

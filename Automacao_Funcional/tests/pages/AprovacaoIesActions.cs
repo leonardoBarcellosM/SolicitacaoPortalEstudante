@@ -5,7 +5,7 @@ using System.Threading;
 using OpenQA.Selenium.Support.UI;
 using System.Windows.Forms;
 
-namespace Solicitacao_Portal_Estudante.tests.steps
+namespace Automacao_Funcional.tests.steps
 {
     class AprovacaoIesActions : AprovacaoIesMap
     {

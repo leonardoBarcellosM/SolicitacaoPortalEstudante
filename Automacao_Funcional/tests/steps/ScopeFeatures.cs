@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
-namespace Solicitacao_Portal_Estudante.tests.steps
+namespace Automacao_Funcional.tests.steps
 {
     [Binding]
     class ScopeFeatures

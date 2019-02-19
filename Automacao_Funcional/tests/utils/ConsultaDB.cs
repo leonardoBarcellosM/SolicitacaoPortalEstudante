@@ -3,7 +3,7 @@ using System;
 using System.Globalization;
 using System.Net.Http;
 
-namespace Solicitacao_Portal_Estudante.tests.steps
+namespace Automacao_Funcional.tests.steps
 {
     class ConsultaDB
     {

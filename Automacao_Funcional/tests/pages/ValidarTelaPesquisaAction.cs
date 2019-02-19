@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium.Support.UI;
 using System.Windows.Forms;
 
-namespace Solicitacao_Portal_Estudante.tests.steps
+namespace Automacao_Funcional.tests.steps
 {
     class ValidarTelaPesquisaAction : ValidarTelaPesquisaMap
     {

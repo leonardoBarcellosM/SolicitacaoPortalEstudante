@@ -2,7 +2,7 @@
 using System;
 using TechTalk.SpecFlow;
 
-namespace Solicitacao_Portal_Estudante.tests.steps
+namespace Automacao_Funcional.tests.steps
 {
     [Binding]
     public class SelecionarDocumentosSteps

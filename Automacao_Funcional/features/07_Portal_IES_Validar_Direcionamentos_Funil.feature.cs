@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Solicitacao_Portal_Estudante.Features
+namespace Automacao_Funcional.Features
 {
     using TechTalk.SpecFlow;
     
@@ -31,7 +31,9 @@ namespace Solicitacao_Portal_Estudante.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "07_Portal_IES_Validar_Direcionamentos_Funil", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "07_Portal_IES_Validar_Direcionamentos_Funil", "\tUse before title fiture separed with \"-\":\r\n\t \'C\' for Chrome;\r\n\t \'I\' for Internet" +
+                    " Explorer;\r\n\t \'F\' for FireFox Mozilla;\r\n\t \'E\' for Edge;\r\n\t \'H\' for Headless Chro" +
+                    "me;\r\n\t Default: Chrome", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,12 +78,12 @@ namespace Solicitacao_Portal_Estudante.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Acessar o endereco", null, new string[] {
                         "01_AcessarPagina"});
-#line 4
+#line 11
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 6
+#line 13
 testRunner.Given("Acessar o endereco \"http://homologacao.fundacred.org.br/ies/#/login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 7
+#line 14
 testRunner.Then("Validar Acesso ao portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -94,16 +96,16 @@ testRunner.Then("Validar Acesso ao portal", ((string)(null)), ((TechTalk.SpecFlo
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 Realizar Login Portal IES", null, new string[] {
                         "02_RealizarLogin"});
-#line 10
+#line 17
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 11
+#line 18
 testRunner.Given("Informo o email \"angela@teste.org.br\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 12
+#line 19
 testRunner.When("Informo a senha \"welcome1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
+#line 20
 testRunner.And("Clico no botao Entrar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
+#line 21
 testRunner.Then("Validar login Ies com sucesso", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -116,16 +118,16 @@ testRunner.Then("Validar login Ies com sucesso", ((string)(null)), ((TechTalk.Sp
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Validar a Opção Solicitações Iniciadas", null, new string[] {
                         "03_ValidarFunil"});
-#line 17
+#line 24
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 18
+#line 25
 testRunner.Given("Acesso o dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 19
+#line 26
 testRunner.When("Clico em \"Solicitações Iniciadas\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
+#line 27
 testRunner.When("Valido o direcionamento para a tela de pesquisa \"Pesquisa de solicitações\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 28
 testRunner.Then("Verifico o total de \"Solicitações Iniciadas\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -138,12 +140,12 @@ testRunner.Then("Verifico o total de \"Solicitações Iniciadas\"", ((string)(nu
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Validar Resumo Da Pesquisa E Filtro De Etapas", null, new string[] {
                         "03_ValidarFunil"});
-#line 24
+#line 31
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 25
+#line 32
 testRunner.Given("Consulto a lista de etapas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
+#line 33
 testRunner.Then("Verifico as informacoes basicas de listagem de solicitacao", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -156,16 +158,16 @@ testRunner.Then("Verifico as informacoes basicas de listagem de solicitacao", ((
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05 Validar a Opção Reprovados fundacred", null, new string[] {
                         "03_ValidarFunil"});
-#line 29
+#line 36
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 30
+#line 37
 testRunner.Given("Acesso o dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 31
+#line 38
 testRunner.When("Clico em \"Reprovados Fundacred\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
+#line 39
 testRunner.When("Valido o direcionamento para a tela de pesquisa \"Pesquisa de solicitações\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 33
+#line 40
 testRunner.Then("Verifico o total de \"Reprovados Fundacred\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -178,16 +180,16 @@ testRunner.Then("Verifico o total de \"Reprovados Fundacred\"", ((string)(null))
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06 Validar a Opção Pendente Análise Fundacred", null, new string[] {
                         "03_ValidarFunil"});
-#line 36
+#line 43
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 37
+#line 44
 testRunner.Given("Acesso o dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 38
+#line 45
 testRunner.When("Clico em \"Pendente Análise Fundacred\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 39
+#line 46
 testRunner.When("Valido o direcionamento para a tela de pesquisa \"Pesquisa de solicitações\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
+#line 47
 testRunner.Then("Verifico o total de \"Pendente Análise Fundacred\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -200,16 +202,16 @@ testRunner.Then("Verifico o total de \"Pendente Análise Fundacred\"", ((string)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07 Validar a Opção Pendente Análise Ies", null, new string[] {
                         "03_ValidarFunil"});
-#line 43
+#line 50
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 44
+#line 51
 testRunner.Given("Acesso o dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 45
+#line 52
 testRunner.When("Clico em \"Pendente Análise Ies\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 46
+#line 53
 testRunner.When("Valido o direcionamento para a tela de pesquisa \" Aprovação de solicitações \"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 47
+#line 54
 testRunner.Then("Verifico o total de \"Pendente Análise Ies\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -222,16 +224,16 @@ testRunner.Then("Verifico o total de \"Pendente Análise Ies\"", ((string)(null)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08 Validar a Opção Reprovadas IES", null, new string[] {
                         "03_ValidarFunil"});
-#line 50
+#line 57
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 51
+#line 58
 testRunner.Given("Acesso o dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 52
+#line 59
 testRunner.When("Clico em \"Reprovadas IES\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 53
+#line 60
 testRunner.When("Valido o direcionamento para a tela de pesquisa \"Pesquisa de solicitações\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
+#line 61
 testRunner.Then("Verifico o total de \"Reprovadas IES\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -244,16 +246,16 @@ testRunner.Then("Verifico o total de \"Reprovadas IES\"", ((string)(null)), ((Te
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09 Validar a Opção Aprovadas", null, new string[] {
                         "03_ValidarFunil"});
-#line 57
+#line 64
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 58
+#line 65
 testRunner.Given("Acesso o dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 59
+#line 66
 testRunner.When("Clico em \"Aprovadas\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 60
+#line 67
 testRunner.When("Valido o direcionamento para a tela de pesquisa \"Pesquisa de solicitações\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 61
+#line 68
 testRunner.Then("Verifico o total de \"Aprovadas\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

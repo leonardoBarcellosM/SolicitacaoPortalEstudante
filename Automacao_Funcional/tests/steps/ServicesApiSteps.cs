@@ -2,7 +2,7 @@
 using System;
 using TechTalk.SpecFlow;
 
-namespace Solicitacao_Portal_Estudante.tests.steps
+namespace Automacao_Funcional.tests.steps
 {
     [Binding]
     public class ServicesApiSteps
@@ -13,7 +13,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
         public void GivenConsultarCarregarSolicitacao()
         {
            bool result = PageActions.ConsultarServicoCarregarSolicitacao();
-           Assert.That(result, Is.True, "Erro ao carregar a solicitacao!");
+           Assert.That(result, Is.True, "Service - Erro ao carregar a solicitacao!");
         }
     }
 }

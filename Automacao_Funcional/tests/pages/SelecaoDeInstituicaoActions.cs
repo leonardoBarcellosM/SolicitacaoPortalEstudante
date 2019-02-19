@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Support.UI;
 
-namespace Solicitacao_Portal_Estudante.tests.steps
+namespace Automacao_Funcional.tests.steps
 {
     class SelecaoDeInstituicaoActions : SelecaoDeInstituicaoMap
     {
