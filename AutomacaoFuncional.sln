@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomacaoFuncional", "Solicitacao_Portal_Estudante\AutomacaoFuncional.csproj", "{7A14CF73-37AD-4596-BF52-A5C39BB4D468}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomacaoFuncional", "Automacao_Funcional\AutomacaoFuncional.csproj", "{7A14CF73-37AD-4596-BF52-A5C39BB4D468}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8CA698DB-8A2E-4822-84B6-CFF6CFF83660}
+		SolutionGuid = {B04D06D8-8B4F-4DAF-95C4-CB909A19A9E2}
 	EndGlobalSection
 EndGlobal

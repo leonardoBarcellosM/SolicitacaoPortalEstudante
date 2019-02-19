@@ -340,7 +340,6 @@ namespace Solicitacao_Portal_Estudante.tests.steps
                     BtnReprovarConfirm.Click();
                     _result = true;
                 }
-
             }
             catch
             {
@@ -355,7 +354,7 @@ namespace Solicitacao_Portal_Estudante.tests.steps
             bool _result = true;
             try
             {
-                Thread.Sleep(3500);
+                Thread.Sleep(4000);
                 IWebElement Validar = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//html/body/div[1]/div/div/div[1]/h2"));
 
                 if (Validar.Displayed)
