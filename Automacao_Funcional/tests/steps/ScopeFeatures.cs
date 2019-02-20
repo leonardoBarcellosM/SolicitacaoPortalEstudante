@@ -5,14 +5,11 @@ namespace Automacao_Funcional.tests.steps
     [Binding]
     class ScopeFeatures
     {
-        private ClassUtilities util = new ClassUtilities();
-
-
+       
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
             string dataHora = ClassUtilities.PegarDataHora();
-
         }
 
         [BeforeFeature]
@@ -34,7 +31,6 @@ namespace Automacao_Funcional.tests.steps
 
         }
 
-
         [AfterStep]
         public static void AfterStep()
         {
@@ -44,7 +40,7 @@ namespace Automacao_Funcional.tests.steps
         [AfterScenario]
         public static void AfterScenario()
         {
-            
+            //Assert.IsTrue(ClassInfo.GetInstance().ResultScenario, ClassInfo.GetInstance().LogMessage, null);
         }
 
         [AfterFeature]

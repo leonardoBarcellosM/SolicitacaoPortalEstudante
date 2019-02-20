@@ -12,6 +12,7 @@ namespace Automacao_Funcional.tests.steps
         public void GivenConsultarCarregarSolicitacao()
         {
            bool result = PageActions.ConsultarServicoCarregarSolicitacao();
+                
            Assert.That(result, Is.True, "Service - Erro ao carregar a solicitacao!");
         }
     }

@@ -166,12 +166,12 @@ namespace Automacao_Funcional.tests.steps
                 }
                 else
                 {
-                    ClassInfo.GetInstance().LogMessage = "else - Erro Validar direcionamento para dados fiador";
+                    
                 }
             }
             catch
             {
-                ClassInfo.GetInstance().LogMessage = "try - Erro Validar direcionamento para dados fiador";
+               
             }
             return _result;
         }
@@ -191,12 +191,12 @@ namespace Automacao_Funcional.tests.steps
                 }
                 else
                 {
-                    //ClassInfo.GetInstance().LogMessage = "else - Erro Validar direcionamento para dados fiador";
+                    
                 }
             }
             catch
             {
-               // ClassInfo.GetInstance().LogMessage = "else - Erro Validar direcionamento para dados fiador";
+               
             }
             return _result;
         }
