@@ -96,16 +96,26 @@ testRunner.Then("Validar o carregamento", ((string)(null)), ((TechTalk.SpecFlow.
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 Realizar login", null, new string[] {
                         "02_RealizarLogin"});
-#line 17
+#line 16
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 18
+#line 17
 testRunner.Given("Clico no botao Entrar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 19
-testRunner.When("Preencho os campos nome e senha \"802.204.500-48,teste123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table1.AddRow(new string[] {
+                        "CPF",
+                        "802.204.500-48"});
+            table1.AddRow(new string[] {
+                        "Senha",
+                        "teste123"});
+#line 18
+testRunner.When("Preencho os campos nome e senha", ((string)(null)), table1, "When ");
+#line 22
 testRunner.And("Clico em Entrar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
+#line 23
 testRunner.Then("Login deve ser ralizado com sucesso", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -118,10 +128,10 @@ testRunner.Then("Login deve ser ralizado com sucesso", ((string)(null)), ((TechT
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Validar Servico Carregar Solicitacao", null, new string[] {
                         "02_ValidarServicoCarregarSolicitacao"});
-#line 24
+#line 26
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 25
+#line 27
 testRunner.Given("Consultar o servico de carregar a solicitacao", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();

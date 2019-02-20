@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace Automacao_Funcional.tests.steps
 {
@@ -16,11 +17,11 @@ namespace Automacao_Funcional.tests.steps
             Assert.That(result, Is.True, "Erro ao acessar a tela de login!");
         }
 
-        [When(@"Preencho os campos nome e senha ""(.*)""")]
-        public void WhenPreenchoCampoESenha(string arg)
+        [When(@"Preencho os campos nome e senha")]
+        public void WhenPreenchoCampoESenha(Table table)
         {
-            var items = arg.Split(',');
-            bool result = pageAction.PreencherCampos(items);
+            
+            bool result = pageAction.PreencherCampos(table);
 
             Assert.That(result, Is.True, "Erro ao preencher usuário e senha!");
         }

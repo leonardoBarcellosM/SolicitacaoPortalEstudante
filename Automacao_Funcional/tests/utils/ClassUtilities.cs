@@ -89,6 +89,13 @@ namespace Automacao_Funcional.tests.steps
 
         }
 
+        public class Credentials
+        {
+            public string Cpf { get; set; }
+            public string Senha { get; set; }
+        }
+
+
         public static String getItemFromLocalStorage(String key)
         {
             IJavaScriptExecutor js = ClassDriver.GetInstance().Driver as IJavaScriptExecutor;

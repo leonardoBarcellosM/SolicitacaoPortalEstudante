@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using System.Threading;
+using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace Automacao_Funcional.tests.steps
 {
@@ -34,22 +36,23 @@ namespace Automacao_Funcional.tests.steps
             return _result;
         }
 
-        public bool PreencherCampos(string[] values)
+        public bool PreencherCampos(Table table)
         {
             bool _result = false;
+            var credentials = table.CreateInstance<ClassUtilities.Credentials>();
 
             try
             {
-                util.WaitForElementVisible(InputCpf, 15);
+                util.WaitForElementVisible(InputCpf, 45);
                 if (InputCpf.Displayed)
                 {
                     InputCpf.Click();
                     Thread.Sleep(300);
-                    InputCpf.SendKeys(values[0]);
+                    InputCpf.SendKeys(credentials.Cpf);
                     Thread.Sleep(300);
                     InputSenha.Click();
                     Thread.Sleep(300);
-                    InputSenha.SendKeys(values[1]);
+                    InputSenha.SendKeys(credentials.Senha);
                     Thread.Sleep(300);
 
                     _result = true;
@@ -68,7 +71,7 @@ namespace Automacao_Funcional.tests.steps
 
             try
             {
-                util.WaitForElementVisible(BtnSubmit, 15);
+                util.WaitForElementVisible(BtnSubmit, 45);
                 if (BtnSubmit.Displayed)
                 {
                     BtnSubmit.Click();
@@ -111,7 +114,7 @@ namespace Automacao_Funcional.tests.steps
 
             try
             {
-                util.WaitForElementVisible(InputCpf, 15);
+                util.WaitForElementVisible(InputCpf, 45);
                 if (InputCpf.Displayed)
                 {
                     InputCpf.Click();
@@ -134,7 +137,7 @@ namespace Automacao_Funcional.tests.steps
             try
             {
                 IWebElement MsgErro = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[5]"));
-                util.WaitForElementVisible(MsgErro, 15);
+                util.WaitForElementVisible(MsgErro, 45);
                 if (MsgErro.Displayed)
                 {
                     _result = true;
@@ -151,7 +154,7 @@ namespace Automacao_Funcional.tests.steps
             public bool PreencherUserPassword()
             {
                 bool _result = false;
-                util.WaitForElementVisible(CampoUsername, 30);
+                util.WaitForElementVisible(CampoUsername, 45);
 
                 try
                 {
@@ -217,7 +220,7 @@ namespace Automacao_Funcional.tests.steps
                 {
                     Thread.Sleep(10000);
                     IWebElement formLogin = ClassDriver.GetInstance().Driver.FindElement(By.Id("formLogin"));
-                    util.WaitForElementVisible(formLogin, 15);
+                    util.WaitForElementVisible(formLogin, 45);
                     if (formLogin.Displayed)
                     {
                         _result = true;
