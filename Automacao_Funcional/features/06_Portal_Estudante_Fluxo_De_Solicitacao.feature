@@ -35,7 +35,6 @@ Then Validar solicitacao enviada
 Scenario: 05 Validar DB solicitação iniciada
 Then Validar status de solicitacao no db "Solicitacao"
 
-#Dados editáveis
 @02_2Etapa
 Scenario: 06 Preencher Dados Do Estudante
 Given Clicar no botao enviar
@@ -45,7 +44,6 @@ Then Validar direcionamento para etapa 3
 Scenario: 07 Validar DB atualização do estudante
 Then Validar status de solicitacao no db "Estudante"
 
-#Dados editáveis
 @03_3Etapa
 Scenario: 08 Preencher Dados Do Fiador
 Given Inserir nome e cpf " Leonardo Barcellos Teste "

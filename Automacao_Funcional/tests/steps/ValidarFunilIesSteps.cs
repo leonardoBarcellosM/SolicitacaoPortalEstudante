@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
 using TechTalk.SpecFlow;
 
 namespace Automacao_Funcional.tests.steps

@@ -1,7 +1,5 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using System;
-using System.Globalization;
-using System.Net.Http;
 
 namespace Automacao_Funcional.tests.steps
 {
