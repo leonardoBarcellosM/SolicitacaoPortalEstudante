@@ -42,7 +42,7 @@ namespace Automacao_Funcional.tests.steps
                     break;
             }
 
-            Assert.That(result, Is.True, "Erro - Clico em solicitacoes iniciadas!");
+            Assert.That(result, Is.True, "Erro - " + arg + "");
         }
 
 
