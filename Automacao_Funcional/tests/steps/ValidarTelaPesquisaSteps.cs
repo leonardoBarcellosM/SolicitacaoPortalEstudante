@@ -52,7 +52,7 @@ namespace Automacao_Funcional.tests.steps
 
             }
 
-            Assert.That(result, Is.True, "Erro - Verifico o total de solicitacoes listadas! |  " + vlr);
+            Assert.That(result, Is.True, "Erro - Total de solicitacoes: "+ arg + " -> " + vlr);
         }
 
         [Given(@"Consulto a lista de etapas")]
