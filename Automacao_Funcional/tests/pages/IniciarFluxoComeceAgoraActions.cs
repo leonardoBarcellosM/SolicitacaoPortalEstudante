@@ -43,9 +43,13 @@ namespace Automacao_Funcional.tests.steps
                 //Doc.WriteLine("\r\n\r\n");
                 //Doc.Close();
 
-                util.WaitForElementVisible(campoNome, 3);
+                util.WaitForElementVisible(BtnIniciar, 60);
 
-                if (campoNome.Displayed) {
+                if (BtnIniciar.Displayed) {
+
+                    BtnIniciar.Click();
+                    Thread.Sleep(1000);
+
 
                     campoNome.Click();
                     campoNome.SendKeys(massa.nome + " " + massa.sobrenome);

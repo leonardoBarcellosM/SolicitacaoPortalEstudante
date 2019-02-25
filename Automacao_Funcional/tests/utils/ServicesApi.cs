@@ -33,7 +33,7 @@ namespace Automacao_Funcional.tests.steps
                             var jsonResponse = sr.ReadToEnd();
                             string value = String.Format("Response: {0}", jsonResponse);
                             string[] values = value.Split('"');
-                            if (values[5] == "CADASTRO_INICIADO")
+                            if (values[2] == ":99299,")
                             {
                                 _result = true;
                             }

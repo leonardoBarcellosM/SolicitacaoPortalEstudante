@@ -6,19 +6,23 @@ namespace Automacao_Funcional.tests.steps
     class LoginMap
     {
 
-        [FindsBy(How = How.XPath, Using = "//div[@class='col-sm-6 col-xs-6']//a[@class='btn btn-laranja pull-right']")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='topo']/div/a")]
         [CacheLookup]
         public IWebElement BtnEntrar { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@id='cpf']")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='txtCpfLogin']")]
         [CacheLookup]
         public IWebElement InputCpf { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@id='senha']")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='frmLogin']/fieldset/ul/li[2]/label")]
         [CacheLookup]
         public IWebElement InputSenha { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//button[@class='btn btn-block btn-laranja btn-entrar']")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='txtSenhaLogin']")]
+        [CacheLookup]
+        public IWebElement Pass { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='frmLogin']/fieldset/div/button")]
         [CacheLookup]
         public IWebElement BtnSubmit { get; set; }
 

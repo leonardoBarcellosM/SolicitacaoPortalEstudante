@@ -52,7 +52,7 @@ namespace Automacao_Funcional.tests.steps
                     Thread.Sleep(300);
                     InputSenha.Click();
                     Thread.Sleep(300);
-                    InputSenha.SendKeys(credentials.Senha);
+                    Pass.SendKeys(credentials.Senha);
                     Thread.Sleep(300);
 
                     _result = true;
@@ -93,7 +93,7 @@ namespace Automacao_Funcional.tests.steps
             Thread.Sleep(3000);
             try
             {
-                IWebElement BemVindo = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//div[@class='panel main-panel']"));
+                IWebElement BemVindo = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/ng-include/div/div/h3"));
                 util.WaitForElementVisible(BemVindo, 45);
                 if (BemVindo.Displayed)
                 {

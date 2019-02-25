@@ -5,35 +5,39 @@ namespace Automacao_Funcional.tests.steps
 {
     class IniciarFluxoComeceAgoraMap
     {
-        [FindsBy(How = How.XPath, Using = "//INPUT[@id='campoNome']/self::INPUT")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='inicio']/div/div[3]/a/b[1]")]
+        [CacheLookup]
+        public IWebElement BtnIniciar { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='txtNome']")]
         [CacheLookup]
         public IWebElement campoNome { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//INPUT[@id='campoCpf']/self::INPUT")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='txtCpf']")]
         [CacheLookup]
         public IWebElement campoCpf { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//INPUT[@id='campoTelefone']/self::INPUT")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='txtTelefone']")]
         [CacheLookup]
         public IWebElement campoTelefone { get; set; }
 
-        [FindsBy(How = How.Id, Using = "campoEmail")]
+        [FindsBy(How = How.Id, Using = "txtEmail")]
         [CacheLookup]
         public IWebElement campoEmail { get; set; }
 
-        [FindsBy(How = How.Id, Using = "campoEmailConf")]
+        [FindsBy(How = How.Id, Using = "txtEmailConfirmar")]
         [CacheLookup]
         public IWebElement campoEmailConf { get; set; }
 
-        [FindsBy(How = How.Id, Using = "campoSenha")]
+        [FindsBy(How = How.Id, Using = "txtSenha")]
         [CacheLookup]
         public IWebElement campoSenha { get; set; }
 
-        [FindsBy(How = How.Id, Using = "senhaConf")]
+        [FindsBy(How = How.Id, Using = "txtSenhaConfirmar")]
         [CacheLookup]
         public IWebElement senhaConf { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//BUTTON[@id='btnCadastro']/self::BUTTON")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='frmCadastro']/fieldset/ul/li[8]/button")]
         [CacheLookup]
         public IWebElement btnCadastro { get; set; }
 
