@@ -123,11 +123,11 @@ testRunner.Then("Login deve ser ralizado com sucesso", ((string)(null)), ((TechT
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("03 Validar Servico Carregar Solicitacao")]
-        [NUnit.Framework.CategoryAttribute("02_ValidarServicoCarregarSolicitacao")]
+        [NUnit.Framework.CategoryAttribute("03_ValidarServicoCarregarSolicitacao")]
         public virtual void _03ValidarServicoCarregarSolicitacao()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Validar Servico Carregar Solicitacao", null, new string[] {
-                        "02_ValidarServicoCarregarSolicitacao"});
+                        "03_ValidarServicoCarregarSolicitacao"});
 #line 26
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

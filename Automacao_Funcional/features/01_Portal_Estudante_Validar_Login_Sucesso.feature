@@ -22,6 +22,6 @@ When Preencho os campos nome e senha
 And Clico em Entrar
 Then Login deve ser ralizado com sucesso
 
-@02_ValidarServicoCarregarSolicitacao
+@03_ValidarServicoCarregarSolicitacao
 Scenario: 03 Validar Servico Carregar Solicitacao
 Given Consultar o servico de carregar a solicitacao
