@@ -66,78 +66,87 @@ namespace Automacao_Funcional.tests.steps
             Thread.Sleep(4000);
             try
             {
-                if (InputCep.Displayed)
+                if (Campoendereco.Displayed)
                 {
                     InputCep.Click();
-                    Thread.Sleep(400);
+                    Thread.Sleep(600);
                     InputCep.SendKeys(massa.cep);
-                    Thread.Sleep(400);
+                    Thread.Sleep(600);
                     //BtnBuscarEnder.Click();
-                    Thread.Sleep(500);
+                    Thread.Sleep(600);
 
                     InputNumero.Click();
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
                     InputNumero.SendKeys(massa.numero);
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
 
                     InputComplemento.Click();
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
                     InputComplemento.SendKeys(massa.complemento);
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
 
                     Campoendereco.Clear();
+                    Thread.Sleep(600);
                     Campoendereco.Click();
+                    Thread.Sleep(600);
                     Campoendereco.SendKeys("Av Júlio De Castilhos");
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
 
                     CampoBairro.Clear();
+                    Thread.Sleep(600);
                     CampoBairro.Click();
+                    Thread.Sleep(600);
                     CampoBairro.SendKeys("Centro Histórico");
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
 
                     CampoCidade.Clear();
+                    Thread.Sleep(600);
                     CampoCidade.Click();
+                    Thread.Sleep(600);
                     CampoCidade.SendKeys("Porto Alegre");
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
 
                     var selectElement = new SelectElement(SelectUf);
+                    Thread.Sleep(600);
                     selectElement.SelectByIndex(21);
+                    Thread.Sleep(600);
 
                     InputNomePai.Click();
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
                     InputNomePai.SendKeys(massa.nomePai);
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
 
                     InputCpfPai.Click();
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
                     InputCpfPai.SendKeys(util.GerarCpf());
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
 
                     util.ScrollPage(1);
 
                     InputNomeMae.Click();
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
                     InputNomeMae.SendKeys(massa.nomeMae);
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
 
                     InputCpfMae.Click();
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
                     InputCpfMae.SendKeys(util.GerarCpf());
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
 
                     InputDdd.Click();
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
                     InputDdd.SendKeys(massa.ddd);
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
 
                     InputNumeroTel.Click();
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
                     InputNumeroTel.SendKeys(massa.numTel);
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
 
                     InputRamal.Click();
-                    Thread.Sleep(300);
+                    Thread.Sleep(600);
                     InputRamal.SendKeys(massa.ramal);
+                    Thread.Sleep(600);
 
                     _result = true;
                 }

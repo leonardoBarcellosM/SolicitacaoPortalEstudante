@@ -238,6 +238,28 @@ testRunner.Then("Validar status de solicitacao no db \"Fiador\"", ((string)(null
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("10 Preencher Dados Pessoais")]
+        [NUnit.Framework.CategoryAttribute("04_4Etapa")]
+        public virtual void _10PreencherDadosPessoais()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10 Preencher Dados Pessoais", null, new string[] {
+                        "04_4Etapa"});
+#line 59
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 60
+testRunner.Given("Inserir os dados pessoais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 61
+testRunner.When("Inserir endereco e contato", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 62
+testRunner.And("Clicar no botao proximo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 63
+testRunner.Then("Validar direcionamento dados fiador", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -54,13 +54,13 @@ Then Validar direcionamento para etapa 4
 @02_1Etapa
 Scenario: 09 Validar DB atualização do fiador
 Then Validar status de solicitacao no db "Fiador"
-#
-#@04_4Etapa
-#Scenario: 10 Preencher Dados Pessoais
-#Given Inserir os dados pessoais
-#When Inserir endereco e contato
-#And Clicar no botao proximo
-#Then Validar direcionamento dados fiador
+
+@04_4Etapa
+Scenario: 10 Preencher Dados Pessoais
+Given Inserir os dados pessoais
+When Inserir endereco e contato
+And Clicar no botao proximo
+Then Validar direcionamento dados fiador
 #
 #@04_4Etapa
 #Scenario: 11 Preencher Dados Completos Do Fiador

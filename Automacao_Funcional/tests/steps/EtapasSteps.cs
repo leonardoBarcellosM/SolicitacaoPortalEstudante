@@ -74,7 +74,7 @@ namespace Automacao_Funcional.tests.steps
                     //    break;
             }
 
-            Assert.That(result, Is.True, "Divergência entre a etapa/ação e os status do banco!");
+            Assert.That(result, Is.True, "Divergência entre a etapa/ação e os status do banco -> " + var +"");
         }
 
         //[Then(@"Consultar renda ""(.*)"" no db")]

@@ -13,7 +13,7 @@ namespace Automacao_Funcional.tests.steps
         {
            bool result = PageActions.ConsultarServicoCarregarSolicitacao();
                 
-           Assert.That(result, Is.True, "Service - Erro ao carregar a solicitacao!");
+           Assert.That(result, Is.True, "Service - Erro ao carregar a solicitacao em andamento!");
         }
     }
 }

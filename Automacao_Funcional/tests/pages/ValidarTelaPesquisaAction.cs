@@ -85,7 +85,7 @@ namespace Automacao_Funcional.tests.steps
 
             }
             result = _result;
-            conteudo = "Portal IES: " + valor + " | DB: " + dadosList[arg];
+            conteudo = "Tela de Pesquisa de solicitações: " + valor + " | Funil: " + dadosList[arg];
             
             //return (_result, "Portal IES: " + valor + " | DB: " + dadosList[arg]);
         }

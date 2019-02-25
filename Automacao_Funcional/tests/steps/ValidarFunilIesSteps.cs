@@ -33,7 +33,7 @@ namespace Automacao_Funcional.tests.steps
 
             pageAction.ValidarIniciados(ref result, ref valores);
 
-            Assert.That(result, Is.True, "Dados não conferem: " + valores);
+            Assert.That(result, Is.True, "Dados não conferem - solicitacoes iniciadas: " + valores);
         }
 
         [When(@"Valido pendente analise fundacred")]
@@ -44,7 +44,7 @@ namespace Automacao_Funcional.tests.steps
 
             pageAction.ValidarPendenteFundacred(ref result, ref valores);
 
-            Assert.That(result, Is.True, "Dados não conferem: " + valores);
+            Assert.That(result, Is.True, "Dados não conferem - pendente analise fundacred: " + valores);
         }
 
         [When(@"Valido Pendente analise ies")]
@@ -55,7 +55,7 @@ namespace Automacao_Funcional.tests.steps
 
             pageAction.ValidarPendenteIes(ref result, ref valores);
 
-            Assert.That(result, Is.True, "Dados não conferem: " + valores);
+            Assert.That(result, Is.True, "Dados não conferem - Pendente analise ies: " + valores);
         }
 
         [When(@"Valido aprovados")]
@@ -66,7 +66,7 @@ namespace Automacao_Funcional.tests.steps
 
             pageAction.ValidarAprovados(ref result, ref valores);
 
-            Assert.That(result, Is.True, "Dados não conferem: " + valores);
+            Assert.That(result, Is.True, "Dados não conferem - aprovados: " + valores);
         }
 
         [When(@"Valido reprovados fundacred")]
@@ -77,7 +77,7 @@ namespace Automacao_Funcional.tests.steps
 
             pageAction.ValidarReprovadosFundacred(ref result, ref valores);
 
-            Assert.That(result, Is.True, "Dados não conferem: " + valores);
+            Assert.That(result, Is.True, "Dados não conferem - reprovados fundacred: " + valores);
         }
 
         [When(@"Valido reprovados ies")]
@@ -88,7 +88,7 @@ namespace Automacao_Funcional.tests.steps
 
             pageAction.ValidarReprovadosIes(ref result, ref valores);
 
-            Assert.That(result, Is.True, "Dados não conferem: " + valores);
+            Assert.That(result, Is.True, "Dados não conferem - reprovados ies: " + valores);
         }
         
     }
