@@ -49,32 +49,29 @@ namespace Automacao_Funcional.tests.steps
                         BtnIniciar.Click();
                         Thread.Sleep(1000);
 
-                    if (campoNome.Displayed)
-                    {
+                   
                         campoNome.Click();
                         Thread.Sleep(500);
                         campoNome.SendKeys(massa.nome + " " + massa.sobrenome);
                         Thread.Sleep(500);
-                    }
-                    else
-                    {
-                        Error = "Inserir nome";
-                        result = false;
-                    }
+                   
 
-                    if (LabelCpf.Displayed)
-                    {
+                   
                         LabelCpf.Click();
                         Thread.Sleep(800);
                         InputCpf.SendKeys(cpf);
                         Thread.Sleep(500);
+
+                    string Classe = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtCpf")).GetAttribute("class");
+                    
+                    if (Classe == "input-padrao valid")
+                    {
+                        //OK
                     }
                     else
                     {
-                        Error = "Inserir nome";
-                        result = false;
+                        Error = "Não pegou CPF " + Classe;
                     }
-                    
 
                     campoTelefone.Click();
                     Thread.Sleep(500);
