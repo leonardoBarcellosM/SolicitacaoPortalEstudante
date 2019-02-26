@@ -90,7 +90,7 @@ namespace Automacao_Funcional.tests.steps
                     }
                     else
                     {
-                        Error = "Nao pegou CPF - " + Classe1;
+                        Error = "Nao pegou email - " + Classe1;
                     }
 
                     campoEmailConf.Click();
@@ -106,7 +106,7 @@ namespace Automacao_Funcional.tests.steps
                     }
                     else
                     {
-                        Error = "Nao pegou CPF - " + Classe2;
+                        Error = "Nao pegou email confirmar - " + Classe2;
                     }
 
                     campoSenha.Click();
