@@ -54,12 +54,17 @@ namespace Automacao_Funcional.tests.steps
                         Thread.Sleep(500);
                         campoNome.SendKeys(massa.nome + " " + massa.sobrenome);
                         Thread.Sleep(500);
-                   
 
-                   
-                        LabelCpf.Click();
+
+
+                        InputCpf.Click();
                         Thread.Sleep(800);
                         InputCpf.SendKeys(cpf);
+                        Thread.Sleep(600);
+
+                        campoTelefone.Click();
+                        Thread.Sleep(500);
+                        campoTelefone.SendKeys(massa.telefone);
                         Thread.Sleep(500);
 
                     string Classe = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtCpf")).GetAttribute("class");
@@ -70,13 +75,10 @@ namespace Automacao_Funcional.tests.steps
                     }
                     else
                     {
-                        Error = "Não pegou CPF " + Classe;
+                        Error = "Nao pegou CPF - " + Classe;
                     }
 
-                    campoTelefone.Click();
-                    Thread.Sleep(500);
-                    campoTelefone.SendKeys(massa.telefone);
-                    Thread.Sleep(500);
+                    
 
                     campoEmail.Click();
                     Thread.Sleep(500);
