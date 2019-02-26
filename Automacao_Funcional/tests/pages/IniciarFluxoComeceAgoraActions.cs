@@ -17,9 +17,10 @@ namespace Automacao_Funcional.tests.steps
             PageFactory.InitElements(ClassDriver.GetInstance().Driver, this);
         }
 
-        public bool PreencherOsDados()
+        public void PreencherOsDados( ref string Error,  ref bool result)
         {
-            bool _result = false;
+            //bool _result = false;
+
             string mail = util.GerarNumRandom();
             mail = "teste_" + mail + massa.email;
             string cpf = util.GerarCpf();
@@ -31,15 +32,11 @@ namespace Automacao_Funcional.tests.steps
             try
             {
                 //MassaDeDados.BKey = "SOLICITACAO " + cpf;
-               // UpdateStatusDB.Cpf(cpf);
-
+                // UpdateStatusDB.Cpf(cpf);
                 //string dt = utils.ClassUtilities.PegarDataHora();
                 //string arquivo = @"C:\Users\leonardo.barcellos\Desktop\Fundacred\reg\" + dt + ".txt";
-                
                 //StreamWriter Doc = new StreamWriter(arquivo);
                 //string line = String.Empty;
-
-        
                 //Doc.WriteLine(DateTime.Now);
                 //Doc.WriteLine("CPF: " + cpf);
                 //Doc.WriteLine("\r\n\r\n");
@@ -49,51 +46,78 @@ namespace Automacao_Funcional.tests.steps
 
                 if (BtnIniciar.Displayed) {
 
-                    BtnIniciar.Click();
-                    Thread.Sleep(1000);
+                    
+                        BtnIniciar.Click();
+                        Thread.Sleep(1000);
 
-                    campoNome.Click();
-                    Thread.Sleep(500);
-                    campoNome.SendKeys(massa.nome + " " + massa.sobrenome);
-                    Thread.Sleep(500);
-                    LabelCpf.Click();
-                    Thread.Sleep(800);
-                    InputCpf.SendKeys(cpf);
-                    Thread.Sleep(500);
+                    if (campoNome.Displayed)
+                    {
+                        campoNome.Click();
+                        Thread.Sleep(500);
+                        campoNome.SendKeys(massa.nome + " " + massa.sobrenome);
+                        Thread.Sleep(500);
+                    }
+                    else
+                    {
+                        Error = "Inserir nome";
+                        result = false;
+                    }
+
+                    if (LabelCpf.Displayed)
+                    {
+                        LabelCpf.Click();
+                        Thread.Sleep(800);
+                        InputCpf.SendKeys(cpf);
+                        Thread.Sleep(500);
+                    }
+                    else
+                    {
+                        Error = "Inserir nome";
+                        result = false;
+                    }
+                    
+
                     campoTelefone.Click();
                     Thread.Sleep(500);
                     campoTelefone.SendKeys(massa.telefone);
                     Thread.Sleep(500);
+
                     campoEmail.Click();
                     Thread.Sleep(500);
                     campoEmail.SendKeys(mail);
                     Thread.Sleep(500);
+
                     campoEmailConf.Click();
                     Thread.Sleep(500);
                     campoEmailConf.SendKeys(mail);
                     Thread.Sleep(500);
+
                     campoSenha.Click();
                     Thread.Sleep(500);
                     campoSenha.SendKeys(massa.senha);
                     Thread.Sleep(500);
+
                     senhaConf.Click();
                     Thread.Sleep(500);
                     senhaConf.SendKeys(massa.senha);
                     Thread.Sleep(500);
 
-                    _result = true;
+                   // _result = true;
+                    result = true;
                 }
                 else
                 {
-                    //Error
+                    Error = "Primeiro IF";
+                    result = false;
                 }
             }
             catch
             {
-                //Error
+                Error = "Try/Catch";
+                result = false;
             }
 
-            return _result;
+            //return _result;
         }
 
         public bool ClicarComeceAgora()

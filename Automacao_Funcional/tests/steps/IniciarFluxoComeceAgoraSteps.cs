@@ -12,9 +12,12 @@ namespace Automacao_Funcional.tests.steps
         [Given(@"Preencher os dados")]
         public void GivenPreencherOsDados()
         {
-            bool result = pageAction.PreencherOsDados();
+            bool result = false;
+            string Error = "";
 
-                Assert.That(result, Is.True, "Erro ao preencher os dados!");
+            pageAction.PreencherOsDados(ref Error, ref result);
+
+                Assert.That(result, Is.True, Error);
         }
 
         [When(@"Clicar em Comece agora sem compromisso")]
