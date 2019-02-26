@@ -127,7 +127,7 @@ namespace Automacao_Funcional.tests.steps
 
                     string Classe3 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtSenha")).GetAttribute("class");
 
-                    if (Classe3 == "input-padrao valid")
+                    if (Classe3 == "input-padrao eyePass valid")
                     {
                         Error = Classe3;
                        
@@ -138,18 +138,18 @@ namespace Automacao_Funcional.tests.steps
                         result = false;
                     }
 
-                    string Classe4 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtSenhaConfirmar")).GetAttribute("class");
+                    //string Classe4 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtSenhaConfirmar")).GetAttribute("class");
 
-                    if (Classe4 == "input-padrao valid")
-                    {
-                        Error = Classe4;
+                    //if (Classe4 == "input-padrao eyePass valid")
+                    //{
+                    //    Error = Classe4;
                        
-                    }
-                    else
-                    {
-                        Error = "Nao pegou Conf senha - " + Classe4;
-                        result = false;
-                    }
+                    //}
+                    //else
+                    //{
+                    //    Error = "Nao pegou Conf senha - " + Classe4;
+                    //    result = false;
+                    //}
                     
                 }
                 else
