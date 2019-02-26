@@ -27,7 +27,8 @@ namespace Automacao_Funcional.tests.steps
 
             ConsultaDB.Cpf(cpf);
 
-            cpf = util.MascaraCpf(cpf);
+            //cpf = util.MascaraCpf(cpf);
+            var teste = cpf.ToCharArray();
 
             try
             {
@@ -59,7 +60,7 @@ namespace Automacao_Funcional.tests.steps
 
                         InputCpf.Click();
                         Thread.Sleep(800);
-                        InputCpf.SendKeys(cpf);
+                        InputCpf.SendKeys("017.626.670-45");
                         Thread.Sleep(600);
 
                         campoTelefone.Click();
