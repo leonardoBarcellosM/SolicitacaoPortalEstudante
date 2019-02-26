@@ -24,7 +24,7 @@ namespace Automacao_Funcional.Features
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "06_Portal_Estudante_Fluxo_De_Solicitacao.feature"
+#line 1 "Portal_Estudante_Fluxo_De_Solicitacao.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]

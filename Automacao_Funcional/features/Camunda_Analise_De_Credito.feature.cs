@@ -24,7 +24,7 @@ namespace Automacao_Funcional.Features
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "13_Camunda_Analise_De_Credito.feature"
+#line 1 "Camunda_Analise_De_Credito.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]

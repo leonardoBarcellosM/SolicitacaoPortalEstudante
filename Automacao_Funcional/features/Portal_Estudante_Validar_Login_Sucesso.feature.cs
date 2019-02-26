@@ -24,7 +24,7 @@ namespace Automacao_Funcional.Features
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "01_Portal_Estudante_Validar_Login_Sucesso.feature"
+#line 1 "Portal_Estudante_Validar_Login_Sucesso.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]

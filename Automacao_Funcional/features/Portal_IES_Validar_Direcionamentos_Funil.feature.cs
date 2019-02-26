@@ -24,7 +24,7 @@ namespace Automacao_Funcional.Features
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "07_Portal_IES_Validar_Direcionamentos_Funil.feature"
+#line 1 "Portal_IES_Validar_Direcionamentos_Funil.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]

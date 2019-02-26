@@ -24,7 +24,7 @@ namespace Automacao_Funcional.Features
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "11_Portal_IES_Validar_Aprovar_Solicitacao.feature"
+#line 1 "Portal_IES_Validar_Aprovar_Solicitacao.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
