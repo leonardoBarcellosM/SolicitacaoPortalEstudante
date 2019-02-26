@@ -23,8 +23,10 @@ namespace Automacao_Funcional.tests.steps
             string mail = util.GerarNumRandom();
             mail = "teste_" + mail + massa.email;
             string cpf = util.GerarCpf();
+
             ConsultaDB.Cpf(cpf);
-            //mail = "leonardo.barcellos@viaflow.com.br";
+
+            cpf = util.MascaraCpf(cpf);
 
             try
             {
@@ -54,9 +56,9 @@ namespace Automacao_Funcional.tests.steps
                     Thread.Sleep(500);
                     campoNome.SendKeys(massa.nome + " " + massa.sobrenome);
                     Thread.Sleep(500);
-                    campoCpf.Click();
-                    Thread.Sleep(500);
-                    campoCpf.SendKeys(cpf);
+                    LabelCpf.Click();
+                    Thread.Sleep(800);
+                    InputCpf.SendKeys(cpf);
                     Thread.Sleep(500);
                     campoTelefone.Click();
                     Thread.Sleep(500);

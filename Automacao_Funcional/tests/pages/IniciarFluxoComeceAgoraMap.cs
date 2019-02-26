@@ -13,9 +13,13 @@ namespace Automacao_Funcional.tests.steps
         [CacheLookup]
         public IWebElement campoNome { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "//*[@id='frmCadastro']/fieldset/ul/li[2]/label[1]")]
+        [CacheLookup]
+        public IWebElement LabelCpf { get; set; }
+
         [FindsBy(How = How.XPath, Using = "//*[@id='txtCpf']")]
         [CacheLookup]
-        public IWebElement campoCpf { get; set; }
+        public IWebElement InputCpf { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//*[@id='txtTelefone']")]
         [CacheLookup]

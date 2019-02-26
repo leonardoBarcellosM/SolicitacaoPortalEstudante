@@ -95,6 +95,11 @@ namespace Automacao_Funcional.tests.steps
             public string Senha { get; set; }
         }
 
+        public string MascaraCpf(string cpf)
+        {
+            return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
+        }
+
 
         public static String getItemFromLocalStorage(String key)
         {
