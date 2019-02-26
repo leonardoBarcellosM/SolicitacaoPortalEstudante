@@ -1,4 +1,4 @@
-﻿Feature: FeatureDeTeste
+﻿Feature: TestesDeScript
 
 #@mytag
 #Scenario: Testar API

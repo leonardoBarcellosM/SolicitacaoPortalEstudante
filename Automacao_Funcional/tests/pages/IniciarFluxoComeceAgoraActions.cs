@@ -1,7 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using OpenQA.Selenium.Support.UI;
-using System;
 using System.Threading;
 
 namespace Automacao_Funcional.tests.steps
@@ -19,8 +17,7 @@ namespace Automacao_Funcional.tests.steps
 
         public void PreencherOsDados( ref string Error,  ref bool result)
         {
-            //bool _result = false;
-            Error = "Não entrou no IF";
+            Error = "Erro antes dos inputs";
 
             string mail = util.GerarNumRandom();
             mail = "teste_" + mail + massa.email;
@@ -30,7 +27,6 @@ namespace Automacao_Funcional.tests.steps
 
             cpf = util.MascaraCpf(cpf);
             var teste = cpf.ToCharArray();
-            
 
             try
             {
@@ -49,35 +45,23 @@ namespace Automacao_Funcional.tests.steps
 
                 if (BtnIniciar.Displayed) {
 
-                        BtnIniciar.Click();
-                        Thread.Sleep(1000);
+                    BtnIniciar.Click();
+                    Thread.Sleep(1000);
 
-                        campoNome.Click();
-                        Thread.Sleep(500);
-                        campoNome.SendKeys(massa.nome + " " + massa.sobrenome);
-                        Thread.Sleep(500);
+                    campoNome.Click();
+                    Thread.Sleep(500);
+                    campoNome.SendKeys(massa.nome + " " + massa.sobrenome);
+                    Thread.Sleep(500);
 
-                        InputCpf.Click();
-                        Thread.Sleep(1000);
-                        InputCpf.SendKeys(cpf);
-                        Thread.Sleep(1000);
+                    InputCpf.Click();
+                    Thread.Sleep(1000);
+                    InputCpf.SendKeys(cpf);
+                    Thread.Sleep(1000);
 
-                        campoTelefone.Click();
-                        Thread.Sleep(500);
-                        campoTelefone.SendKeys(massa.telefone);
-                        Thread.Sleep(500);
-
-                    string Classe = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtCpf")).GetAttribute("class");
-                    
-                    if (Classe == "input-padrao valid")
-                    {
-                        Error = Classe;
-                    }
-                    else
-                    {
-                        Error = "Nao pegou CPF - " + Classe;
-                        result = false;
-                    }
+                    campoTelefone.Click();
+                    Thread.Sleep(500);
+                    campoTelefone.SendKeys(massa.telefone);
+                    Thread.Sleep(500);
 
                     campoEmail.Click();
                     Thread.Sleep(500);
@@ -88,6 +72,28 @@ namespace Automacao_Funcional.tests.steps
                     Thread.Sleep(500);
                     campoEmailConf.SendKeys(mail);
                     Thread.Sleep(500);
+
+                    campoSenha.Click();
+                    Thread.Sleep(500);
+                    campoSenha.SendKeys(massa.senha);
+                    Thread.Sleep(500);
+
+                    senhaConf.Click();
+                    Thread.Sleep(500);
+                    senhaConf.SendKeys(massa.senha);
+                    Thread.Sleep(500);
+
+                    string Classe = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtCpf")).GetAttribute("class");
+
+                    if (Classe == "input-padrao valid")
+                    {
+                        Error = Classe;
+                    }
+                    else
+                    {
+                        Error = "Nao pegou CPF - " + Classe;
+                        result = false;
+                    }
 
                     string Classe1 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtEmail")).GetAttribute("class");
 
@@ -100,30 +106,19 @@ namespace Automacao_Funcional.tests.steps
                         Error = "Nao pegou email - " + Classe1;
                         result = false;
                     }
-                    
-
-                    campoSenha.Click();
-                    Thread.Sleep(500);
-                    campoSenha.SendKeys(massa.senha);
-                    Thread.Sleep(500);
 
                     string Classe2 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtEmailConfirmar")).GetAttribute("class");
 
                     if (Classe2 == "input-padrao valid")
                     {
                         Error = Classe2;
-                       
+
                     }
                     else
                     {
                         Error = "Nao pegou email confirmar - " + Classe2;
                         result = false;
                     }
-
-                    senhaConf.Click();
-                    Thread.Sleep(500);
-                    senhaConf.SendKeys(massa.senha);
-                    Thread.Sleep(500);
 
                     string Classe3 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtSenha")).GetAttribute("class");
 
@@ -137,20 +132,6 @@ namespace Automacao_Funcional.tests.steps
                         Error = "Nao pegou CPF - " + Classe3;
                         result = false;
                     }
-
-                    //string Classe4 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtSenhaConfirmar")).GetAttribute("class");
-
-                    //if (Classe4 == "input-padrao eyePass valid")
-                    //{
-                    //    Error = Classe4;
-                       
-                    //}
-                    //else
-                    //{
-                    //    Error = "Nao pegou Conf senha - " + Classe4;
-                    //    result = false;
-                    //}
-                    
                 }
                 else
                 {
@@ -160,20 +141,18 @@ namespace Automacao_Funcional.tests.steps
             }
             catch
             {
-                //Error = "Try/Catch";
-                //result = false;
+
             }
 
-            //return _result;
         }
 
         public bool ClicarComeceAgora()
         {
             bool _result = false;
+            Thread.Sleep(1000);
 
             try
             {
-                Thread.Sleep(1000);
                 if (btnCadastro.Displayed)
                 {
                     btnCadastro.Submit();
