@@ -81,6 +81,11 @@ namespace Automacao_Funcional.tests.steps
                     Thread.Sleep(500);
                     campoEmail.SendKeys(mail);
                     Thread.Sleep(500);
+                    
+                    campoEmailConf.Click();
+                    Thread.Sleep(500);
+                    campoEmailConf.SendKeys(mail);
+                    Thread.Sleep(500);
 
                     string Classe1 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtEmail")).GetAttribute("class");
 
@@ -92,10 +97,11 @@ namespace Automacao_Funcional.tests.steps
                     {
                         Error = "Nao pegou email - " + Classe1;
                     }
+                    
 
-                    campoEmailConf.Click();
+                    campoSenha.Click();
                     Thread.Sleep(500);
-                    campoEmailConf.SendKeys(mail);
+                    campoSenha.SendKeys(massa.senha);
                     Thread.Sleep(500);
 
                     string Classe2 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtEmailConfirmar")).GetAttribute("class");
@@ -108,11 +114,6 @@ namespace Automacao_Funcional.tests.steps
                     {
                         Error = "Nao pegou email confirmar - " + Classe2;
                     }
-
-                    campoSenha.Click();
-                    Thread.Sleep(500);
-                    campoSenha.SendKeys(massa.senha);
-                    Thread.Sleep(500);
 
                     senhaConf.Click();
                     Thread.Sleep(500);
