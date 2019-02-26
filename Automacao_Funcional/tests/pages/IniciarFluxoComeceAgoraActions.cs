@@ -20,6 +20,7 @@ namespace Automacao_Funcional.tests.steps
         public void PreencherOsDados( ref string Error,  ref bool result)
         {
             //bool _result = false;
+            Error = "Não entrou no IF";
 
             string mail = util.GerarNumRandom();
             mail = "teste_" + mail + massa.email;
@@ -27,9 +28,9 @@ namespace Automacao_Funcional.tests.steps
 
             ConsultaDB.Cpf(cpf);
 
-            //cpf = util.MascaraCpf(cpf);
+            cpf = util.MascaraCpf(cpf);
             var teste = cpf.ToCharArray();
-            Error = "Não entrouo no IF";
+            
 
             try
             {
