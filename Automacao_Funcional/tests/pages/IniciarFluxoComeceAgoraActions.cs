@@ -56,12 +56,10 @@ namespace Automacao_Funcional.tests.steps
                         campoNome.SendKeys(massa.nome + " " + massa.sobrenome);
                         Thread.Sleep(500);
 
-
-
                         InputCpf.Click();
-                        Thread.Sleep(800);
-                        InputCpf.SendKeys("017.626.670-45");
-                        Thread.Sleep(600);
+                        Thread.Sleep(1000);
+                        InputCpf.SendKeys(cpf);
+                        Thread.Sleep(1000);
 
                         campoTelefone.Click();
                         Thread.Sleep(500);
@@ -72,7 +70,7 @@ namespace Automacao_Funcional.tests.steps
                     
                     if (Classe == "input-padrao valid")
                     {
-                        //OK
+                        Error = Classe;
                     }
                     else
                     {
