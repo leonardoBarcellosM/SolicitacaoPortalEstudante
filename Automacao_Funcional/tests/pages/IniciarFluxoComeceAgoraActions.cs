@@ -29,6 +29,7 @@ namespace Automacao_Funcional.tests.steps
 
             //cpf = util.MascaraCpf(cpf);
             var teste = cpf.ToCharArray();
+            Error = "Não entrouo no IF";
 
             try
             {
@@ -120,7 +121,31 @@ namespace Automacao_Funcional.tests.steps
                     senhaConf.SendKeys(massa.senha);
                     Thread.Sleep(500);
 
-                   // _result = true;
+                    string Classe3 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtSenha")).GetAttribute("class");
+
+                    if (Classe3 == "input-padrao valid")
+                    {
+                        Error = Classe3;
+                    }
+                    else
+                    {
+                        Error = "Nao pegou CPF - " + Classe3;
+                    }
+
+                    string Classe4 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtSenhaConfirmar")).GetAttribute("class");
+
+                    if (Classe4 == "input-padrao valid")
+                    {
+                        Error = Classe4;
+                    }
+                    else
+                    {
+                        Error = "Nao pegou CPF - " + Classe4;
+                    }
+
+                    
+
+                    // _result = true;
                     result = true;
                 }
                 else
