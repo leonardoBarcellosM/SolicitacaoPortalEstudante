@@ -46,7 +46,6 @@ namespace Automacao_Funcional.tests.steps
 
                 if (BtnIniciar.Displayed) {
 
-                    
                         BtnIniciar.Click();
                         Thread.Sleep(1000);
 
@@ -113,8 +112,8 @@ namespace Automacao_Funcional.tests.steps
             }
             catch
             {
-                Error = "Try/Catch";
-                result = false;
+                //Error = "Try/Catch";
+                //result = false;
             }
 
             //return _result;
