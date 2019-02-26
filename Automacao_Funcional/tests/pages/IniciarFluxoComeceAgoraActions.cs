@@ -77,17 +77,37 @@ namespace Automacao_Funcional.tests.steps
                         Error = "Nao pegou CPF - " + Classe;
                     }
 
-                    
-
                     campoEmail.Click();
                     Thread.Sleep(500);
                     campoEmail.SendKeys(mail);
                     Thread.Sleep(500);
 
+                    string Classe1 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtEmail")).GetAttribute("class");
+
+                    if (Classe1 == "input-padrao valid")
+                    {
+                        Error = Classe1;
+                    }
+                    else
+                    {
+                        Error = "Nao pegou CPF - " + Classe1;
+                    }
+
                     campoEmailConf.Click();
                     Thread.Sleep(500);
                     campoEmailConf.SendKeys(mail);
                     Thread.Sleep(500);
+
+                    string Classe2 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtEmailConfirmar")).GetAttribute("class");
+
+                    if (Classe2 == "input-padrao valid")
+                    {
+                        Error = Classe2;
+                    }
+                    else
+                    {
+                        Error = "Nao pegou CPF - " + Classe2;
+                    }
 
                     campoSenha.Click();
                     Thread.Sleep(500);
