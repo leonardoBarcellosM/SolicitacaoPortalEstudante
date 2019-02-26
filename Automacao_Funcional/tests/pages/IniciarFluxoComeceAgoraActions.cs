@@ -129,7 +129,7 @@ namespace Automacao_Funcional.tests.steps
                     }
                     else
                     {
-                        Error = "Nao pegou CPF - " + Classe3;
+                        Error = "Não pegou senha - " + Classe3;
                         result = false;
                     }
                 }
