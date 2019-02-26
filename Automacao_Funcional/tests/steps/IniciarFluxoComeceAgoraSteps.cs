@@ -12,7 +12,7 @@ namespace Automacao_Funcional.tests.steps
         [Given(@"Preencher os dados")]
         public void GivenPreencherOsDados()
         {
-            bool result = false;
+            bool result = true;
             string Error = "";
 
             pageAction.PreencherOsDados(ref Error, ref result);

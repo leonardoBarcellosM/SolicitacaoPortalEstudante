@@ -52,7 +52,6 @@ namespace Automacao_Funcional.tests.steps
                         BtnIniciar.Click();
                         Thread.Sleep(1000);
 
-                   
                         campoNome.Click();
                         Thread.Sleep(500);
                         campoNome.SendKeys(massa.nome + " " + massa.sobrenome);
@@ -77,6 +76,7 @@ namespace Automacao_Funcional.tests.steps
                     else
                     {
                         Error = "Nao pegou CPF - " + Classe;
+                        result = false;
                     }
 
                     campoEmail.Click();
@@ -98,6 +98,7 @@ namespace Automacao_Funcional.tests.steps
                     else
                     {
                         Error = "Nao pegou email - " + Classe1;
+                        result = false;
                     }
                     
 
@@ -111,10 +112,12 @@ namespace Automacao_Funcional.tests.steps
                     if (Classe2 == "input-padrao valid")
                     {
                         Error = Classe2;
+                       
                     }
                     else
                     {
                         Error = "Nao pegou email confirmar - " + Classe2;
+                        result = false;
                     }
 
                     senhaConf.Click();
@@ -127,10 +130,12 @@ namespace Automacao_Funcional.tests.steps
                     if (Classe3 == "input-padrao valid")
                     {
                         Error = Classe3;
+                       
                     }
                     else
                     {
                         Error = "Nao pegou CPF - " + Classe3;
+                        result = false;
                     }
 
                     string Classe4 = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtSenhaConfirmar")).GetAttribute("class");
@@ -138,16 +143,14 @@ namespace Automacao_Funcional.tests.steps
                     if (Classe4 == "input-padrao valid")
                     {
                         Error = Classe4;
+                       
                     }
                     else
                     {
-                        Error = "Nao pegou CPF - " + Classe4;
+                        Error = "Nao pegou Conf senha - " + Classe4;
+                        result = false;
                     }
-
                     
-
-                    // _result = true;
-                    result = true;
                 }
                 else
                 {
