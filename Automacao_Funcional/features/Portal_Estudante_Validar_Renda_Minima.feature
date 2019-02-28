@@ -32,7 +32,7 @@ And Clicar no botao aceito os termos
 Then Validar solicitacao enviada
 
 @02_2Etapa
-Scenario: 06 Preencher Dados Do Estudante
+Scenario: 05 Preencher Dados Do Estudante
 Given Clicar no botao enviar
 Then Validar direcionamento para etapa 3
 
@@ -41,14 +41,14 @@ Scenario: 06 Validar DB
 Then Consultar renda "minima" no db
 
 @03_Renda_Minima
-Scenario: 06 Validar o comportamento com a renda inferior ao minimo exigido
+Scenario: 07 Validar o comportamento com a renda inferior ao minimo exigido
 When Informo valor inferior ao minimo
 Then Apresenta mensagem informando que o valor é insuficiente
 And O botao Enviar ficara desabilitado
 And A opcao quero continuar mesmo assim e apresentada
 
 @03_Renda_Minima
-Scenario: 06 Validar o comportamento com a renda superior ao minimo exigido
+Scenario: 08 Validar o comportamento com a renda superior ao minimo exigido
 When Informo valor superior ao minimo
 Then Apresenta mensagem informando que o valor é suficiente
 And O botao Enviar ficara habilitado

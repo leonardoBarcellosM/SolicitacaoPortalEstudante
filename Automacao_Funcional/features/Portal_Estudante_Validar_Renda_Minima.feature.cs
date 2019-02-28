@@ -152,11 +152,11 @@ testRunner.Then("Validar solicitacao enviada", ((string)(null)), ((TechTalk.Spec
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("06 Preencher Dados Do Estudante")]
+        [NUnit.Framework.DescriptionAttribute("05 Preencher Dados Do Estudante")]
         [NUnit.Framework.CategoryAttribute("02_2Etapa")]
-        public virtual void _06PreencherDadosDoEstudante()
+        public virtual void _05PreencherDadosDoEstudante()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06 Preencher Dados Do Estudante", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05 Preencher Dados Do Estudante", null, new string[] {
                         "02_2Etapa"});
 #line 35
 this.ScenarioInitialize(scenarioInfo);
@@ -186,11 +186,11 @@ testRunner.Then("Consultar renda \"minima\" no db", ((string)(null)), ((TechTalk
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("06 Validar o comportamento com a renda inferior ao minimo exigido")]
+        [NUnit.Framework.DescriptionAttribute("07 Validar o comportamento com a renda inferior ao minimo exigido")]
         [NUnit.Framework.CategoryAttribute("03_Renda_Minima")]
-        public virtual void _06ValidarOComportamentoComARendaInferiorAoMinimoExigido()
+        public virtual void _07ValidarOComportamentoComARendaInferiorAoMinimoExigido()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06 Validar o comportamento com a renda inferior ao minimo exigido", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07 Validar o comportamento com a renda inferior ao minimo exigido", null, new string[] {
                         "03_Renda_Minima"});
 #line 44
 this.ScenarioInitialize(scenarioInfo);
@@ -208,11 +208,11 @@ testRunner.And("A opcao quero continuar mesmo assim e apresentada", ((string)(nu
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("06 Validar o comportamento com a renda superior ao minimo exigido")]
+        [NUnit.Framework.DescriptionAttribute("08 Validar o comportamento com a renda superior ao minimo exigido")]
         [NUnit.Framework.CategoryAttribute("03_Renda_Minima")]
-        public virtual void _06ValidarOComportamentoComARendaSuperiorAoMinimoExigido()
+        public virtual void _08ValidarOComportamentoComARendaSuperiorAoMinimoExigido()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06 Validar o comportamento com a renda superior ao minimo exigido", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08 Validar o comportamento com a renda superior ao minimo exigido", null, new string[] {
                         "03_Renda_Minima"});
 #line 51
 this.ScenarioInitialize(scenarioInfo);
