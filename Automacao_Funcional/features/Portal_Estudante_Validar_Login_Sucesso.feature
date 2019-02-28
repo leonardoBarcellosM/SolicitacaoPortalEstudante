@@ -16,9 +16,9 @@ Then Validar o carregamento
 Scenario: 02 Realizar login
 Given Clico no botao Entrar
 When Preencho os campos nome e senha
-| Field		| Value			|
-| CPF		| 802.204.500-48|
-| Senha		| teste123		|
+| Field		| Value			 |
+| CPF		| 802.204.500-48 |
+| Senha		| teste123		 |
 And Clico em Entrar
 Then Login deve ser ralizado com sucesso
 

@@ -49,12 +49,11 @@ namespace Automacao_Funcional.tests.steps
                     DadosDB.Funil_Aprovados = Element[arg].Text;
                     break;
             };
+
             util.WaitForElementVisible(Element[arg], 30);
 
             try
             {
-                
-
                 if (Element[arg].Displayed)
                 {
                     Element[arg].Click();

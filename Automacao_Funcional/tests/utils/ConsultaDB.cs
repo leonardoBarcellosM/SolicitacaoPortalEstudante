@@ -1,5 +1,6 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using System;
+using System.Globalization;
 
 namespace Automacao_Funcional.tests.steps
 {
@@ -38,9 +39,10 @@ namespace Automacao_Funcional.tests.steps
             ano = year.ToString();
             string data = dia + "-" + mes + "-" + ano;
 
-            OracleConnection con = new OracleConnection();
-
-            con.ConnectionString = ConectarDB();
+            OracleConnection con = new OracleConnection
+            {
+                ConnectionString = ConectarDB()
+            };
 
             //string queryString0 =
             //    "select count(1) from SOLICITACOES_WEB where STATUS not in ('C', 'RIES') and STATUS_CADASTRO not in ('C') and BOLSA_ID in (select bolsas_id from USUARIOS_IES_BOLSAS where USUARIO_IES_ID = 8) and nvl(OCULTAR_IES, 'N') <> 'S' and dt_inclusao >= :dt";
@@ -172,9 +174,10 @@ namespace Automacao_Funcional.tests.steps
             string[] stat = new string[3];
             string Id = null;
 
-            OracleConnection con = new OracleConnection();
-
-            con.ConnectionString = ConectarDB();
+            OracleConnection con = new OracleConnection
+            {
+                ConnectionString = ConectarDB()
+            };
 
             string queryString0 =
                 "select id from usuarios_web where cpf = :cpf";
@@ -222,132 +225,147 @@ namespace Automacao_Funcional.tests.steps
             return stat;
         }
 
-        //public string[] ConsultaBolsaCurso()
-        //{
-        //    string[] stat = new string[2];
+        public string[] ConsultaBolsaCurso()
+        {
+            string[] stat = new string[2];
 
-        //    OracleConnection con = new OracleConnection();
+            OracleConnection con = new OracleConnection();
 
-        //    con.ConnectionString = ConectarDB();
+            con.ConnectionString = ConectarDB();
 
-        //    string queryString1 =
-        //        "select sw.bolsa_id, sw.curso_id " +
-        //        "from usuarios_web uw " +
-        //        "inner join solicitacoes_web sw on sw.usr_id = uw.id " +
-        //        "where cpf = :cpf ";
+            string queryString1 =
+                "select sw.bolsa_id, sw.curso_id " +
+                "from usuarios_web uw " +
+                "inner join solicitacoes_web sw on sw.usr_id = uw.id " +
+                "where cpf = :cpf ";
 
-        //    con.Open();
+            con.Open();
 
-        //    try
-        //    {
-        //        OracleCommand command2 = con.CreateCommand();
-        //        command2.CommandText = queryString1;
-        //        command2.Parameters.Add(new OracleParameter("cpf", CpfFixo));
+            try
+            {
+                OracleCommand command2 = con.CreateCommand();
+                command2.CommandText = queryString1;
+                command2.Parameters.Add(new OracleParameter("cpf", CpfFixo));
 
-        //        OracleDataReader reader2 = command2.ExecuteReader();
+                OracleDataReader reader2 = command2.ExecuteReader();
 
-        //        if (reader2.Read())
-        //        {
-        //            stat[0] = reader2[0].ToString();
-        //            stat[1] = reader2[1].ToString();
-        //        }
-        //        reader2.Close();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine(ex.Message);
-        //    }
+                if (reader2.Read())
+                {
+                    stat[0] = reader2[0].ToString();
+                    stat[1] = reader2[1].ToString();
+                }
+                reader2.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
-        //    con.Dispose();
+            con.Dispose();
 
-        //    return stat;
-        //}
+            return stat;
+        }
 
-        //public string ConsultaRendaMinima()
-        //{
-        //    string valor01 = null;
-        //    string valor02 = null;
-        //    string valor03 = null;
-        //    string valor04 = null;
-        //    string minimo = null;
-        //    float total_minimo;
-        //    float fiador_minimo;
+        public string ConsultaRendaMinima()
+        {
+            string vlrMensalidade = null;
+            string MinSalMinimo = null;
+            string VlrRendaFiador = null;
+            string SalarioMinimo = null;
+            string Minimo = null;
+            double Mensalidade;
+            float salMinimo;
 
+            string[] status = ConsultaBolsaCurso();
 
-        //    string[] status = ConsultaBolsaCurso();
+            OracleConnection con = new OracleConnection();
+            con.ConnectionString = ConectarDB();
 
-        //    OracleConnection con = new OracleConnection();
+            string queryString0 =
+                "select pbc.min_salarios_minimo, pbc.valor_renda_fiador, vmp.vl_mensalidade, (select valor from salario_minimo where rownum = 1) as salario_minimo " +
+                "from bolsas_curso bc " +
+                "left join param_bolsas_curso pbc on pbc.bcs_id = bc.id " +
+                "left join valores_medio_parcela vmp on vmp.bcs_id = bc.id " +
+                "where bol_id = :bolsa and bc.id = :curso";
 
-        //    con.ConnectionString = ConectarDB();
+            con.Open();
 
-        //    string queryString0 =
-        //        "select pbc.valor_renda_fiador, vmp.vl_mensalidade, pbc.min_salarios_minimo, (select valor from salario_minimo where rownum = 1) " +
-        //        "from bolsas_curso bc left " +
-        //        "join param_bolsas_curso pbc on pbc.bcs_id = bc.bol_id left " +
-        //        "join valores_medio_parcela vmp on vmp.bcs_id = bc.id " +
-        //        "where bc.bol_id = :bolsa and bc.cod_curso = :curso";
+            try
+            {
+                OracleCommand command = con.CreateCommand();
+                command.CommandText = queryString0;
+                command.Parameters.Add(new OracleParameter("bolsa", status[0]));
+                command.Parameters.Add(new OracleParameter("curso", status[1]));
 
-        //    con.Open();
+                OracleDataReader reader = command.ExecuteReader();
 
-        //    try
-        //    {
-        //        OracleCommand command = con.CreateCommand();
-        //        command.CommandText = queryString0;
-        //        command.Parameters.Add(new OracleParameter("bolsa", status[0]));
-        //        command.Parameters.Add(new OracleParameter("curso", status[1]));
+                if (reader.Read())
+                {
+                    MinSalMinimo = reader[0].ToString();
+                    VlrRendaFiador = reader[1].ToString();
+                    vlrMensalidade = reader[2].ToString();
+                    SalarioMinimo = reader[3].ToString();
+                }
 
-        //        OracleDataReader reader = command.ExecuteReader();
+                reader.Close();
 
-        //        if (reader.Read())
-        //        {
-        //            valor01 = reader[0].ToString();
-        //            valor02 = reader[1].ToString();
-        //            valor03 = reader[2].ToString();
-        //            valor04 = reader[3].ToString();
-        //        }
+                if (vlrMensalidade != "" && vlrMensalidade != null)
+                {
+                    if(VlrRendaFiador == "" || VlrRendaFiador == null)
+                    {
+                        Mensalidade = float.Parse(vlrMensalidade) * 1.5;
+                    }
+                    else
+                    {
+                        Mensalidade = float.Parse(vlrMensalidade) * float.Parse(VlrRendaFiador);
+                    }
 
-        //        reader.Close();
+                    if(MinSalMinimo == "" || MinSalMinimo == null )
+                    {
+                        salMinimo = float.Parse(SalarioMinimo) * 2;
+                    }
+                    else
+                    {
+                        salMinimo = float.Parse(SalarioMinimo) * float.Parse(MinSalMinimo);
+                    }
 
-        //        if (valor02 != "")
-        //        {
-        //            total_minimo = float.Parse(valor01) * float.Parse(valor02);
-        //            fiador_minimo = float.Parse(valor03) * float.Parse(valor04);
+                    if (Mensalidade > salMinimo)
+                    {
+                        Minimo = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", Mensalidade);
+                        Minimo = Minimo.Replace("R$ ", "");
+                    }
+                    else
+                    {
+                        Minimo = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", salMinimo);
+                        Minimo = Minimo.Replace("R$ ", "");
+                    }
+                }
+                else
+                {
+                    //Não apresentar a mensagem de valor mínimo//
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
-        //            if (total_minimo >= fiador_minimo)
-        //            {
-        //                minimo = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", total_minimo);
-        //                minimo = minimo.Replace("R$ ", "");
-        //            }
-        //            else
-        //            {
-        //                minimo = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", fiador_minimo);
-        //                minimo = minimo.Replace("R$ ", "");
-        //            }
-        //        }
-        //        else
-        //        {
-        //            //Não apresentar a mensagem de valor mínimo//
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine(ex.Message);
-        //    }
+            con.Dispose();
 
-        //    con.Dispose();
-
-        //    return minimo;
-        //}
+            return Minimo;
+        }
 
         public void AlterarStatus()
         {
-            OracleConnection con = new OracleConnection();
-            con.ConnectionString = ConectarDB();
+            OracleConnection con = new OracleConnection
+            {
+                ConnectionString = ConectarDB()
+            };
+
             con.Open();
 
             string queryString =
                 "update SOLICITACOES_WEB set STATUS = 'PIES' where id = '99329'";
-
 
             OracleCommand command = con.CreateCommand();
             command.CommandText = queryString;
@@ -364,6 +382,5 @@ namespace Automacao_Funcional.tests.steps
             }
             con.Dispose();
         }
-        
     }
 }

@@ -12,7 +12,7 @@ namespace Automacao_Funcional.tests.steps
         private DadosDoFiadorActions FiadorActions = new DadosDoFiadorActions();
         private SelecionarDocumentosActions ConcluirSolicitacao = new SelecionarDocumentosActions();
         private AprovacaoIesActions Reprovar = new AprovacaoIesActions();
-        //private ValidarRendaMinimaActions RendaMinima = new ValidarRendaMinimaActions();
+        private ValidarRendaMinimaActions RendaMinima = new ValidarRendaMinimaActions();
 
         [Given(@"Acessar a opcao solicitacao")]
         public void GivenAcessarAOpcaoSolicitacao()
@@ -77,19 +77,19 @@ namespace Automacao_Funcional.tests.steps
             Assert.That(result, Is.True, "Divergência entre a etapa/ação e os status do banco -> " + var +"");
         }
 
-        //[Then(@"Consultar renda ""(.*)"" no db")]
-        //public void ThenConsultarRendaMinima(string var)
-        //{
-        //    bool result = false;
+        [Then(@"Consultar renda ""(.*)"" no db")]
+        public void ThenConsultarRendaMinima(string var)
+        {
+            bool result = false;
 
-        //    switch (var)
-        //    {
-        //        case "minima":
-        //            result = RendaMinima.ConsultarRendaMinima();
-        //            break;
-        //    }
+            switch (var)
+            {
+                case "minima":
+                    result = RendaMinima.ConsultarRendaMinima();
+                    break;
+            }
 
-        //        Assert.That(result, Is.True, "Divergência entre a etapa/ação e os status do banco!");
-        //}
+            Assert.That(result, Is.True, "Divergência entre a etapa/ação e os status do banco!");
+        }
     }
 }

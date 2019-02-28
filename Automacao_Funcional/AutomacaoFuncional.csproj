@@ -166,6 +166,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Portal_IES_Validar_Reprovar_Solicitacao.feature</DependentUpon>
     </Compile>
+    <Compile Include="features\Portal_Estudante_Validar_Renda_Minima.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Portal_Estudante_Validar_Renda_Minima.feature</DependentUpon>
+    </Compile>
     <Compile Include="features\TestesDeScript.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -202,6 +207,8 @@
     <Compile Include="tests\pages\SelecionarDocumentosMap.cs" />
     <Compile Include="tests\pages\ValidarFunilIesActions.cs" />
     <Compile Include="tests\pages\ValidarFunilIesMap.cs" />
+    <Compile Include="tests\pages\ValidarRendaMinimaActions.cs" />
+    <Compile Include="tests\pages\ValidarRendaMinimaMap.cs" />
     <Compile Include="tests\pages\ValidarTelaPesquisaAction.cs" />
     <Compile Include="tests\pages\ValidarTelaPesquisaMap.cs" />
     <Compile Include="tests\steps\AccessSteps.cs" />
@@ -216,6 +223,7 @@
     <Compile Include="tests\steps\NavegarIesSteps.cs" />
     <Compile Include="tests\steps\PreencherDadosDoCursoSteps.cs" />
     <Compile Include="tests\steps\PreencherDadosFiadorSteps.cs" />
+    <Compile Include="tests\steps\RendaMinimaSteps.cs" />
     <Compile Include="tests\steps\ScopeFeatures.cs" />
     <Compile Include="tests\steps\SelecionarDocumentosSteps.cs" />
     <Compile Include="tests\steps\SelecionarInstituicaoSteps.cs" />
@@ -259,6 +267,10 @@
     <None Include="features\Portal_IES_Validar_Reprovar_Solicitacao.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Portal_IES_Validar_Reprovar_Solicitacao.feature.cs</LastGenOutput>
+    </None>
+    <None Include="features\Portal_Estudante_Validar_Renda_Minima.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Portal_Estudante_Validar_Renda_Minima.feature.cs</LastGenOutput>
     </None>
     <None Include="features\TestesDeScript.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
