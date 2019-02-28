@@ -291,14 +291,33 @@ namespace Automacao_Funcional.tests.steps
             {
                 string minimo = db.ConsultaRendaMinima();
 
-                var msg = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//form[@name='formCadastroFiador']//div[@class='row'][3]//div[2]//div[1]//div[1] //div[1]//div[1]//div[2]")).Text;
-                var text = msg.Split(' ');
-                var valor = text[8].Replace("R$", "");
-
-                if (valor == minimo+".")
+                if (minimo != null)
                 {
-                    _result = true;
-                    Thread.Sleep(500);
+                    var msg = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//form[@name='formCadastroFiador']//div[@class='row'][3]//div[2]//div[1]//div[1] //div[1]//div[1]//div[2]")).Text;
+                    var text = msg.Split(' ');
+                    var valor = text[8].Replace("R$", "");
+
+                    if (valor == minimo + ".")
+                    {
+                        _result = true;
+                        Thread.Sleep(500);
+                    }
+                    else
+                    {
+                        _result = false;
+                    }
+                }
+                else
+                {
+                    IWebElement msg = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//form[@name='formCadastroFiador']//div[@class='row'][3]//div[2]//div[1]//div[1] //div[1]//div[1]//div[2]"));
+                    if (msg.Displayed)
+                    {
+                        _result = false;
+                    }
+                    else
+                    {
+                        _result = true;
+                    }
                 }
             }
             catch

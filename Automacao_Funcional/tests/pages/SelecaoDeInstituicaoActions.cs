@@ -102,7 +102,7 @@ namespace Automacao_Funcional.tests.steps
             try
             {
                 IWebElement opt2 = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//a[@class='chosen-single chosen-default']/../div//div/../ul//li[text()='"+arg+"']"));
-               // IWebElement opt2 = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//*[@id='listaCursosIES_chosen']/div/ul/li[1]"));
+               
                 util.WaitForElementVisible(opt2, 10);
                 if (opt2.Displayed)
                 {

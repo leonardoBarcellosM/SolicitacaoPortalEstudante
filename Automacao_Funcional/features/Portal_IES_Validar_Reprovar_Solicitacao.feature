@@ -1,4 +1,4 @@
-﻿Feature: H-12_Portal_IES_Validar_Reprovar_Solicitacao
+﻿Feature: H-Portal_IES_Validar_Reprovar_Solicitacao
 	Use before title fiture separed with "-":
 	 'C' for Chrome;
 	 'I' for Internet Explorer;

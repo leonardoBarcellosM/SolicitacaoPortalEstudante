@@ -52,4 +52,3 @@ Scenario: 06 Validar o comportamento com a renda superior ao minimo exigido
 When Informo valor superior ao minimo
 Then Apresenta mensagem informando que o valor é suficiente
 And O botao Enviar ficara habilitado
-

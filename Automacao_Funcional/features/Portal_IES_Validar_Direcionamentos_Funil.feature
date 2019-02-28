@@ -1,4 +1,4 @@
-﻿Feature: H-07_Portal_IES_Validar_Direcionamentos_Funil
+﻿Feature: H-Portal_IES_Validar_Direcionamentos_Funil
 	Use before title fiture separed with "-":
 	 'C' for Chrome;
 	 'I' for Internet Explorer;

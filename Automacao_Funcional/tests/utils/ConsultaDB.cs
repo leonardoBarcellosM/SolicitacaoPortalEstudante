@@ -342,7 +342,7 @@ namespace Automacao_Funcional.tests.steps
                 }
                 else
                 {
-                    //Não apresentar a mensagem de valor mínimo//
+                    Minimo = null;
                 }
             }
             catch (Exception ex)
