@@ -175,11 +175,11 @@ namespace Automacao_Funcional.tests.steps
         public bool FluxoIniciadoComSucesso()
         {
             bool _result = false;
-            Thread.Sleep(2500);
+            Thread.Sleep(5000);
+            util.WaitForElementVisible(ClassDriver.GetInstance().Driver.FindElement(By.XPath("//H1[@class='hidden-sm hidden-xs'][text()='Portal do Estudante']/self::H1")), 60);
 
             try
             {
-                
                 IWebElement BemVindo = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//H1[@class='hidden-sm hidden-xs'][text()='Portal do Estudante']/self::H1"));
 
                 if (BemVindo.Displayed)
