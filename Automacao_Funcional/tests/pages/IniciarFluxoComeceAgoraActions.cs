@@ -149,7 +149,7 @@ namespace Automacao_Funcional.tests.steps
         public bool ClicarComeceAgora()
         {
             bool _result = false;
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
 
             try
             {
@@ -157,6 +157,7 @@ namespace Automacao_Funcional.tests.steps
                 {
                     btnCadastro.Submit();
                     _result = true;
+                    Thread.Sleep(3000);
                 }
                 else
                 {
@@ -165,9 +166,8 @@ namespace Automacao_Funcional.tests.steps
             }
             catch
             {
-                util.ScreenshotPrepare();
-            }
 
+            }
             return _result;
         }
 
@@ -176,11 +176,11 @@ namespace Automacao_Funcional.tests.steps
         {
             bool _result = false;
             Thread.Sleep(5000);
-            util.WaitForElementVisible(ClassDriver.GetInstance().Driver.FindElement(By.XPath("//H1[@class='hidden-sm hidden-xs'][text()='Portal do Estudante']/self::H1")), 60);
+            util.WaitForElementVisible(ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[2]/div/ng-include[2]/nav/div/div/div[1]/a")), 60);
 
             try
             {
-                IWebElement BemVindo = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//H1[@class='hidden-sm hidden-xs'][text()='Portal do Estudante']/self::H1"));
+                IWebElement BemVindo = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[2]/div/ng-include[2]/nav/div/div/div[1]/a"));
 
                 if (BemVindo.Displayed)
                 {
