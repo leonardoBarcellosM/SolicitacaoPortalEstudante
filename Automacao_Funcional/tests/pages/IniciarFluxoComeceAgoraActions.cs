@@ -176,7 +176,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool _result = false;
             Thread.Sleep(5000);
-            IWebElement BemVindo = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/ng-include/div/div/p[1]"));
+            IWebElement BemVindo = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/ng-include/div/div/h3"));
             try
             {
                 if (BemVindo.Text.Contains("LEONARDO"))
