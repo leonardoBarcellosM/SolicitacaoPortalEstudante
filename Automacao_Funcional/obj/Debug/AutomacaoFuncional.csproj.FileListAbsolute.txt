@@ -77,7 +77,6 @@ C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\Newtonsoft.Json.dll
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\nunit.framework.dll
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\Oracle.ManagedDataAccess.dll
-C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\Simplify.Resources.dll
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\System.Net.Http.dll
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\System.Net.Http.Extensions.dll
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\System.Net.Http.Formatting.dll
@@ -104,7 +103,6 @@ C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\Newtonsoft.Json.xml
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\nunit.framework.pdb
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\nunit.framework.xml
-C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\Simplify.Resources.xml
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\System.Web.Helpers.xml
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\System.Web.Http.xml
@@ -124,3 +122,4 @@ C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\Automacao_Funcional.pdb
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\obj\Debug\Automacao_Funcional.dll
 C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\obj\Debug\Automacao_Funcional.pdb
+C:\Users\leonardo.barcellos\source\repos\Automacao_Funcional\Automacao_Funcional\bin\Debug\System.ValueTuple.xml

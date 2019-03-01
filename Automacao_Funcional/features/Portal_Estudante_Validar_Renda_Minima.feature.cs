@@ -18,8 +18,8 @@ namespace Automacao_Funcional.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("H-Portal_Estudante_Validar_Renda_Minima")]
-    public partial class H_Portal_Estudante_Validar_Renda_MinimaFeature
+    [NUnit.Framework.DescriptionAttribute("Portal_Estudante_Validar_Renda_Minima")]
+    public partial class Portal_Estudante_Validar_Renda_MinimaFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace Automacao_Funcional.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "H-Portal_Estudante_Validar_Renda_Minima", "\tUse before title fiture separed with \"-\":\r\n\t \'C\' for Chrome;\r\n\t \'I\' for Internet" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Portal_Estudante_Validar_Renda_Minima", "\tUse before title fiture separed with \"-\":\r\n\t \'C\' for Chrome;\r\n\t \'I\' for Internet" +
                     " Explorer;\r\n\t \'F\' for FireFox Mozilla;\r\n\t \'E\' for Edge;\r\n\t \'H\' for Headless Chro" +
                     "me;\r\n\t Default: Chrome", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
@@ -91,11 +91,11 @@ testRunner.Then("Validar o carregamento", ((string)(null)), ((TechTalk.SpecFlow.
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("02 Iniciar Fluxo Comece Agora")]
-        [NUnit.Framework.CategoryAttribute("02_1Etapa")]
+        [NUnit.Framework.CategoryAttribute("02_CadastrarEstudante")]
         public virtual void _02IniciarFluxoComeceAgora()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 Iniciar Fluxo Comece Agora", null, new string[] {
-                        "02_1Etapa"});
+                        "02_CadastrarEstudante"});
 #line 16
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -111,11 +111,11 @@ testRunner.Then("Validar se o fluxo e iniciado", ((string)(null)), ((TechTalk.Sp
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("03 Iniciar Solicitacao")]
-        [NUnit.Framework.CategoryAttribute("02_1Etapa")]
+        [NUnit.Framework.CategoryAttribute("03_IniciarSolicitaçaoDeCrédito")]
         public virtual void _03IniciarSolicitacao()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Iniciar Solicitacao", null, new string[] {
-                        "02_1Etapa"});
+                        "03_IniciarSolicitaçaoDeCrédito"});
 #line 22
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -131,11 +131,11 @@ testRunner.Then("Validar o direcionamento com sucesso", ((string)(null)), ((Tech
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("04 Selecionar Instituicao")]
-        [NUnit.Framework.CategoryAttribute("02_1Etapa")]
+        [NUnit.Framework.CategoryAttribute("03_IniciarSolicitaçaoDeCrédito")]
         public virtual void _04SelecionarInstituicao()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Selecionar Instituicao", null, new string[] {
-                        "02_1Etapa"});
+                        "03_IniciarSolicitaçaoDeCrédito"});
 #line 28
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -153,11 +153,11 @@ testRunner.Then("Validar solicitacao enviada", ((string)(null)), ((TechTalk.Spec
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("05 Preencher Dados Do Estudante")]
-        [NUnit.Framework.CategoryAttribute("02_2Etapa")]
+        [NUnit.Framework.CategoryAttribute("03_IniciarSolicitaçaoDeCrédito")]
         public virtual void _05PreencherDadosDoEstudante()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05 Preencher Dados Do Estudante", null, new string[] {
-                        "02_2Etapa"});
+                        "03_IniciarSolicitaçaoDeCrédito"});
 #line 35
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -170,12 +170,14 @@ testRunner.Then("Validar direcionamento para etapa 3", ((string)(null)), ((TechT
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("06 Validar DB")]
-        [NUnit.Framework.CategoryAttribute("03_Renda_Minima")]
-        public virtual void _06ValidarDB()
+        [NUnit.Framework.DescriptionAttribute("06 Consultar os dados para calcular a renda mínima que será apresentada no portal" +
+            " do estudante")]
+        [NUnit.Framework.CategoryAttribute("04_RendaMinima")]
+        public virtual void _06ConsultarOsDadosParaCalcularARendaMinimaQueSeraApresentadaNoPortalDoEstudante()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06 Validar DB", null, new string[] {
-                        "03_Renda_Minima"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06 Consultar os dados para calcular a renda mínima que será apresentada no portal" +
+                    " do estudante", null, new string[] {
+                        "04_RendaMinima"});
 #line 40
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -187,11 +189,11 @@ testRunner.Then("Consultar renda \"minima\" no db", ((string)(null)), ((TechTalk
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("07 Validar o comportamento com a renda inferior ao minimo exigido")]
-        [NUnit.Framework.CategoryAttribute("03_Renda_Minima")]
+        [NUnit.Framework.CategoryAttribute("04_RendaMinima")]
         public virtual void _07ValidarOComportamentoComARendaInferiorAoMinimoExigido()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07 Validar o comportamento com a renda inferior ao minimo exigido", null, new string[] {
-                        "03_Renda_Minima"});
+                        "04_RendaMinima"});
 #line 44
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -209,11 +211,11 @@ testRunner.And("A opcao quero continuar mesmo assim e apresentada", ((string)(nu
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("08 Validar o comportamento com a renda superior ao minimo exigido")]
-        [NUnit.Framework.CategoryAttribute("03_Renda_Minima")]
+        [NUnit.Framework.CategoryAttribute("04_RendaMinima")]
         public virtual void _08ValidarOComportamentoComARendaSuperiorAoMinimoExigido()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08 Validar o comportamento com a renda superior ao minimo exigido", null, new string[] {
-                        "03_Renda_Minima"});
+                        "04_RendaMinima"});
 #line 51
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -230,12 +232,12 @@ testRunner.And("O botao Enviar ficara habilitado", ((string)(null)), ((TechTalk.
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("09 Validar o comportamento da renda minima utilizando dois fiadores com renda ins" +
             "uficiente")]
-        [NUnit.Framework.CategoryAttribute("03_Renda_Minima")]
+        [NUnit.Framework.CategoryAttribute("04_RendaMinima")]
         public virtual void _09ValidarOComportamentoDaRendaMinimaUtilizandoDoisFiadoresComRendaInsuficiente()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09 Validar o comportamento da renda minima utilizando dois fiadores com renda ins" +
                     "uficiente", null, new string[] {
-                        "03_Renda_Minima"});
+                        "04_RendaMinima"});
 #line 57
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -247,6 +249,8 @@ testRunner.When("Seleciono a opcao para informar um segundo fiador", ((string)(n
 testRunner.And("Informo valor inferior ao minimo com o segundo fiador", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 61
 testRunner.Then("Apresenta mensagem informando que o valor é insuficiente para os dois fiadores", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 62
+testRunner.And("O botao Enviar ficara desabilitado", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 63
 testRunner.And("A opcao quero continuar mesmo assim e apresentada para os dois fiadores", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -256,12 +260,12 @@ testRunner.And("A opcao quero continuar mesmo assim e apresentada para os dois f
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("10 Validar o comportamento da renda minima utilizando dois fiadores com renda suf" +
             "iciente")]
-        [NUnit.Framework.CategoryAttribute("03_Renda_Minima")]
+        [NUnit.Framework.CategoryAttribute("04_RendaMinima")]
         public virtual void _10ValidarOComportamentoDaRendaMinimaUtilizandoDoisFiadoresComRendaSuficiente()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10 Validar o comportamento da renda minima utilizando dois fiadores com renda suf" +
                     "iciente", null, new string[] {
-                        "03_Renda_Minima"});
+                        "04_RendaMinima"});
 #line 66
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -271,6 +275,8 @@ testRunner.Given("Informo a primeira metade do valor com o primeiro fiador", ((s
 testRunner.When("Informo a segunda metade do valor com o segundo fiador", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 69
 testRunner.Then("Apresenta mensagem informando que o valor é suficiente para dois fiadores", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 70
+testRunner.And("O botao Enviar ficara habilitado", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

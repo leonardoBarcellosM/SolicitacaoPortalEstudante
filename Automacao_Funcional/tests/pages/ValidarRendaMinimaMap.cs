@@ -26,6 +26,7 @@ namespace Automacao_Funcional.tests.steps
         [CacheLookup]
         public IWebElement MsgConfirma2 { get; set; }
 
+
         [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/div/div[2]/div/div/ng-view/section/form/div[3]/div[2]/div/renda-minima-fiador/div/div/div[1]/div[2]")]
         [CacheLookup]
         public IWebElement MsgRendaInvalida { get; set; }
@@ -40,7 +41,7 @@ namespace Automacao_Funcional.tests.steps
 
         [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/div/div[2]/div/div/ng-view/section/form/div[7]/button")]
         [CacheLookup]
-        public IWebElement BtnEnviar2 { get; set; }
+        public IWebElement btnEnviarDoisFiadores { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//div[@class='row'][2]//div[2]//div//input[1]")]
         [CacheLookup]

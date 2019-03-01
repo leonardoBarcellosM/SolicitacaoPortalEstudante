@@ -270,6 +270,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool _result = false;
             util.WaitForElementVisible(MsgRendaInvalida, 15);
+
             try
             {
                 if (MsgRendaInvalida.Text.Contains("A renda informada não é suficiente."))
@@ -310,7 +311,7 @@ namespace Automacao_Funcional.tests.steps
         public bool ValidarBtnEnviarDisabled()
         {
             bool _result = false;
-
+            
             try
             {
                 if (BtnEnviar.Enabled)
@@ -325,7 +326,15 @@ namespace Automacao_Funcional.tests.steps
             }
             catch
             {
-
+                if (btnEnviarDoisFiadores.Enabled)
+                {
+                    _result = false;
+                    Thread.Sleep(500);
+                }
+                else
+                {
+                    _result = true;
+                }
             }
             return _result;
         }
@@ -394,11 +403,11 @@ namespace Automacao_Funcional.tests.steps
         public bool ValidarBtnEnviarEnabled()
         {
             bool _result = false;
-
+           
             try
             {
-                util.WaitForElementVisible(BtnEnviar, 15);
-                if (BtnEnviar.Enabled || BtnEnviar2.Enabled)
+                util.WaitForElementVisible(BtnEnviar, 2);
+                if (BtnEnviar.Enabled)
                 {
                     _result = true;
                     Thread.Sleep(500);
@@ -410,7 +419,15 @@ namespace Automacao_Funcional.tests.steps
             }
             catch
             {
-
+                if (btnEnviarDoisFiadores.Enabled)
+                {
+                    _result = true;
+                    Thread.Sleep(500);
+                }
+                else
+                {
+                    _result = false;
+                }
             }
             return _result;
         }
