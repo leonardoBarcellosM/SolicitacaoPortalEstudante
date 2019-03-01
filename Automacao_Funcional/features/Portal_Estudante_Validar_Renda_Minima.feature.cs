@@ -18,8 +18,8 @@ namespace Automacao_Funcional.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("H-Portal_Estudante_Validar_Renda_Minima")]
-    public partial class H_Portal_Estudante_Validar_Renda_MinimaFeature
+    [NUnit.Framework.DescriptionAttribute("Portal_Estudante_Validar_Renda_Minima")]
+    public partial class Portal_Estudante_Validar_Renda_MinimaFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace Automacao_Funcional.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "H-Portal_Estudante_Validar_Renda_Minima", "\tUse before title fiture separed with \"-\":\r\n\t \'C\' for Chrome;\r\n\t \'I\' for Internet" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Portal_Estudante_Validar_Renda_Minima", "\tUse before title fiture separed with \"-\":\r\n\t \'C\' for Chrome;\r\n\t \'I\' for Internet" +
                     " Explorer;\r\n\t \'F\' for FireFox Mozilla;\r\n\t \'E\' for Edge;\r\n\t \'H\' for Headless Chro" +
                     "me;\r\n\t Default: Chrome", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
@@ -277,6 +277,52 @@ testRunner.When("Informo a segunda metade do valor com o segundo fiador", ((stri
 testRunner.Then("Apresenta mensagem informando que o valor é suficiente para dois fiadores", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 70
 testRunner.And("O botao Enviar ficara habilitado", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("11 Validar a opção quero continuar mesmo assim com a renda inferior ao mínimo com" +
+            " um fiador")]
+        [NUnit.Framework.CategoryAttribute("04_RendaMinima")]
+        public virtual void _11ValidarAOpcaoQueroContinuarMesmoAssimComARendaInferiorAoMinimoComUmFiador()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11 Validar a opção quero continuar mesmo assim com a renda inferior ao mínimo com" +
+                    " um fiador", null, new string[] {
+                        "04_RendaMinima"});
+#line 73
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 74
+testRunner.Given("Removo o segundo fiador", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 75
+testRunner.When("Informo valor insuficiente para a renda mensal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 76
+testRunner.And("Clico no checkbox para continuar mesmo assim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("12 Validar a opção quero continuar mesmo assim com a renda inferior ao mínimo com" +
+            " dois fiadores")]
+        [NUnit.Framework.CategoryAttribute("04_RendaMinima")]
+        public virtual void _12ValidarAOpcaoQueroContinuarMesmoAssimComARendaInferiorAoMinimoComDoisFiadores()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("12 Validar a opção quero continuar mesmo assim com a renda inferior ao mínimo com" +
+                    " dois fiadores", null, new string[] {
+                        "04_RendaMinima"});
+#line 80
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 81
+testRunner.Given("Informo a metade do valor com o primeiro fiador", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 82
+testRunner.When("Seleciono a opcao para informar um segundo fiador", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 83
+testRunner.And("Informo valor inferior ao minimo com o segundo fiador", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 84
+testRunner.And("Clico no checkbox para continuar mesmo assim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

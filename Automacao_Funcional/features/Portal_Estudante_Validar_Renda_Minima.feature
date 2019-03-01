@@ -1,4 +1,4 @@
-﻿Feature: H-Portal_Estudante_Validar_Renda_Minima
+﻿Feature: Portal_Estudante_Validar_Renda_Minima
 	Use before title fiture separed with "-":
 	 'C' for Chrome;
 	 'I' for Internet Explorer;
@@ -68,3 +68,18 @@ Given Informo a primeira metade do valor com o primeiro fiador
 When Informo a segunda metade do valor com o segundo fiador
 Then Apresenta mensagem informando que o valor é suficiente para dois fiadores
 And O botao Enviar ficara habilitado
+
+@04_RendaMinima
+Scenario: 11 Validar a opção quero continuar mesmo assim com a renda inferior ao mínimo com um fiador
+Given Removo o segundo fiador
+When Informo valor insuficiente para a renda mensal
+And Clico no checkbox para continuar mesmo assim
+#Then O botao Enviar ficara habilitado
+
+@04_RendaMinima
+Scenario: 12 Validar a opção quero continuar mesmo assim com a renda inferior ao mínimo com dois fiadores
+Given Informo a metade do valor com o primeiro fiador
+When Seleciono a opcao para informar um segundo fiador
+And Informo valor inferior ao minimo com o segundo fiador
+And Clico no checkbox para continuar mesmo assim
+#Then O botao Enviar ficara habilitado

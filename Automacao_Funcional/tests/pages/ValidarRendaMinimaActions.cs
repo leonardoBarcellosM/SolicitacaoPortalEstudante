@@ -379,7 +379,7 @@ namespace Automacao_Funcional.tests.steps
             return _result;
         }
         
-        public bool ClicarBtnContinuar()
+        public bool SelecionarCheckboxContinuar()
         {
             bool _result = false;
 
@@ -562,6 +562,30 @@ namespace Automacao_Funcional.tests.steps
             {
             }
             return _result;
-        } 
+        }
+
+        public bool RemoverFiador( )
+        {
+            bool _result = false;
+
+            try
+            {
+                if (BtnRemoverFiador.Displayed)
+                {
+                    BtnRemoverFiador.Click();
+                    Thread.Sleep(500);
+
+                    BtnRmvSim.Click();
+                    _result = true;
+
+                    Thread.Sleep(500);
+                }
+            }
+            catch
+            {
+
+            }
+            return _result;
+        }
     }
 }

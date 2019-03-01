@@ -59,7 +59,13 @@ namespace Automacao_Funcional.tests.steps
         [CacheLookup]
         public IWebElement MsgRendaInvalida2 { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/div/div[2]/div/div/ng-view/section/form/div[6]/div[1]/div/input")]
+        [CacheLookup]
+        public IWebElement BtnRemoverFiador { get; set; }
 
-        
+        [FindsBy(How = How.XPath, Using = "/html/body/div[7]/div/div/div[3]/button[1]")]
+        [CacheLookup]
+        public IWebElement BtnRmvSim { get; set; }
+
     }
 }

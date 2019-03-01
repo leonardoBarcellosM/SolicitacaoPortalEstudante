@@ -128,5 +128,29 @@ namespace Automacao_Funcional.tests.steps
             Assert.That(result, Is.True, "Erro ao apresentar o botao quero continuar mesmo assim para dois fiadores");
         }
 
+        [Given(@"Removo o segundo fiador")]
+        public void GivenRemovoOSegundoFiador()
+        {
+            bool result = PageActions.RemoverFiador();
+
+            Assert.That(result, Is.True, "Erro ao remover o segundo fiador");
+        }
+
+        [When(@"Informo valor insuficiente para a renda mensal")]
+        public void WhenInformoValorInsuficienteParaARendaMensal()
+        {
+            bool result = PageActions.InformarRendaInferiorPrimeiroFiador();
+
+            Assert.That(result, Is.True, "Erro ao informar a renda mensal bruta do segundo fiador");
+        }
+
+        [When(@"Clico no checkbox para continuar mesmo assim")]
+        public void WhenClicoNoCheckboxParaContinuarMesmoAssim()
+        {
+            bool result = PageActions.SelecionarCheckboxContinuar();
+
+            Assert.That(result, Is.True, "Erro ao selecionar a opcao quero continuar mesmo assim");
+        }
+      
     }
 }
