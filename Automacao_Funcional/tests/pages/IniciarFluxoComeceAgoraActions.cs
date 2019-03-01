@@ -149,7 +149,7 @@ namespace Automacao_Funcional.tests.steps
         public bool ClicarComeceAgora()
         {
             bool _result = false;
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
 
             try
             {
@@ -176,13 +176,10 @@ namespace Automacao_Funcional.tests.steps
         {
             bool _result = false;
             Thread.Sleep(5000);
-            util.WaitForElementVisible(ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[2]/div/ng-include[2]/nav/div/div/div[1]/a")), 60);
-
+            IWebElement BemVindo = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/ng-include/div/div/p[1]"));
             try
             {
-                IWebElement BemVindo = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[2]/div/ng-include[2]/nav/div/div/div[1]/a"));
-
-                if (BemVindo.Displayed)
+                if (BemVindo.Text.Contains("LEONARDO"))
                 {
                     _result = true;
                     Thread.Sleep(1500);
@@ -197,7 +194,6 @@ namespace Automacao_Funcional.tests.steps
                 
             }
             return _result;
- 
         }
 
         //public bool ValidarCadastroDB()
