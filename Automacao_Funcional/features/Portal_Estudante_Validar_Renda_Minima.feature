@@ -1,4 +1,4 @@
-﻿Feature: H-Portal_Estudante_Validar_Renda_Minima
+﻿Feature: Portal_Estudante_Validar_Renda_Minima
 	Use before title fiture separed with "-":
 	 'C' for Chrome;
 	 'I' for Internet Explorer;
@@ -42,13 +42,29 @@ Then Consultar renda "minima" no db
 
 @03_Renda_Minima
 Scenario: 07 Validar o comportamento com a renda inferior ao minimo exigido
-When Informo valor inferior ao minimo
+Given Informo valor inferior ao minimo
 Then Apresenta mensagem informando que o valor é insuficiente
 And O botao Enviar ficara desabilitado
 And A opcao quero continuar mesmo assim e apresentada
 
 @03_Renda_Minima
 Scenario: 08 Validar o comportamento com a renda superior ao minimo exigido
-When Informo valor superior ao minimo
+Given Informo valor superior ao minimo
 Then Apresenta mensagem informando que o valor é suficiente
 And O botao Enviar ficara habilitado
+
+@03_Renda_Minima
+Scenario: 09 Validar o comportamento da renda minima utilizando dois fiadores com renda insuficiente
+Given Informo a metade do valor com o primeiro fiador
+When Seleciono a opcao para informar um segundo fiador
+And Informo valor inferior ao minimo com o segundo fiador
+Then Apresenta mensagem informando que o valor é insuficiente para os dois fiadores
+#And O botao Enviar ficara desabilitado
+And A opcao quero continuar mesmo assim e apresentada para os dois fiadores
+
+@03_Renda_Minima
+Scenario: 10 Validar o comportamento da renda minima utilizando dois fiadores com renda suficiente
+Given Informo a primeira metade do valor com o primeiro fiador
+When Informo a segunda metade do valor com o segundo fiador
+Then Apresenta mensagem informando que o valor é suficiente para dois fiadores
+#And O botao Enviar ficara habilitado

@@ -69,6 +69,167 @@ namespace Automacao_Funcional.tests.steps
             }
             return _result;
         }
+        
+        public bool InformarRendaInferiorPrimeiroFiador()
+        {
+            bool _result = false;
+
+            try
+            {
+                util.WaitForElementVisible(InputRenda, 30);
+                if (InputRenda.Displayed)
+                {
+
+                    InputRenda.Clear();
+
+                    var msg = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//form[@name='formCadastroFiador']//div[@class='row'][3]//div[2]//div[1]//div[1] //div[1]//div[1]//div[2]")).Text;
+                    var text = msg.Split(' ');
+                    var valor = text[8].Replace("R$", "");
+                    valor = valor.Replace(".", "");
+                    valor = valor.Replace(",", "");
+
+                    //Valor mínimo dívidido por dois
+                    var vlr = float.Parse(valor) / 2;
+
+                    valor = vlr.ToString();
+
+                    InputRenda.SendKeys(valor);
+                    _result = true;
+                    Thread.Sleep(500);
+                }
+            }
+            catch
+            {
+
+            }
+            return _result;
+        }
+
+        
+        public bool InformarMetadeRendaPrimeiroFiador()
+        {
+            bool _result = false;
+
+            try
+            {
+                util.WaitForElementVisible(InputRenda, 30);
+                if (InputRenda.Displayed)
+                {
+
+                    InputRenda.Clear();
+                    InputRenda2.Clear();
+
+                    var msg = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//form[@name='formCadastroFiador']//div[@class='row'][3]//div[2]//div[1]//div[1] //div[1]//div[1]//div[2]")).Text;
+                    var text = msg.Split(' ');
+                    var valor = text[8].Replace("R$", "");
+                    valor = valor.Replace(".", "");
+                    valor = valor.Replace(",", "");
+
+                    //Valor mínimo dívidido por dois
+                    var vlr = float.Parse(valor) / 2;
+
+                    valor = vlr.ToString();
+
+                    InputRenda.SendKeys(valor);
+                    _result = true;
+                    Thread.Sleep(500);
+                }
+            }
+            catch
+            {
+
+            }
+            return _result;
+        }
+
+        public bool InformarRendaInferiorSegundoFiador()
+        {
+            bool _result = false;
+
+            var msg = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[2]/div/div/ng-view/section/form/div[6]/div[3]/div[2]/div/renda-minima-fiador/div/div/div[1]/div[2]")).Text;
+            var text = msg.Split(' ');
+            var valor = text[12].Replace("R$", "");
+            valor = valor.Replace(".", "");
+            valor = valor.Replace(",", "");
+
+            //Valor mínimo dívidido por dois
+            var vlr = (float.Parse(valor) / 2) - 1;
+            //vlr = vlr - 1;
+
+            try
+            {
+                util.WaitForElementVisible(InputRenda, 30);
+                if (InputRenda2.Displayed)
+                {
+                    InputRenda2.Click();
+                    InputRenda2.Clear();
+                    InputRenda2.SendKeys(vlr.ToString());
+                    _result = true;
+                    Thread.Sleep(500);
+                }
+            }
+            catch
+            {
+
+            }
+            return _result;
+        }
+
+        public bool InformarMetadeRendaSegundoFiador()
+        {
+            bool _result = false;
+
+            var msg = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[2]/div/div/ng-view/section/form/div[6]/div[3]/div[2]/div/renda-minima-fiador/div/div/div[1]/div[2]")).Text;
+            var text = msg.Split(' ');
+            var valor = text[12].Replace("R$", "");
+            valor = valor.Replace(".", "");
+            valor = valor.Replace(",", "");
+
+            //Valor mínimo dívidido por dois
+            var vlr = float.Parse(valor) / 2;
+            //vlr = vlr - 1;
+
+            try
+            {
+                util.WaitForElementVisible(InputRenda, 30);
+                if (InputRenda2.Displayed)
+                {
+                    InputRenda2.Click();
+                    InputRenda2.Clear();
+                    InputRenda2.SendKeys(vlr.ToString());
+                    _result = true;
+                    Thread.Sleep(500);
+                }
+            }
+            catch
+            {
+
+            }
+            return _result;
+        }
+        
+
+        public bool SelecionarInformarDoisFiadores()
+        {
+            bool _result = false;
+
+            util.WaitForElementVisible(Check2Fiadores, 30);
+            try
+            {
+                if (Check2Fiadores.Displayed)
+                {
+                    Check2Fiadores.Click();
+                    _result = true;
+                    Thread.Sleep(500);
+                }
+            }
+            catch
+            {
+
+            }
+            return _result;
+        }
+        
 
         public bool InformarRendaSuperior()
         {
@@ -108,11 +269,32 @@ namespace Automacao_Funcional.tests.steps
         public bool ValidarMsgRendaInvalida()
         {
             bool _result = false;
+            util.WaitForElementVisible(MsgRendaInvalida, 15);
+            try
+            {
+                if (MsgRendaInvalida.Text.Contains("A renda informada não é suficiente."))
+                {
+                    _result = true;
+                    Thread.Sleep(500);
+                }
+            }
+            catch
+            {
+
+            }
+            return _result;
+        }
+
+        public bool ValidarMsgRendaInvalidaDoisFiadores()
+        {
+            bool _result = false;
+            util.WaitForElementVisible(MsgRendaInvalida, 15);
+
+            IWebElement msg = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[2]/div/div/ng-view/section/form/div[6]/div[3]/div[2]/div/renda-minima-fiador/div/div/div[1]/div[2]"));
 
             try
             {
-                util.WaitForElementVisible(MsgRendaInvalida, 15);
-                if (MsgRendaInvalida.Displayed)
+                if (MsgRendaInvalida.Text.Contains("A renda informada não é suficiente.") && msg.Text.Contains("A renda informada não é suficiente."))
                 {
                     _result = true;
                     Thread.Sleep(500);
@@ -131,15 +313,14 @@ namespace Automacao_Funcional.tests.steps
 
             try
             {
-                util.WaitForElementVisible(BtnEnviar, 15);
                 if (BtnEnviar.Enabled)
                 {
-                   //false
+                    //false
                 }
                 else
                 {
-                    _result = true;
-                    Thread.Sleep(500);
+                   _result = true;
+                   Thread.Sleep(500);
                 }
             }
             catch
@@ -169,6 +350,26 @@ namespace Automacao_Funcional.tests.steps
             return _result;
         }
 
+        public bool ValidarBtnContinuarDoisFiadores()
+        {
+            bool _result = false;
+
+            try
+            {
+                util.WaitForElementVisible(BtnContinuar, 15);
+                if (BtnContinuar.Displayed && BtnContinuar2.Displayed)
+                {
+                    _result = true;
+                    Thread.Sleep(500);
+                }
+            }
+            catch
+            {
+
+            }
+            return _result;
+        }
+        
         public bool ClicarBtnContinuar()
         {
             bool _result = false;
@@ -197,7 +398,7 @@ namespace Automacao_Funcional.tests.steps
             try
             {
                 util.WaitForElementVisible(BtnEnviar, 15);
-                if (BtnEnviar.Enabled)
+                if (BtnEnviar.Enabled || BtnEnviar2.Enabled)
                 {
                     _result = true;
                     Thread.Sleep(500);
@@ -221,7 +422,27 @@ namespace Automacao_Funcional.tests.steps
             try
             {
                 util.WaitForElementVisible(MsgConfirma, 15);
-                if (MsgConfirma.Displayed)
+                if (MsgConfirma.Text.Contains("Seu fiador possui a renda necessária!"))
+                {
+                    _result = true;
+                    Thread.Sleep(500);
+                }
+            }
+            catch
+            {
+
+            }
+            return _result;
+        }
+
+        public bool ValidarMsgRendaValidaDoisFiadores()
+        {
+            bool _result = false;
+            
+            try
+            {
+                util.WaitForElementVisible(MsgConfirma, 15);
+                if (MsgConfirma.Text.Contains("Seu fiador possui a renda necessária!") && MsgConfirma2.Text.Contains("Seu fiador possui a renda necessária!"))
                 {
                     _result = true;
                     Thread.Sleep(500);
