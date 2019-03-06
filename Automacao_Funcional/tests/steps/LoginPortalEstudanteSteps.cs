@@ -60,7 +60,7 @@ namespace Automacao_Funcional.tests.steps
         {
             var result = pageAction.ValidarSenhaIncorreta();
 
-            Assert.That(result, Is.True, "Erro ao realizar login!");
+            Assert.That(result, Is.True, "Erro ao apresentar mensagem de senha incorreta!");
         }
 
     }

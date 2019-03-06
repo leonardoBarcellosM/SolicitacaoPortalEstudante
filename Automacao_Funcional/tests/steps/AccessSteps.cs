@@ -14,7 +14,7 @@ namespace Automacao_Funcional.tests.steps
         {
             var result = pageAction.AccessPage(url);
 
-                Assert.That(result, Is.True, "Erro ao acessar a URL!");
+                Assert.That(result, Is.True, "Erro ao acessar a URL -> " + url);
         }
         
         [Then(@"Validar o carregamento")]
@@ -22,7 +22,7 @@ namespace Automacao_Funcional.tests.steps
         {
             var result = pageAction.ValidAccessPage();
             
-                Assert.That(result, Is.True, "Erro ao acessar o endereço solicitado!");
+                Assert.That(result, Is.True, "Erro ao acessar o endereço solicitado");
         }
        
     }

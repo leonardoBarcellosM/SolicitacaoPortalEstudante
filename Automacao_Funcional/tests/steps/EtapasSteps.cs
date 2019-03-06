@@ -19,7 +19,7 @@ namespace Automacao_Funcional.tests.steps
         {
            bool result = pageAction.ClicarSolicitacao();
 
-                Assert.That(result, Is.True, "Erro ao acessar!");
+                Assert.That(result, Is.True, "Erro ao acessar a opção de solicitação!");
         }
 
         [When(@"Clicar em quero solicitar o credito")]
@@ -89,7 +89,7 @@ namespace Automacao_Funcional.tests.steps
                     break;
             }
 
-            Assert.That(result, Is.True, "Divergência entre a etapa/ação e os status do banco!");
+            Assert.That(result, Is.True, "Erro ao consultar a renda mínima exigida de acordo com os dados no banco de dados");
         }
     }
 }

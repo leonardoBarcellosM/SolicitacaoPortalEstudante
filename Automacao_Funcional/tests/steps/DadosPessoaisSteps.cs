@@ -13,7 +13,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool result = pageAction.PreencherDadosPessoais();
 
-                Assert.That(result, Is.True, "Erro ao inserir os dados pessoais!");
+                Assert.That(result, Is.True, "Erro ao inserir os dados pessoais do estudante!");
         }
 
         [When(@"Inserir endereco e contato")]
@@ -21,7 +21,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool result = pageAction.PreencherEndereco();
 
-                Assert.That(result, Is.True, "Erro ao inserir os dados de endereço!");
+                Assert.That(result, Is.True, "Erro ao inserir os dados de endereço e contato!");
         }
 
         [When(@"Clicar no botao proximo")]

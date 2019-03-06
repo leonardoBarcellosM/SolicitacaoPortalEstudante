@@ -29,7 +29,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool result = pageAction.PreencherDados();
 
-                Assert.That(result, Is.True, "Erro ao inserir o número de inetegrantes!");
+                Assert.That(result, Is.True, "Erro ao preencher os dados do estudante!");
         }
 
         [Given(@"Clicar no botao enviar")]

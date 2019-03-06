@@ -14,7 +14,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool result = pageAction.InserirNomeECpf(arg);
 
-                Assert.That(result, Is.True, "Erro ao inserir os dados!");
+                Assert.That(result, Is.True, "Erro ao inserir os dados - Nome e CPF!");
         }
 
         [When(@"Inserir data de nasc e renda ""(.*)""")]
@@ -23,7 +23,7 @@ namespace Automacao_Funcional.tests.steps
             var items = arg.Split('-');
             bool result = pageAction.InserirDtaERenda(items);
 
-                Assert.That(result, Is.True, "Erro ao inserir os dados!");
+                Assert.That(result, Is.True, "Erro ao inserir os dados - Data de nascimento e renda!");
         }
 
         [When(@"Clicar no botao enviar etapa 3")]

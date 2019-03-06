@@ -63,7 +63,7 @@ namespace Automacao_Funcional.tests.steps
         {
             var result = pageActionIes.ValidarLogin();
 
-                Assert.That(result, Is.True, "Erro ao realizar login!");
+                Assert.That(result, Is.True, "Erro ao realizar login no portal da IES!");
         }
 
         [Then(@"Validar Acesso ao portal")]
@@ -71,7 +71,7 @@ namespace Automacao_Funcional.tests.steps
         {
             var result = pageAction.ValidarAcessoIes();
 
-                Assert.That(result, Is.True, "Erro ao acessar o endereço solicitado!");
+                Assert.That(result, Is.True, "Erro ao acessar o portal da IES!");
         }
 
     }

@@ -13,7 +13,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool result = pageAction.SelecionarInstituicao(arg);
 
-                Assert.That(result, Is.True, "Erro ao selecionar a instituição!");
+                Assert.That(result, Is.True, "Erro ao selecionar a instituição -> "+ arg);
         }
 
         [When(@"Selecionar curso ""(.*)""")]
@@ -21,7 +21,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool result = pageAction.SelecionarCurso(arg);
 
-                Assert.That(result, Is.True, "Erro ao selecionar o curso!");
+                Assert.That(result, Is.True, "Erro ao selecionar o curso -> "+arg);
         }
 
         [When(@"Clicar no botao aceito os termos")]
@@ -39,6 +39,5 @@ namespace Automacao_Funcional.tests.steps
 
                 Assert.That(result, Is.True, "Erro ao enviar solicitação!");
         }
-
     }
 }

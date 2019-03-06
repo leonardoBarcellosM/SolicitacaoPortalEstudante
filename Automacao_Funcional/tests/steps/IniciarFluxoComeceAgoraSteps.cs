@@ -25,7 +25,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool result = pageAction.ClicarComeceAgora();
 
-                Assert.That(result, Is.True, "Erro ao clicar em comece agora!");
+                Assert.That(result, Is.True, "Erro ao clicar em comece agora sem compromisso!");
         }
 
         [Then(@"Validar se o fluxo e iniciado")]
@@ -44,7 +44,6 @@ namespace Automacao_Funcional.tests.steps
 
         //        Assert.That(result, Is.True, "Erro ao cadastrar os dados no DB!");
         //}
-
 
     }
 }

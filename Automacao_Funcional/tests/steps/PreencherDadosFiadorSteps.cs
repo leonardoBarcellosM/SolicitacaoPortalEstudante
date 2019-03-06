@@ -13,7 +13,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool result = pageAction.PreencherDadosFiador();
 
-                Assert.That(result, Is.True, "Erro ao preencher os dados pessoais do fiador!");
+                Assert.That(result, Is.True, "Erro ao preencher os dados completos do fiador!");
         }
 
         [When(@"Preencho contato e endereco")]
@@ -21,7 +21,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool result = pageAction.PreencherContatoEndereco();
 
-                Assert.That(result, Is.True, "Erro ao preencher os dados de endereço do fiador!");
+                Assert.That(result, Is.True, "Erro ao preencher os dados de endereço e contato do fiador!");
         }
 
         [When(@"Clico em proximo")]

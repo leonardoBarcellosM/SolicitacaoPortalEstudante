@@ -45,7 +45,6 @@ namespace Automacao_Funcional.tests.steps
             pageAction.Concluir();
         }
 
-
         [Then(@"Validar a conclusao da etapa 4")]
         public void ThenValidarConclusaoDaEtapa4()
         {

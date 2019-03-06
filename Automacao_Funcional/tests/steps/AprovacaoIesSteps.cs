@@ -21,7 +21,7 @@ namespace Automacao_Funcional.tests.steps
         {
             var result = pageAction.PesquisarSolicitacao(cpf);
 
-            Assert.That(result, Is.True, "Erro ao pesquisar solicitação!");
+            Assert.That(result, Is.True, "Erro ao pesquisar solicitação com o CPF ->" + cpf);
         }
 
         [When(@"Clico em prosseguir confirmacao")]
@@ -29,7 +29,7 @@ namespace Automacao_Funcional.tests.steps
         {
             var result = pageAction.ClicarEmProsseguir();
 
-                Assert.That(result, Is.True, "Erro ao pesquisar solicitação!");
+                Assert.That(result, Is.True, "Erro ao prosseguir!");
         }
 
         [Then(@"Valido o acesso a tela aprovar solicitacao")]
@@ -116,9 +116,7 @@ namespace Automacao_Funcional.tests.steps
         {
             var result = pageAction.ValidarReprovacaoComSucesso();
 
-                Assert.That(result, Is.True, "Erro ao reprovar!");
+                Assert.That(result, Is.True, "Erro ao reprovar a solicitação!");
         }
-
-
     }
 }

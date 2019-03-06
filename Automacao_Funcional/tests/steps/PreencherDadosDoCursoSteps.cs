@@ -13,7 +13,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool result = pageAction.PreencherMatricula();
 
-                Assert.That(result, Is.True, "Erro ao preencher os dados!");
+                Assert.That(result, Is.True, "Erro ao preencher os dados Matrícula e Percentual!");
         }
 
         [When(@"Preencho ano e semestre")]
@@ -21,7 +21,7 @@ namespace Automacao_Funcional.tests.steps
         {
             bool result = pageAction.PreencherAnoSemestre();
 
-                Assert.That(result, Is.True, "Erro ao preencher os dados!");
+                Assert.That(result, Is.True, "Erro ao preencher os dados Ano e Semestre!");
         }
 
         [When(@"Clico em documentos")]
