@@ -34,6 +34,7 @@ namespace Automacao_Funcional.tests.steps
 
         }
 
+
         public void ScrollElementoPage(IWebElement element)
         {
             try
@@ -55,6 +56,7 @@ namespace Automacao_Funcional.tests.steps
             }
         }
 
+
         public void ScrollPage(int num)
         {
             int scroll = num * 300;
@@ -70,10 +72,12 @@ namespace Automacao_Funcional.tests.steps
             throw new NotImplementedException();
         }
 
+
         internal void WaitForElementVisible(IWebElement nameProduct)
         {
             throw new NotImplementedException();
         }
+
 
         public void SendKeyJS(IWebElement element, string value)
         {
@@ -89,18 +93,20 @@ namespace Automacao_Funcional.tests.steps
 
         }
 
+
         public class Credentials
         {
             public string Cpf { get; set; }
             public string Senha { get; set; }
         }
 
+
         public string MascaraCpf(string cpf)
         {
             return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
         }
 
-
+        //Pegar conteúdo de uma variável Local
         public static String getItemFromLocalStorage(String key)
         {
             IJavaScriptExecutor js = ClassDriver.GetInstance().Driver as IJavaScriptExecutor;
@@ -108,6 +114,7 @@ namespace Automacao_Funcional.tests.steps
             return (String)js.ExecuteScript(String.Format(
                 "return window.localStorage.getItem('tokenPES');", key));
         }
+
 
         public void ClickJS(IWebElement element)
         {
@@ -120,8 +127,8 @@ namespace Automacao_Funcional.tests.steps
             {
 
             }
-
         }
+
 
         public void HoverMenu(IWebDriver driver, IWebElement element)
         {
@@ -138,6 +145,7 @@ namespace Automacao_Funcional.tests.steps
             }
         }
 
+
         public void ScreenshotPrepare()
         {
             screenshots = @"C:\Users\leonardo.barcellos\Desktop\Screenshots\";
@@ -146,6 +154,7 @@ namespace Automacao_Funcional.tests.steps
             Screenshot(ClassDriver.GetInstance().Driver, screenshots + "ComeceAgora_" + Cont++ + ".png");
         }
 
+
         public void Screenshot(IWebDriver driver, string screenshotPasta)
         {
             ITakesScreenshot camera = driver as ITakesScreenshot;
@@ -153,10 +162,12 @@ namespace Automacao_Funcional.tests.steps
             foto.SaveAsFile(screenshotPasta, ScreenshotImageFormat.Png);
         }
 
+
         internal void Screenshot(IWebDriver driver, object p)
         {
             throw new NotImplementedException();
         }
+
 
         public static string PegarDataHora()
         {
@@ -166,24 +177,7 @@ namespace Automacao_Funcional.tests.steps
             return dta;
         }
 
-        /*
-         * Faz o clique no elemento passado como parâmetro
-         *
-         */
-
-        //public void ClickJS(IWebElement element)
-        //{
-        //    try
-        //    {
-        //        // this.HigthLine(element, true);
-        //        IJavaScriptExecutor executor = (IJavaScriptExecutor)ClassDriver.GetInstance().Driver;
-        //        executor.ExecuteScript("arguments[0].click();", element);
-
-        //    }
-        //    catch (Exception) { }
-
-        //}
-
+        
         public string GerarCpf()
         {
             int soma = 0, resto = 0;
@@ -211,6 +205,7 @@ namespace Automacao_Funcional.tests.steps
             return semente;
         }
 
+
         public string GerarRg()
         {
             Random random = new Random();
@@ -220,11 +215,27 @@ namespace Automacao_Funcional.tests.steps
             return rg;
         }
 
+
         public string GerarNumRandom()
         {
             Random random = new Random();
             string numRandom = random.Next(100000, 999999).ToString();
             return numRandom;
         }
+
+
+        //public void ClickJS(IWebElement element)
+        //{
+        //    try
+        //    {
+        //        // this.HigthLine(element, true);
+        //        IJavaScriptExecutor executor = (IJavaScriptExecutor)ClassDriver.GetInstance().Driver;
+        //        executor.ExecuteScript("arguments[0].click();", element);
+
+        //    }
+        //    catch (Exception) { }
+
+        //}
+
     }
 }

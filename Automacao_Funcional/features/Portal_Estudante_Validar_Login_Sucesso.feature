@@ -1,4 +1,4 @@
-﻿Feature: H-Portal_Estudante_Validar_Login_Sucesso
+﻿Feature: Portal_Estudante_Validar_Login_Sucesso
 	Use before title fiture separed with "-":
 	 'C' for Chrome;
 	 'I' for Internet Explorer;
@@ -25,3 +25,22 @@ Then Login deve ser ralizado com sucesso
 @03_ValidarServicoCarregarSolicitacao
 Scenario: 03 Validar Servico Carregar Solicitacao
 Given Consultar o servico de carregar a solicitacao
+
+@04_ValidarLoginIncorreto
+Scenario: 04 Validar o comportamento ao inserir dados incorretos para login com senha inválida
+Given Acesso a tela de login
+When Preencho os campos nome e senha
+| Field		| Value			 |
+| CPF		| 802.204.500-48 |
+| Senha		| teste124		 |
+And Clico em Entrar
+Then Verifico a mensagem de usuario ou senha incorretos
+
+@04_ValidarLoginIncorreto
+Scenario: 05 Validar o comportamento ao inserir dados incorretos para login com CPF inválido
+When Preencho os campos nome e senha
+| Field		| Value			 |
+| CPF		| 802.204.500-47 |
+| Senha		| teste124		 |
+And Clico em Entrar
+Then Verifico a mensagem de CPF invalido

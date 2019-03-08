@@ -11,7 +11,7 @@ namespace Automacao_Funcional.tests.steps
         [Given(@"Consultar o servico de carregar a solicitacao")]
         public void GivenConsultarCarregarSolicitacao()
         {
-           bool result = PageActions.ConsultarServicoCarregarSolicitacao();
+           bool result = PageActions.CarregarSolicitacao();
                 
            Assert.That(result, Is.True, "Service - Erro ao carregar a solicitacao em andamento!");
         }

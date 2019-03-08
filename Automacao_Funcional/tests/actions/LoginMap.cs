@@ -38,5 +38,9 @@ namespace Automacao_Funcional.tests.steps
         [CacheLookup]
         public IWebElement BtnSignIn { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "//*[@id='linkSair']")]
+        [CacheLookup]
+        public IWebElement BtnSair { get; set; }
+        
     }
 }

@@ -18,8 +18,8 @@ namespace Automacao_Funcional.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("H-Portal_Estudante_Validar_Login_Sucesso")]
-    public partial class H_Portal_Estudante_Validar_Login_SucessoFeature
+    [NUnit.Framework.DescriptionAttribute("Portal_Estudante_Validar_Login_Sucesso")]
+    public partial class Portal_Estudante_Validar_Login_SucessoFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace Automacao_Funcional.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "H-Portal_Estudante_Validar_Login_Sucesso", "\tUse before title fiture separed with \"-\":\r\n\t \'C\' for Chrome;\r\n\t \'I\' for Internet" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Portal_Estudante_Validar_Login_Sucesso", "\tUse before title fiture separed with \"-\":\r\n\t \'C\' for Chrome;\r\n\t \'I\' for Internet" +
                     " Explorer;\r\n\t \'F\' for FireFox Mozilla;\r\n\t \'E\' for Edge;\r\n\t \'H\' for Headless Chro" +
                     "me;\r\n\t Default: Chrome", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
@@ -133,6 +133,72 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 27
 testRunner.Given("Consultar o servico de carregar a solicitacao", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("04 Validar o comportamento ao inserir dados incorretos para login com senha invál" +
+            "ida")]
+        [NUnit.Framework.CategoryAttribute("04_ValidarLoginIncorreto")]
+        public virtual void _04ValidarOComportamentoAoInserirDadosIncorretosParaLoginComSenhaInvalida()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Validar o comportamento ao inserir dados incorretos para login com senha invál" +
+                    "ida", null, new string[] {
+                        "04_ValidarLoginIncorreto"});
+#line 30
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 31
+testRunner.Given("Acesso a tela de login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table2.AddRow(new string[] {
+                        "CPF",
+                        "802.204.500-48"});
+            table2.AddRow(new string[] {
+                        "Senha",
+                        "teste124"});
+#line 32
+testRunner.When("Preencho os campos nome e senha", ((string)(null)), table2, "When ");
+#line 36
+testRunner.And("Clico em Entrar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+testRunner.Then("Verifico a mensagem de usuario ou senha incorretos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("05 Validar o comportamento ao inserir dados incorretos para login com CPF inválid" +
+            "o")]
+        [NUnit.Framework.CategoryAttribute("04_ValidarLoginIncorreto")]
+        public virtual void _05ValidarOComportamentoAoInserirDadosIncorretosParaLoginComCPFInvalido()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05 Validar o comportamento ao inserir dados incorretos para login com CPF inválid" +
+                    "o", null, new string[] {
+                        "04_ValidarLoginIncorreto"});
+#line 40
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table3.AddRow(new string[] {
+                        "CPF",
+                        "802.204.500-47"});
+            table3.AddRow(new string[] {
+                        "Senha",
+                        "teste124"});
+#line 41
+testRunner.When("Preencho os campos nome e senha", ((string)(null)), table3, "When ");
+#line 45
+testRunner.And("Clico em Entrar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 46
+testRunner.Then("Verifico a mensagem de CPF invalido", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

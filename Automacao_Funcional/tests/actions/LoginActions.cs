@@ -18,16 +18,14 @@ namespace Automacao_Funcional.tests.steps
         public bool AcessarTelaLogin()
         {
             bool _result = false;
-
+            util.WaitForElementVisible(BtnEntrar, 30);
             try
             {
-                util.WaitForElementVisible(BtnEntrar, 15);
                 if (BtnEntrar.Displayed)
                 {
                     BtnEntrar.Click();
                     _result = true;
                 }
-
             }
             catch
             {
@@ -46,11 +44,9 @@ namespace Automacao_Funcional.tests.steps
                 util.WaitForElementVisible(InputCpf, 45);
                 if (InputCpf.Displayed)
                 {
-                    InputCpf.Click();
+                    InputCpf.Clear();
                     Thread.Sleep(300);
                     InputCpf.SendKeys(credentials.Cpf);
-                    Thread.Sleep(300);
-                    InputSenha.Click();
                     Thread.Sleep(300);
                     Pass.SendKeys(credentials.Senha);
                     Thread.Sleep(300);
@@ -130,14 +126,16 @@ namespace Automacao_Funcional.tests.steps
             return _result;
         }
 
-        public bool ValidarSenhaIncorreta()
+        public bool VerificarMsgLoginInvalido()
         {
             bool _result = false;
 
+            Thread.Sleep(1000);
+            IWebElement MsgErro = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//*[@id='frmLogin']/fieldset/div/span"));
+            util.WaitForElementVisible(MsgErro, 45);
+
             try
             {
-                IWebElement MsgErro = ClassDriver.GetInstance().Driver.FindElement(By.XPath("/html/body/div[5]"));
-                util.WaitForElementVisible(MsgErro, 45);
                 if (MsgErro.Displayed)
                 {
                     _result = true;
@@ -150,7 +148,31 @@ namespace Automacao_Funcional.tests.steps
             return _result;
         }
 
-       
+        public bool VerificarMsgCpfInvalido()
+        {
+            bool _result = false;
+
+            Thread.Sleep(1000);
+
+            IWebElement MsgErro = ClassDriver.GetInstance().Driver.FindElement(By.Id("txtCpfLogin-error"));
+            util.WaitForElementVisible(MsgErro, 45);
+
+            try
+            {
+                if (MsgErro.Displayed)
+                {
+                    _result = true;
+                }
+            }
+            catch
+            {
+
+            }
+            return _result;
+        }
+        
+
+
             public bool PreencherUserPassword()
             {
                 bool _result = false;
@@ -236,5 +258,35 @@ namespace Automacao_Funcional.tests.steps
                 }
                 return _result;
             }
+
+
+        public bool TelaLogin()
+        {
+            bool _result = false;
+            try
+            {
+               
+                util.WaitForElementVisible(BtnSair, 45);
+                if (BtnSair.Displayed)
+                {
+                    BtnSair.Click();
+
+                    Thread.Sleep(1500);
+                    AcessarTelaLogin();
+
+                    _result = true;
+                }
+                else
+                {
+
+                }
+            }
+            catch
+            {
+
+            }
+            return _result;
         }
+        
+    }
 }

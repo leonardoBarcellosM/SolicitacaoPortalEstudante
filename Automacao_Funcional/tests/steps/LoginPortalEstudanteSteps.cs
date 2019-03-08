@@ -20,7 +20,6 @@ namespace Automacao_Funcional.tests.steps
         [When(@"Preencho os campos nome e senha")]
         public void WhenPreenchoCampoESenha(Table table)
         {
-            
             bool result = pageAction.PreencherCampos(table);
 
             Assert.That(result, Is.True, "Erro ao preencher usuário e senha!");
@@ -55,13 +54,38 @@ namespace Automacao_Funcional.tests.steps
         }
 
 
-        [Then(@"Validar mensagem de senha incorreta")]
-        public void ThenValidarSenhaIncorreta()
+        //[Then(@"Validar mensagem de senha incorreta")]
+        //public void ThenValidarSenhaIncorreta()
+        //{
+        //var result = pageAction.ValidarSenhaIncorreta();
+
+        //    Assert.That(result, Is.True, "Erro ao apresentar mensagem de senha incorreta!");
+        //}
+
+        [Given(@"Acesso a tela de login")]
+        public void GivenAcessoATelaDeLogin()
         {
-            var result = pageAction.ValidarSenhaIncorreta();
+            var result = pageAction.TelaLogin();
+
+            Assert.That(result, Is.True, "Erro ao acessar a tela de login!");
+        }
+
+        [Then(@"Verifico a mensagem de usuario ou senha incorretos")]
+        public void ThenVerificoAMensagemDeUsuarioESenhaIncorretos()
+        {
+            var result = pageAction.VerificarMsgLoginInvalido();
 
             Assert.That(result, Is.True, "Erro ao apresentar mensagem de senha incorreta!");
         }
+
+        [Then(@"Verifico a mensagem de CPF invalido")]
+        public void ThenVerificoAMensagemDeCPFInvalido()
+        {
+            var result = pageAction.VerificarMsgCpfInvalido();
+
+            Assert.That(result, Is.True, "Erro ao apresentar mensagem de senha incorreta!");
+        }
+
 
     }
 }

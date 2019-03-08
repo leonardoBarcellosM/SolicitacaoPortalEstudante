@@ -9,7 +9,6 @@ namespace Automacao_Funcional.tests.steps
 {
     class AprovacaoIesActions : AprovacaoIesMap
     {
-        
         private ClassUtilities util = new ClassUtilities();
         private ConsultaDB db = new ConsultaDB();
 
@@ -41,7 +40,6 @@ namespace Automacao_Funcional.tests.steps
 
         public bool PesquisarSolicitacao(string cpf)
         {
-
             bool _result = false;
             ConsultaDB.Cpf(cpf);
             try
@@ -105,7 +103,6 @@ namespace Automacao_Funcional.tests.steps
             {
 
             }
-
             return _result;
         }
 

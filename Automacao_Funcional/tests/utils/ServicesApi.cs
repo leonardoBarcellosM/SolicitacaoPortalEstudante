@@ -4,15 +4,15 @@ namespace Automacao_Funcional.tests.steps
 {
     class ServicesApi
     {
-        public bool ConsultarServicoCarregarSolicitacao()
+        public bool CarregarSolicitacao()
         {
             String Token = ClassUtilities.getItemFromLocalStorage("value");
-            bool _result = CarregarSolicitacao(Token);
+            bool _result = ConsultarServicoCarregarSolicitacao(Token);
 
             return _result;
         }
 
-        public bool CarregarSolicitacao(string Token)
+        public bool ConsultarServicoCarregarSolicitacao(string Token)
         {
             bool _result = false;
             const string WEBSERVICE_URL = "http://homologacao.fundacred.org.br:8080/portal-estudante-rest/resources/solicitacaoCredito/carregar";
