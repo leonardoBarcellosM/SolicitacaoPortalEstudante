@@ -37,4 +37,4 @@ Scenario: 05 Preencher os dados do dependente
 Given Preencho os dados do dependente
 When Clico em enviar
 Then Os dados devem ser salvos com sucesso na tabela dependentes
-And Socliticacao iniciada com sucesso na tabela solicitacoes_web para o dependente
+And Solicitacao iniciada com sucesso na tabela solicitacoes_web para o dependente

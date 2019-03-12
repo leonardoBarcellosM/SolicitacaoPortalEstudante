@@ -170,7 +170,7 @@ testRunner.When("Clico em enviar", ((string)(null)), ((TechTalk.SpecFlow.Table)(
 #line 39
 testRunner.Then("Os dados devem ser salvos com sucesso na tabela dependentes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40
-testRunner.And("Socliticacao iniciada com sucesso na tabela solicitacoes_web para o dependente", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("Solicitacao iniciada com sucesso na tabela solicitacoes_web para o dependente", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

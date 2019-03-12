@@ -43,7 +43,7 @@ namespace Automacao_Funcional.tests.steps
             Assert.That(result, Is.True, "Erro ao cadastrar os dados do dependente!");
         }
 
-        [Then(@"Socliticacao iniciada com sucesso na tabela solicitacoes_web para o dependente")]
+        [Then(@"Solicitacao iniciada com sucesso na tabela solicitacoes_web para o dependente")]
         public void ThenSocliticacaoIniciadaComSucessoNaTabelaSolicitacoes_WebParaODependente()
         {
             bool result = Db.ConsultarSolicitacaoDependente();
