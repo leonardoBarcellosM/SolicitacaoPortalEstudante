@@ -37,5 +37,16 @@
         public static string Cemail = "@mailinator.com";
         public static string Csenha = "teste123";
         public static string CdtaNasc = "25/09/1988";
+
+
+        public class Dependentes
+        {
+            public static string NomeDep { get; set; }
+            public static string CpfDep { get; set; }
+            public static string RgDep { get; set; }
+            public static string DtDep { get; set; }
+            public static string MatDep { get; set; }
+        }
+
     }
 }

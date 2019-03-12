@@ -382,5 +382,88 @@ namespace Automacao_Funcional.tests.steps
             }
             con.Dispose();
         }
+
+        public string[] ConsultarTabelaDependentes()
+        {
+            string[] values = new string[5];
+
+            OracleConnection con = new OracleConnection
+            {
+                ConnectionString = ConectarDB()
+            };
+
+            con.Open();
+
+            string queryString =
+                "select * from dependentes where cpf =:Cpf";
+
+            try
+            {
+                OracleCommand command = con.CreateCommand();
+                command.CommandText = queryString;
+                command.Parameters.Add(new OracleParameter("Cpf", MassaDeDados.Dependentes.CpfDep));
+
+                OracleDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    values[0] = reader[1].ToString();
+                    values[1] = reader[2].ToString();
+                    values[2] = reader[3].ToString();
+                    values[3] = reader[4].ToString();
+                    values[4] = reader[5].ToString();
+                }
+
+                reader.Close();
+            }
+            catch
+            {
+
+            }
+            return values;
+        }
+
+        public bool ConsultarSolicitacaoDependente()
+        {
+            string Id = null;
+            bool _result = false; 
+
+
+            OracleConnection con = new OracleConnection
+            {
+                ConnectionString = ConectarDB()
+            };
+
+            con.Open();
+
+            string queryString =
+                "select sw.id from solicitacoes_web sw inner join dependentes d on d.id = sw.dep_id where cpf =:Cpf";
+
+            try
+            {
+                OracleCommand command = con.CreateCommand();
+                command.CommandText = queryString;
+                command.Parameters.Add(new OracleParameter("Cpf", MassaDeDados.Dependentes.CpfDep));
+
+                OracleDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Id = reader[0].ToString();
+
+                    if (Id != null)
+                    {
+                        _result = true;
+                    }
+                }
+
+                reader.Close();
+            }
+            catch
+            {
+
+            }
+            return _result;
+        }
     }
 }
