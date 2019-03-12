@@ -39,5 +39,14 @@ namespace Automacao_Funcional.tests.steps
 
                 Assert.That(result, Is.True, "Erro ao enviar solicitação!");
         }
+
+        [When(@"Seleciono a opcao Sou o responsavel pela assinatura")]
+        public void WhenSelecionoAOpcaoSouOResponsavelPelaAssinatura()
+        {
+            var result = pageAction.SelecionarOpResponsavel();
+
+            Assert.That(result, Is.True, "Erro ao selecionar Sou o responsável pela assinatura do contrato de prestação de serviços educacionais com a COLÉGIO ULBRA !");
+        }
+
     }
 }

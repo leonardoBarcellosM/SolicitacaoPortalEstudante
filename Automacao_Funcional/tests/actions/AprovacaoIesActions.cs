@@ -114,28 +114,13 @@ namespace Automacao_Funcional.tests.steps
 
             try
             {
-                util.WaitForElementVisible(InputMatricula, 30);
-                if (InputMatricula.Displayed)
+                util.WaitForElementVisible(InputPercentual, 30);
+                if (InputPercentual.Displayed)
                 {
-                    InputMatricula.Click();
-                    Thread.Sleep(300);
-
-                    InputMatricula.SendKeys("000000");
-
-                    SelectSemestre.Click();
-                    Thread.Sleep(750);
-
-                    var selectElement = new SelectElement(SelectSemestre);
-                    selectElement.SelectByIndex(3);
-                    _result = true;
-
-                    if (InputPercentual.Displayed)
-                    {
-                        InputPercentual.Click();
-                        Thread.Sleep(300);
-                        InputPercentual.SendKeys("85");
-                        _result = true;
-                    }
+                     InputPercentual.Click();
+                     Thread.Sleep(300);
+                     InputPercentual.SendKeys("85");
+                     _result = true;
                 }
             }
             catch
@@ -149,11 +134,13 @@ namespace Automacao_Funcional.tests.steps
         {
             bool _result = false;
             string path = @"C:\Users\leonardo.barcellos\Desktop\Imagens\teste.jpg";
-            Thread.Sleep(1000);
+            util.WaitForElementVisible(InputValor_01, 30);
             try
             {
                 if (InputValor_01.Displayed)
                 {
+                    util.ScrollElementoPage(InputValor_01);
+
                     InputValor_01.Click();
                     Thread.Sleep(300);
                     InputValor_01.SendKeys("5.000,00");
@@ -375,6 +362,29 @@ namespace Automacao_Funcional.tests.steps
                 string[] list = db.ConsultaSolicitacao();
 
                 if (list[0] == "RIES" && list[1] == "C" && list[2] == "R")
+                {
+                    _result = true;
+                    db.AlterarStatus();
+                }
+                else
+                {
+                }
+            }
+            catch
+            {
+            }
+            return _result;
+        }
+
+        public bool ValidarSolicAprovNoDb()
+        {
+            bool _result = false;
+
+            try
+            {
+                string[] list = db.ConsultaSolicitacao();
+
+                if (list[0] == "A" && list[1] == "C" && list[2] == "A")
                 {
                     _result = true;
                     db.AlterarStatus();

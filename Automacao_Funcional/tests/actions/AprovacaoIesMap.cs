@@ -20,8 +20,8 @@ namespace Automacao_Funcional.tests.steps
         [FindsBy(How = How.XPath, Using = "//*[@id='modal - aprovacao']/form/div/div[2]/div[2]/div/div[1]/input")]
         [CacheLookup]
         public IWebElement InputMatricula { get; set; }
-
-        [FindsBy(How = How.XPath, Using = "//*[@id='modal - aprovacao']/form/div/div[2]/div[2]/div/div[3]/input")]
+    
+        [FindsBy(How = How.XPath, Using = "//*[@id='modal-aprovacao']/form/div/div[2]/div[2]/div/div[3]/input")]
         [CacheLookup]
         public IWebElement InputPercentual { get; set; }
 
@@ -29,19 +29,19 @@ namespace Automacao_Funcional.tests.steps
         [CacheLookup]
         public IWebElement SelectSemestre { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//form[@name='formCalculo']/./div[4]//div[@class='list-group'][1]//div[1]//div[1]//div[1]//input[1]")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='modal-aprovacao']/form/div/div[4]/div[3]/div/div/div[1]/div/div/div/div[2]/div/div/div[1]/input")]
         [CacheLookup]
         public IWebElement InputValor_01 { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//form[@name='formCalculo']/./div[4]//div[@class='list-group'][1]//div[1]//div[2]//input[1]")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='modal-aprovacao']/form/div/div[4]/div[3]/div/div/div[1]/div/div/div/div[2]/div/div/div[2]/input")]
         [CacheLookup]
         public IWebElement InputValor_02 { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//form[@name='formCalculo']/./div[4]//div[@class='col-md-6'][2]//div[@class='list-group-item']//div[1]//div[1]//input")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='modal-aprovacao']/form/div/div[4]/div[3]/div/div/div[2]/div/div/div/div[2]/div/div/div[1]/input")]
         [CacheLookup]
         public IWebElement InicioContrato { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//form[@name='formCalculo']/./div[4]//div[@class='col-md-6'][2]//div[@class='list-group-item']//div[2]//input")]
+        [FindsBy(How = How.XPath, Using = "//*/form/div/div[4]/div[3]/div/div/div[2]/div/div/div/div[2]/div/div/div[2]/input")]
         [CacheLookup]
         public IWebElement FinalContrato { get; set; }
 
@@ -75,3 +75,5 @@ namespace Automacao_Funcional.tests.steps
         //
     }
 }
+
+

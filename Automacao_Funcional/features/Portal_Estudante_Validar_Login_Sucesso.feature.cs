@@ -192,7 +192,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "802.204.500-47"});
             table3.AddRow(new string[] {
                         "Senha",
-                        "teste124"});
+                        "teste123"});
 #line 41
 testRunner.When("Preencho os campos nome e senha", ((string)(null)), table3, "When ");
 #line 45

@@ -128,6 +128,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="features\Portal_Estudante_credNEX.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Portal_Estudante_credNEX.feature</DependentUpon>
+    </Compile>
     <Compile Include="features\Portal_Estudante_Validar_Login_Sucesso.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -184,6 +189,8 @@
     <Compile Include="tests\actions\DadosDoFiadorMap.cs" />
     <Compile Include="tests\actions\DadosPessoaisActions.cs" />
     <Compile Include="tests\actions\DadosPessoaisMap.cs" />
+    <Compile Include="tests\actions\DependenteCadastroActions.cs" />
+    <Compile Include="tests\actions\DependenteCadastroMap.cs" />
     <Compile Include="tests\actions\EtapasActions.cs" />
     <Compile Include="tests\actions\EtapasMap.cs" />
     <Compile Include="tests\actions\IniciarFluxoComeceAgoraActions.cs" />
@@ -213,6 +220,7 @@
     <Compile Include="tests\steps\DadosDoEstudanteSteps.cs" />
     <Compile Include="tests\steps\DadosDoFiadorSteps.cs" />
     <Compile Include="tests\steps\DadosPessoaisSteps.cs" />
+    <Compile Include="tests\steps\DependenteSteps.cs" />
     <Compile Include="tests\steps\EtapasSteps.cs" />
     <Compile Include="tests\steps\IniciarFluxoComeceAgoraSteps.cs" />
     <Compile Include="tests\steps\LoginPortalEstudanteSteps.cs" />
@@ -237,6 +245,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="features\Portal_Estudante_credNEX.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Portal_Estudante_credNEX.feature.cs</LastGenOutput>
+    </None>
     <None Include="features\Portal_Estudante_Validar_Login_Sucesso.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Portal_Estudante_Validar_Login_Sucesso.feature.cs</LastGenOutput>

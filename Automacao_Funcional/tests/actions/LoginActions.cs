@@ -39,6 +39,8 @@ namespace Automacao_Funcional.tests.steps
             bool _result = false;
             var credentials = table.CreateInstance<ClassUtilities.Credentials>();
 
+            string Class = Pass.GetAttribute("class");
+
             try
             {
                 util.WaitForElementVisible(InputCpf, 45);
@@ -48,10 +50,23 @@ namespace Automacao_Funcional.tests.steps
                     Thread.Sleep(300);
                     InputCpf.SendKeys(credentials.Cpf);
                     Thread.Sleep(300);
-                    Pass.SendKeys(credentials.Senha);
-                    Thread.Sleep(300);
 
-                    _result = true;
+                    if (Class == "input-padrao valid")
+                    {
+                        Pass.Clear();
+
+                        Pass.SendKeys(credentials.Senha);
+                        Thread.Sleep(300);
+
+                        _result = true;
+                    }
+                    else
+                    {
+                        Pass.SendKeys(credentials.Senha);
+                        Thread.Sleep(300);
+
+                        _result = true;
+                    }
                 }
             }
             catch

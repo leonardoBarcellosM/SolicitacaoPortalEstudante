@@ -41,6 +41,6 @@ Scenario: 05 Validar o comportamento ao inserir dados incorretos para login com 
 When Preencho os campos nome e senha
 | Field		| Value			 |
 | CPF		| 802.204.500-47 |
-| Senha		| teste124		 |
+| Senha		| teste123		 |
 And Clico em Entrar
 Then Verifico a mensagem de CPF invalido

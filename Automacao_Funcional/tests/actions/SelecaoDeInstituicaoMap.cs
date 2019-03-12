@@ -22,5 +22,8 @@ namespace Automacao_Funcional.tests.steps
         [CacheLookup]
         public IWebElement BtnSubmit { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "//*[@id='formCadastroEstudante']/div[3]/div/div/div/div/label[2]/span")]
+        [CacheLookup]
+        public IWebElement OpResponsavel { get; set; }
     }
 }

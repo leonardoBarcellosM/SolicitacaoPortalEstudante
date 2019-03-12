@@ -202,6 +202,27 @@ namespace Automacao_Funcional.tests.steps
             return _result;
         }
 
+        public bool SelecionarOpResponsavel()
+        {
+            bool _result = false;
+            util.WaitForElementVisible(OpResponsavel, 30);
+            util.ScrollElementoPage(OpResponsavel);
+            try
+            {
+                if (OpResponsavel.Displayed)
+                {
+                    OpResponsavel.Click();
+                    _result = true;
+                }
+                else
+                {
+                }
+            }
+            catch
+            {
+            }
 
+            return _result;
+        }
     }
 }
