@@ -27,7 +27,7 @@ namespace Automacao_Funcional.tests.steps
             Assert.That(result, Is.True, "Erro ao enviar!");
         }
 
-        [Then(@"Os dados devem ser salvos com sucesso na tabela dependentes")]
+        [Then(@"Os dados do dependente devem ser salvos com sucesso na tabela dependentes")]
         public void ThenOsDadosDevemSerSalvosComSucessoNaTabelaDependentes()
         {
             bool result = pageAction.ValidarCadastroDeDependenteNoBanco();
@@ -51,6 +51,13 @@ namespace Automacao_Funcional.tests.steps
             Assert.That(result, Is.True, "Erro ao iniciar a solicitação na tabela de solicitacoes_web para o dependente!");
         }
 
+        [Then(@"O requerente deve ser salvo na tabela pessoas_web")]
+        public void ThenORequerenteDeveSerSalvoNaTabelaPessoas_Web()
+        {
+            bool result = Db.ConsultarCadastroRequerente();
+
+            Assert.That(result, Is.True, "Erro ao salvar o requerente na tabela PESSOAS_WEB");
+        }
 
     }
 }

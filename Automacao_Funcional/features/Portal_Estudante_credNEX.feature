@@ -25,7 +25,7 @@ When Clicar em quero solicitar o credito
 Then Validar o direcionamento com sucesso
 
 @02_1Etapa
-Scenario: 04 Selecionar Instituicao
+Scenario: 04 Selecionar Instituicao E Curso
 Given Selecionar instituicao "COLÉGIO ULBRA CRISTO SALVADOR"
 When Selecionar curso "ENSINO MÉDIO"
 And Seleciono a opcao Sou o responsavel pela assinatura
@@ -33,8 +33,9 @@ And Clicar no botao aceito os termos
 Then Validar solicitacao enviada
 
 @02_1Etapa
-Scenario: 05 Preencher os dados do dependente
+Scenario: 05 Preencher Os Dados Do Dependente E Validar O Banco De Dados
 Given Preencho os dados do dependente
 When Clico em enviar
-Then Os dados devem ser salvos com sucesso na tabela dependentes
+Then Os dados do dependente devem ser salvos com sucesso na tabela dependentes
+And O requerente deve ser salvo na tabela pessoas_web
 And Solicitacao iniciada com sucesso na tabela solicitacoes_web para o dependente

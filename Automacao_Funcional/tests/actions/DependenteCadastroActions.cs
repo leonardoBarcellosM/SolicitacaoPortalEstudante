@@ -28,7 +28,7 @@ namespace Automacao_Funcional.tests.actions
             MassaDeDados.Dependentes.DtDep = "27/10/2006";
             MassaDeDados.Dependentes.MatDep = util.GerarNumRandom();
 
-            ConsultaDB.Cpf(MassaDeDados.Dependentes.CpfDep);
+            //ConsultaDB.Cpf(MassaDeDados.Dependentes.CpfDep);
 
             util.WaitForElementVisible(InputNomeDep, 30);
             try

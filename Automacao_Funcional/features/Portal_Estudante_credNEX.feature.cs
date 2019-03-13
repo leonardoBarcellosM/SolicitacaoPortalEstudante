@@ -130,11 +130,11 @@ testRunner.Then("Validar o direcionamento com sucesso", ((string)(null)), ((Tech
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("04 Selecionar Instituicao")]
+        [NUnit.Framework.DescriptionAttribute("04 Selecionar Instituicao E Curso")]
         [NUnit.Framework.CategoryAttribute("02_1Etapa")]
-        public virtual void _04SelecionarInstituicao()
+        public virtual void _04SelecionarInstituicaoECurso()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Selecionar Instituicao", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Selecionar Instituicao E Curso", null, new string[] {
                         "02_1Etapa"});
 #line 28
 this.ScenarioInitialize(scenarioInfo);
@@ -154,11 +154,11 @@ testRunner.Then("Validar solicitacao enviada", ((string)(null)), ((TechTalk.Spec
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("05 Preencher os dados do dependente")]
+        [NUnit.Framework.DescriptionAttribute("05 Preencher Os Dados Do Dependente E Validar O Banco De Dados")]
         [NUnit.Framework.CategoryAttribute("02_1Etapa")]
-        public virtual void _05PreencherOsDadosDoDependente()
+        public virtual void _05PreencherOsDadosDoDependenteEValidarOBancoDeDados()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05 Preencher os dados do dependente", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05 Preencher Os Dados Do Dependente E Validar O Banco De Dados", null, new string[] {
                         "02_1Etapa"});
 #line 36
 this.ScenarioInitialize(scenarioInfo);
@@ -168,8 +168,10 @@ testRunner.Given("Preencho os dados do dependente", ((string)(null)), ((TechTalk
 #line 38
 testRunner.When("Clico em enviar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 39
-testRunner.Then("Os dados devem ser salvos com sucesso na tabela dependentes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("Os dados do dependente devem ser salvos com sucesso na tabela dependentes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40
+testRunner.And("O requerente deve ser salvo na tabela pessoas_web", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
 testRunner.And("Solicitacao iniciada com sucesso na tabela solicitacoes_web para o dependente", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

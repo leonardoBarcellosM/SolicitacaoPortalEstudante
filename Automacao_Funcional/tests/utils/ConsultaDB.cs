@@ -459,7 +459,50 @@ namespace Automacao_Funcional.tests.steps
 
                 reader.Close();
             }
-            catch
+            catch(Exception)
+            {
+                
+            }
+            return _result;
+        }
+
+        public bool ConsultarCadastroRequerente()
+        {
+            string Id = null;
+            bool _result = false;
+
+
+            OracleConnection con = new OracleConnection
+            {
+                ConnectionString = ConectarDB()
+            };
+
+            con.Open();
+
+            string queryString =
+                "select id from PESSOAS_WEB where cpf =:Cpf";
+
+            try
+            {
+                OracleCommand command = con.CreateCommand();
+                command.CommandText = queryString;
+                command.Parameters.Add(new OracleParameter("Cpf", CpfFixo));
+
+                OracleDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Id = reader[0].ToString();
+
+                    if (Id != null)
+                    {
+                        _result = true;
+                    }
+                }
+
+                reader.Close();
+            }
+            catch (Exception)
             {
 
             }
