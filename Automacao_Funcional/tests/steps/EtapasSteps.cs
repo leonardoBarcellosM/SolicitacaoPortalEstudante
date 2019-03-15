@@ -89,7 +89,7 @@ namespace Automacao_Funcional.tests.steps
                     break;
             }
 
-            Assert.That(result, Is.True, "Erro ao consultar a renda mínima exigida de acordo com os dados no banco de dados");
+            Assert.That(result, Is.True, "Erro ao consultar a renda mínima exigida de acordo com os dados no banco de dados!");
         }
     }
 }
