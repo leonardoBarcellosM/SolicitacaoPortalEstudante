@@ -240,11 +240,11 @@ testRunner.Then("Verifico o total de \"Reprovadas IES\"", ((string)(null)), ((Te
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("09 Validar a Opção Aprovadas")]
+        [NUnit.Framework.DescriptionAttribute("09 Validar a Opção Fila De Espera")]
         [NUnit.Framework.CategoryAttribute("03_ValidarFunil")]
-        public virtual void _09ValidarAOpcaoAprovadas()
+        public virtual void _09ValidarAOpcaoFilaDeEspera()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09 Validar a Opção Aprovadas", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09 Validar a Opção Fila De Espera", null, new string[] {
                         "03_ValidarFunil"});
 #line 64
 this.ScenarioInitialize(scenarioInfo);
@@ -252,10 +252,32 @@ this.ScenarioInitialize(scenarioInfo);
 #line 65
 testRunner.Given("Acesso o dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 66
-testRunner.When("Clico em \"Aprovadas\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("Clico em \"Fila De Espera\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 67
-testRunner.When("Valido o direcionamento para a tela de pesquisa \"Pesquisa de solicitações\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("Valido o direcionamento para a tela de pesquisa \"Fila de espera de solicitações\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 68
+testRunner.Then("Verifico o total de \"Fila De Espera\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("10 Validar a Opção Aprovadas")]
+        [NUnit.Framework.CategoryAttribute("03_ValidarFunil")]
+        public virtual void _10ValidarAOpcaoAprovadas()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10 Validar a Opção Aprovadas", null, new string[] {
+                        "03_ValidarFunil"});
+#line 71
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 72
+testRunner.Given("Acesso o dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 73
+testRunner.When("Clico em \"Aprovadas\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 74
+testRunner.When("Valido o direcionamento para a tela de pesquisa \"Pesquisa de solicitações\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 75
 testRunner.Then("Verifico o total de \"Aprovadas\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -40,6 +40,9 @@ namespace Automacao_Funcional.tests.steps
                 case "Aprovadas":
                     result = pageAction.ClicarFunil(5);
                     break;
+                case "Fila De Espera":
+                    result = pageAction.ClicarFunil(6);
+                    break;
             }
 
             Assert.That(result, Is.True, "Erro - " + arg + "");

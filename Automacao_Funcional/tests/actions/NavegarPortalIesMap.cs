@@ -27,6 +27,10 @@ namespace Automacao_Funcional.tests.steps
 
         [FindsBy(How = How.XPath, Using = "//*[name()='svg' and @class='funnel-chart']/*/*[8]/*[text()][2]")]
         [CacheLookup]
+        public IWebElement OptFilaDeEspera { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//*[name()='svg' and @class='funnel-chart']/*/*[9]/*[text()][2]")]
+        [CacheLookup]
         public IWebElement OptAprovados { get; set; }
 
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/ul/li[1]/a")]

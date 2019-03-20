@@ -49,6 +49,9 @@ namespace Automacao_Funcional.tests.steps
                 case "Aprovadas":
                     pageAction.ValidarTotalDeSolicitacoes(ref result, ref vlr, 5);
                     break;
+                case "Fila De Espera":
+                    pageAction.ValidarTotalDeSolicitacoes(ref result, ref vlr, 6);
+                    break;
 
             }
 

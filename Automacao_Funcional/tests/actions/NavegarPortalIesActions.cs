@@ -25,7 +25,8 @@ namespace Automacao_Funcional.tests.steps
                     OptPendenteAnalisefundacred,
                     OptPendenteAnaliseIes,
                     OptReprovadosIEs,
-                    OptAprovados
+                    OptAprovados,
+                    OptFilaDeEspera
                     };
 
             switch (arg)
@@ -47,6 +48,9 @@ namespace Automacao_Funcional.tests.steps
                     break;
                 case 5:
                     DadosDB.Funil_Aprovados = Element[arg].Text;
+                    break;
+                case 6:
+                    DadosDB.Funil_FilaDeEspera = Element[arg].Text;
                     break;
             };
 

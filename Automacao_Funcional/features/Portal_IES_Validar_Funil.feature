@@ -42,9 +42,9 @@ Scenario: 07 Valido aprovados
 When Valido aprovados
 
 @03_ValidarFunil
-Scenario: 08 Valido reprovados fundacred
-When Valido reprovados fundacred
+Scenario: 09 Valido Fila De Espera IES
+When Valido Fila De Espera IES
 
 @03_ValidarFunil
-Scenario: 09 Valido reprovados ies
+Scenario: 10 Valido reprovados ies
 When Valido reprovados ies

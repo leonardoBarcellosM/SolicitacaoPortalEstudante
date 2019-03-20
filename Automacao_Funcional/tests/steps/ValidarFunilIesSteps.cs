@@ -69,6 +69,17 @@ namespace Automacao_Funcional.tests.steps
             Assert.That(result, Is.True, "Dados não conferem - aprovados: " + valores);
         }
 
+        [When(@"Valido Fila De Espera IES")]
+        public void WhenValidoFilaDeEsperaIES()
+        {
+            bool result = false;
+            string valores = "";
+
+            pageAction.ValidarFilaDeEsperaIES(ref result, ref valores);
+
+            Assert.That(result, Is.True, "Dados não conferem - Fila De Espera IES: " + valores);
+        }
+
         [When(@"Valido reprovados fundacred")]
         public void WhenValidoReprovados()
         {

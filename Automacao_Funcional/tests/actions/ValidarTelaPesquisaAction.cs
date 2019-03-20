@@ -70,7 +70,8 @@ namespace Automacao_Funcional.tests.steps
                 DadosDB.Funil_PendenteAnaliseFundacred,
                 DadosDB.Funil_PendenteAnaliseIes,
                 DadosDB.Funil_ReprovadosIes,
-                DadosDB.Funil_Aprovados
+                DadosDB.Funil_Aprovados,
+                DadosDB.Funil_FilaDeEspera
                 };
 
             try

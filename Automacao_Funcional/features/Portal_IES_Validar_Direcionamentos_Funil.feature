@@ -61,7 +61,14 @@ When Valido o direcionamento para a tela de pesquisa "Pesquisa de solicitações
 Then Verifico o total de "Reprovadas IES"
 
 @03_ValidarFunil
-Scenario: 09 Validar a Opção Aprovadas
+Scenario: 09 Validar a Opção Fila De Espera
+Given Acesso o dashboard
+When Clico em "Fila De Espera"
+When Valido o direcionamento para a tela de pesquisa "Fila de espera de solicitações"
+Then Verifico o total de "Fila De Espera"
+
+@03_ValidarFunil
+Scenario: 10 Validar a Opção Aprovadas
 Given Acesso o dashboard
 When Clico em "Aprovadas"
 When Valido o direcionamento para a tela de pesquisa "Pesquisa de solicitações"

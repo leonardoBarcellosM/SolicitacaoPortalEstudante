@@ -194,27 +194,27 @@ testRunner.When("Valido aprovados", ((string)(null)), ((TechTalk.SpecFlow.Table)
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("08 Valido reprovados fundacred")]
+        [NUnit.Framework.DescriptionAttribute("09 Valido Fila De Espera IES")]
         [NUnit.Framework.CategoryAttribute("03_ValidarFunil")]
-        public virtual void _08ValidoReprovadosFundacred()
+        public virtual void _09ValidoFilaDeEsperaIES()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08 Valido reprovados fundacred", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09 Valido Fila De Espera IES", null, new string[] {
                         "03_ValidarFunil"});
 #line 45
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 46
-testRunner.When("Valido reprovados fundacred", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("Valido Fila De Espera IES", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("09 Valido reprovados ies")]
+        [NUnit.Framework.DescriptionAttribute("10 Valido reprovados ies")]
         [NUnit.Framework.CategoryAttribute("03_ValidarFunil")]
-        public virtual void _09ValidoReprovadosIes()
+        public virtual void _10ValidoReprovadosIes()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09 Valido reprovados ies", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10 Valido reprovados ies", null, new string[] {
                         "03_ValidarFunil"});
 #line 49
 this.ScenarioInitialize(scenarioInfo);
