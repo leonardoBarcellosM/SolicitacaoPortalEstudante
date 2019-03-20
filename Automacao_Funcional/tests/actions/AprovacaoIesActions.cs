@@ -297,11 +297,11 @@ namespace Automacao_Funcional.tests.steps
                 if (SelectMotivo.Displayed)
                 {
                     var selectElement = new SelectElement(SelectMotivo);
-                    selectElement.SelectByIndex(10);
+                    selectElement.SelectByIndex(8);
 
                     Thread.Sleep(500);
 
-                    TextArea.SendKeys("... Teste reprovação fundacred! ...");
+                    //TextArea.SendKeys("... Teste reprovação fundacred! ...");
                     _result = true;
                     Thread.Sleep(500);
                 }
